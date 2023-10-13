@@ -9,23 +9,66 @@ namespace Vivero
 {
     internal abstract class Planta
     {
-        internal DateTime ultimoRiego; // no se recibe en el constructor
+        #region Atributos
+        internal string nombre;
+        internal float precio;
+        internal DateTime ultimoRiego;
         internal int frecuenciaRiego;
         internal EEstacion estacionTransplante;
-        internal bool tieneFlores;
 
         internal bool aptaInterior;
         internal bool aptaExterior;
 
         internal float alturaMax;
-        internal float alturaActual; // no se recibe en el constructor 
+        internal float alturaActual; 
         internal float alturaTransplante;
+        #endregion
 
-        // PREGUNTAR SI ESTA BIEN
-        internal bool Transpantable {
-            get { return (this.ObtenerEstacion() == estacionTransplante); }
+        #region Constructores
+        // Recibe todos -> llama al que recibe alturaActual 
+        public Planta(string nombre, DateTime ultimoRiego, int frecuenciaRiego, EEstacion estacionTransplante, bool aptaInterior, bool aptaExterior, 
+            float alturaMax, float alturaActual, float alturaTransplante,float precio): this(nombre, frecuenciaRiego, estacionTransplante,
+                       aptaInterior, aptaExterior,alturaActual, alturaMax, alturaTransplante, precio)
+        {
+            this.ultimoRiego = ultimoRiego;
         }
 
+        // No recibe ultimoRiego -> llama al que no recibe ni ultimoRiego ni alturaActual
+        public Planta(string nombre, int frecuenciaRiego, EEstacion estacionTransplante, bool aptaInterior, bool aptaExterior,
+                   float alturaMax, float alturaActual, float alturaTransplante,float precio) : this(nombre, frecuenciaRiego, estacionTransplante,
+                       aptaInterior, aptaExterior, alturaMax, alturaTransplante,precio)
+        {
+            this.alturaActual = alturaActual;
+        }
+
+        // No recibe alturaActual ni ultimoRiego -> llama al que no recibe alturaActual
+        public Planta(string nombre, int frecuenciaRiego, EEstacion estacionTransplante,
+            bool aptaInterior, bool aptaExterior, float alturaMax, float alturaTransplante, float precio)
+        {
+            this.nombre = nombre;
+            this.ultimoRiego = DateTime.Now;
+            this.frecuenciaRiego = frecuenciaRiego;
+            this.estacionTransplante = estacionTransplante;
+            this.aptaInterior = aptaInterior;
+            this.aptaExterior = aptaExterior;
+            this.alturaMax = alturaMax;
+            this.alturaActual = 0;
+            this.alturaTransplante = alturaTransplante;
+            this.precio = precio;
+        }
+        #endregion
+
+        #region Propiedades
+        // PREGUNTAR SI ESTA BIEN
+        // devuelve true si nos encontramos en la estacion en la que se puede
+        // y tiene la altura necesaria 
+        internal bool Transpantable {
+            get { return (this.ObtenerEstacion() == estacionTransplante && alturaActual > alturaTransplante); }
+        }
+
+        #endregion
+
+        #region Metodos
         private EEstacion ObtenerEstacion()
         {
 
@@ -75,7 +118,7 @@ namespace Vivero
 
         }
 
-        // este metodo lo implementa cada clase, segun que tipo sea hace crecer ciertos cm a la planta
+        // este metodo lo DEBE implementar cada clase, segun que tipo sea hace crecer ciertos cm a la planta
         internal abstract void CrecerPlanta();
 
         // si pasaron los dias necesarios, se hace crecer a la planta y devuelve true
@@ -94,20 +137,48 @@ namespace Vivero
             else
                 return false;
         }
-        
-        // bool se puede transplantar ->
-        // devuelve true si nos encontramos en la estacion en la que se puede
-        // y tiene la altura necesaria 
 
-        private bool Transplantar() { 
-            return true; 
+        public override string ToString()
+        {
+            return ToString();
         }
 
-        
+        public virtual void Mostrar()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Nombre {nombre}");
+            sb.AppendLine($"Apta interior: {aptaInterior}");
+            sb.AppendLine($"Apta exterior: {aptaExterior}");
+            sb.AppendLine($"Altura actual: {alturaActual}");
+            sb.AppendLine($"Altura maxima: {alturaMax}");
 
+            Console.Write(sb.ToString());
+        }
 
+        public override bool Equals(object? obj)
+        {
+            Planta planta = (Planta)obj;
+            return (planta is not null && this == planta);
+        }
 
+        #endregion
 
+        #region Sobreescritura operadores
+        public static bool operator ==(Planta a, Planta b)
+        {
+            return a.nombre == b.nombre;
+        }
+
+        public static bool operator !=(Planta a, Planta b)
+        {
+            return !(a == b);
+        }
+
+        #endregion
+
+        #region Metodos ordenamiento
+
+        #endregion
 
 
 

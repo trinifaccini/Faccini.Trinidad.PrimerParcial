@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\Faccini.Trinidad\\Vivero\\Vivero.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Vivero\\Vivero.csproj",
       "projectName": "Vivero",
-      "projectPath": "C:\\Users\\Usuario\\source\\repos\\Faccini.Trinidad\\Vivero\\Vivero.csproj",
+      "projectPath": "C:\\Users\\Usuario\\source\\repos\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Vivero\\Vivero.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\source\\repos\\Faccini.Trinidad\\Vivero\\obj\\",
+      "outputPath": "C:\\Users\\Usuario\\source\\repos\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Vivero\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",

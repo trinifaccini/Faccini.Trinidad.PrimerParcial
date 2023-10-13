@@ -31,3 +31,16 @@ public enum EFlores
 {
 
 }
+
+public enum EArboles
+{
+
+}
+
+public enum EPais
+{
+    Argentina,
+    USA,
+    Brasil,
+    Paraguay
+}
