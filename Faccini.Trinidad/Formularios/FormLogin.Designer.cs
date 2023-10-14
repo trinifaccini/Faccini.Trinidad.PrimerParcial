@@ -41,7 +41,7 @@
             // 
             lblUsuario.AutoSize = true;
             lblUsuario.BackColor = SystemColors.Window;
-            lblUsuario.Location = new Point(12, 89);
+            lblUsuario.Location = new Point(59, 89);
             lblUsuario.Name = "lblUsuario";
             lblUsuario.Size = new Size(43, 15);
             lblUsuario.TabIndex = 0;
@@ -50,7 +50,7 @@
             // lblClave
             // 
             lblClave.AutoSize = true;
-            lblClave.Location = new Point(12, 169);
+            lblClave.Location = new Point(59, 186);
             lblClave.Name = "lblClave";
             lblClave.Size = new Size(36, 15);
             lblClave.TabIndex = 1;
@@ -58,26 +58,26 @@
             // 
             // txtCorreo
             // 
-            txtCorreo.Location = new Point(12, 107);
+            txtCorreo.Location = new Point(59, 107);
             txtCorreo.Name = "txtCorreo";
             txtCorreo.Size = new Size(270, 23);
             txtCorreo.TabIndex = 2;
             // 
             // txtClave
             // 
-            txtClave.Location = new Point(12, 204);
+            txtClave.Location = new Point(59, 204);
             txtClave.Name = "txtClave";
-            txtClave.Size = new Size(251, 23);
+            txtClave.Size = new Size(261, 23);
             txtClave.TabIndex = 3;
             // 
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
             lblTitulo.BackColor = SystemColors.Control;
-            lblTitulo.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lblTitulo.Location = new Point(63, 22);
+            lblTitulo.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitulo.Location = new Point(59, 22);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(270, 20);
+            lblTitulo.Size = new Size(274, 18);
             lblTitulo.TabIndex = 4;
             lblTitulo.Text = "BIENVENIDO AL SISTEMA DE VIVEROS";
             lblTitulo.TextAlign = ContentAlignment.TopCenter;
@@ -87,12 +87,13 @@
             btnIngresar.BackColor = SystemColors.ButtonShadow;
             btnIngresar.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnIngresar.ForeColor = SystemColors.ButtonFace;
-            btnIngresar.Location = new Point(103, 267);
+            btnIngresar.Location = new Point(143, 267);
             btnIngresar.Name = "btnIngresar";
             btnIngresar.Size = new Size(102, 47);
             btnIngresar.TabIndex = 5;
             btnIngresar.Text = "INGRESAR";
             btnIngresar.UseVisualStyleBackColor = false;
+            btnIngresar.Click += btnIngresar_Click;
             // 
             // FormLogin
             // 

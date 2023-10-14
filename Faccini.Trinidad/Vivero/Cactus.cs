@@ -91,17 +91,7 @@ namespace Parcial
             }
         }
 
-        
-        public static implicit operator Cactus(Cactus a)
-        {
-            //…
-        }
-
-        // Explicita
-        public static explicit operator Cactus(Cactus a)
-        {
-            //…
-        }
+       
 
         #endregion
 

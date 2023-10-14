@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vivero", "Vivero\Vivero.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PruebaVivero", "PruebaVivero\PruebaVivero.csproj", "{C294301A-13F7-4FF3-93E6-E4295EC893D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Formularios", "Formularios\Formularios.csproj", "{EFC8F3B2-763A-4B91-8EEF-8524479D41D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Formularios", "Formularios\Formularios.csproj", "{EFC8F3B2-763A-4B91-8EEF-8524479D41D5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsAppLogin", "..\..\..\..\Downloads\WinFormsAppLogin\WinFormsAppLogin\WinFormsAppLogin.csproj", "{B7616FD9-038C-44D3-82AD-8503C2F59AC7}"
 EndProject

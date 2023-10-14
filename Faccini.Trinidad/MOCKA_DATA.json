@@ -1,0 +1,10 @@
+[
+  {
+    "apellido": "Gorgen",
+    "clave": "123abc45",
+    "correo": "cgorgen@vendedor.com",
+    "legajo": 1,
+    "nombre": "Corey",
+    "perfil": "vendedor"
+  }
+]

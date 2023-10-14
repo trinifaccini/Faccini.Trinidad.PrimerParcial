@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0-windows7.0": {}
+    "net6.0-windows7.0": {
+      "Vivero/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Vivero.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Vivero.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Vivero/1.0.0": {
+      "type": "project",
+      "path": "../Vivero/Vivero.csproj",
+      "msbuildProject": "../Vivero/Vivero.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0-windows7.0": []
+    "net6.0-windows7.0": [
+      "Vivero >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Usuario\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Usuario\\source\\repos\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Vivero\\Vivero.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\source\\repos\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Vivero\\Vivero.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

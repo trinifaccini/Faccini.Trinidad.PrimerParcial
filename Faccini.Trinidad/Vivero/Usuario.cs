@@ -8,13 +8,50 @@ namespace Parcial
 {
     public class Usuario
     {
-        public string Apellido { get; set; }
-        public string Nombre { get; set; }
-        public string Legajo { get; set; }
-        public string Correo { get; set; }
-        public string Clave { get; set; }
-        public string Vendedor { get; set; }
 
+        public string apellido { get; set; }
+        public string nombre { get; set; }
+        public int legajo { get; set; }
+        public string correo { get; set; }
+        public string clave { get; set; }
+        public string perfil { get; set; }
+
+        public Usuario()
+        {
+
+        }
+
+        public Usuario(string apellido, string nombre, int legajo, string correo, string clave, string perfil)
+        {
+            this.apellido = apellido;
+            this.nombre = nombre;
+            this.legajo = legajo;
+            this.correo = correo;
+            this.clave = clave;
+            this.perfil = perfil;
+        }
+
+        public static List<Usuario> DeserealizarUsuarios(string path)
+        {
+            List<Usuario> usuarios = new List<Usuario>(); 
+
+            try
+            {
+                using (System.IO.StreamReader sr = new System.IO.StreamReader(path))
+                {
+                    string json = sr.ReadToEnd();
+                    usuarios = (List<Usuario>)System.Text.Json.JsonSerializer.Deserialize(json, typeof(List<Usuario>));
+                }
+            }
+            
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            return usuarios;
+
+        }
     }
 }
 
