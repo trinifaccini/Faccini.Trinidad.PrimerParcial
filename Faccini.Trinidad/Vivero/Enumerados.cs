@@ -1,4 +1,11 @@
-﻿public enum EEstacion
+﻿public enum ECargo
+{
+    Vendedor,
+    Paisajista,
+    Cliente
+}
+
+public enum EEstacion
 {
     Verano,
     Otonio,
@@ -34,7 +41,8 @@ public enum EFlores
 
 public enum EArboles
 {
-
+    Arrayan,
+    Coihue
 }
 
 public enum EPais

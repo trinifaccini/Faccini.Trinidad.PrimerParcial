@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vivero
+namespace Parcial
 {
-    internal class Arbol : Planta
+    public class Arbol : Planta
     {
 
         #region Atributos
@@ -50,6 +50,7 @@ namespace Vivero
 
         public static bool operator ==(Arbol a, Arbol b)
         {
+            Console.WriteLine("== DE ARBOL");
             return (a.nombre == b.nombre && a.precio == b.precio && a.alturaActual == b.alturaActual && a.tieneFrutos == b.tieneFrutos);
         }
 

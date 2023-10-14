@@ -5,9 +5,9 @@ using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vivero
+namespace Parcial
 {
-    internal abstract class Planta
+    public abstract class Planta
     {
         #region Atributos
         internal string nombre;
@@ -138,10 +138,6 @@ namespace Vivero
                 return false;
         }
 
-        public override string ToString()
-        {
-            return ToString();
-        }
 
         public virtual void Mostrar()
         {
@@ -157,6 +153,8 @@ namespace Vivero
 
         public override bool Equals(object? obj)
         {
+            Console.WriteLine("EQUALS DE PLANTA");
+            
             Planta planta = (Planta)obj;
             return (planta is not null && this == planta);
         }
@@ -166,6 +164,8 @@ namespace Vivero
         #region Sobreescritura operadores
         public static bool operator ==(Planta a, Planta b)
         {
+            Console.WriteLine("== DE PLANTA");
+
             return a.nombre == b.nombre;
         }
 

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vivero
+namespace Parcial
 {
-    internal class Flor : Planta
+    public class Flor : Planta
     {
         #region Atributos
         private string color;
@@ -17,7 +17,6 @@ namespace Vivero
         #endregion
 
         #region Constructores
-
 
         // Recibe todos
         public Flor(string nombre, int frecuenciaRiego, EEstacion estacionTransplante, bool aptaInterior, bool aptaExterior, float alturaMax,

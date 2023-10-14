@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vivero
+namespace Parcial
 {
-    internal class Cactus : Planta
+    public class Cactus : Planta
     {
 
         #region Atributos
@@ -89,6 +89,18 @@ namespace Vivero
             {
                 alturaActual += 5;
             }
+        }
+
+        
+        public static implicit operator Cactus(Cactus a)
+        {
+            //…
+        }
+
+        // Explicita
+        public static explicit operator Cactus(Cactus a)
+        {
+            //…
         }
 
         #endregion
