@@ -10,7 +10,7 @@ namespace Parcial
     public abstract class Planta
     {
         #region Atributos
-        internal string nombre;
+        public string nombre;
         internal float precio;
         internal DateTime ultimoRiego;
         internal int frecuenciaRiego;
@@ -139,16 +139,15 @@ namespace Parcial
         }
 
 
-        public virtual void Mostrar()
+        public virtual string Mostrar()
         {
+            // MUESTRO SOLO INFO QUE QUIERO VER EN LA LISTA DEL FORM
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Nombre {nombre}");
-            sb.AppendLine($"Apta interior: {aptaInterior}");
-            sb.AppendLine($"Apta exterior: {aptaExterior}");
-            sb.AppendLine($"Altura actual: {alturaActual}");
-            sb.AppendLine($"Altura maxima: {alturaMax}");
+            sb.Append($"Nombre {nombre} - ");
+            sb.AppendLine($"Altura actual: {alturaActual} - ");
+            sb.AppendLine($"Precio {precio}");
 
-            Console.Write(sb.ToString());
+            return sb.ToString();
         }
 
         public override bool Equals(object? obj)

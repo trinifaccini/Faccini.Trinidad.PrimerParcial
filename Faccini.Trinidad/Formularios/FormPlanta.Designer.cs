@@ -44,6 +44,8 @@
             txtAlturaMax = new TextBox();
             txtAlturaTransplante = new TextBox();
             lblAlturaTransplante = new Label();
+            btnAgregar = new Button();
+            btnCancelar = new Button();
             SuspendLayout();
             // 
             // lblNombre
@@ -178,11 +180,33 @@
             lblAlturaTransplante.TabIndex = 14;
             lblAlturaTransplante.Text = "Altura apta transplante";
             // 
+            // btnAgregar
+            // 
+            btnAgregar.Location = new Point(130, 380);
+            btnAgregar.Name = "btnAgregar";
+            btnAgregar.Size = new Size(94, 42);
+            btnAgregar.TabIndex = 16;
+            btnAgregar.Text = "AGREGAR";
+            btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.Location = new Point(264, 380);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(94, 42);
+            btnCancelar.TabIndex = 17;
+            btnCancelar.Text = "CANCELAR";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
             // FormPlanta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(489, 452);
+            Controls.Add(btnCancelar);
+            Controls.Add(btnAgregar);
             Controls.Add(txtAlturaTransplante);
             Controls.Add(lblAlturaTransplante);
             Controls.Add(txtAlturaMax);
@@ -201,6 +225,7 @@
             Controls.Add(lblNombre);
             Name = "FormPlanta";
             Text = "FormPlanta";
+            FormClosing += FormPlanta_FormClosing;
             Load += FormPlanta_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -215,14 +240,16 @@
         private Label lblAmbiente;
         private Label lblAltura;
         private Label lblAlturaMax;
-        private TextBox txtNombre;
-        private TextBox txtPrecio;
-        private TextBox txtFrecuencia;
-        private ComboBox cbmBoxEstacion;
-        private CheckedListBox checkedListBoxEstacion;
-        private TextBox txtAlturaActual;
-        private TextBox txtAlturaMax;
-        private TextBox txtAlturaTransplante;
-        private Label lblAlturaTransplante;
+        protected TextBox txtNombre;
+        protected TextBox txtPrecio;
+        protected TextBox txtFrecuencia;
+        protected ComboBox cbmBoxEstacion;
+        protected CheckedListBox checkedListBoxEstacion;
+        protected TextBox txtAlturaActual;
+        protected TextBox txtAlturaMax;
+        protected TextBox txtAlturaTransplante;
+        protected Label lblAlturaTransplante;
+        protected Button btnAgregar;
+        protected Button btnCancelar;
     }
 }

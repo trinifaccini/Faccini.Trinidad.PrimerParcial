@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -70,14 +71,15 @@ namespace Parcial
             }
         }
 
-        public override void Mostrar()
+        public override string Mostrar()
         {
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Tiene frutos: {tieneFrutos}");
-            sb.AppendLine($"Pais de origen: {paisOrigen}");
 
-            base.Mostrar();
-            Console.Write(sb.ToString());
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Tipo: Arbol - ");
+            sb.Append(base.Mostrar());
+            sb.AppendLine($" - Pais: {paisOrigen}");
+
+            return (sb.ToString());
         }
 
         public override string ToString()

@@ -57,14 +57,14 @@ namespace Parcial
 
         #region Metodos
 
-        public override void Mostrar()
+        public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Color de sus flores: {color}");
-            sb.AppendLine($"Tiene olor: {tieneOlor}");
+            sb.AppendLine($"Tipo: Flor - ");
+            sb.Append(base.Mostrar());
+            sb.AppendLine($" - Color: {color}");
 
-            base.Mostrar();
-            Console.Write(sb.ToString());
+            return(sb.ToString());
         }
 
         public override string ToString()

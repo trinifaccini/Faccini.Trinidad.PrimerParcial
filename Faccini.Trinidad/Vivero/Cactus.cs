@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -73,14 +74,17 @@ namespace Parcial
             return sb.ToString();
         }
 
-        public override void Mostrar()
+        public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Tiene espinas: {tieneEspinas}");
-            sb.AppendLine($"Tiene flores: {tieneEspinas}");
 
-            base.Mostrar();
-            Console.Write(sb.ToString());
+            sb.AppendLine($"Tipo: Cactus - ");
+            sb.Append(base.Mostrar());
+
+            //this.tieneEspinas ? sb.Append(" - Tiene espinas") : sb.Append(" - No tiene espinas");
+
+            return (sb.ToString());
+
         }
 
         internal override void CrecerPlanta()
