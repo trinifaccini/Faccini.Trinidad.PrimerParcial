@@ -83,19 +83,18 @@ namespace Parcial
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append($"Cactus \t");
+            sb.Append($"Cactus\t");
             sb.Append(base.ToString());
-
             return sb.ToString();
         }
 
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
+            sb.Append($"Tipo: ");
+            sb.Append(this.ToString());
+            sb.Append(tieneEspinas ? $"Tiene espinas\n" : $"No tiene espinas\n");
 
-            sb.AppendLine($"Tipo: Cactus  \t");
-            sb.Append(base.Mostrar());
-            sb.Append(this.tieneEspinas ? $"Tiene espinas\t" : $"No tiene espinas\t");
             return (sb.ToString());
 
         }

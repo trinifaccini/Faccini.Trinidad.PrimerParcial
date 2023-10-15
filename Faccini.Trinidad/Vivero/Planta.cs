@@ -43,11 +43,11 @@ namespace Parcial
         public string UltimoRiego { get { return ultimoRiego.ToString(); } set { ultimoRiego = ParsearFecha(value.ToString()); } }
         public int FrecuenciaRiego { get { return frecuenciaRiego; } set { } }
         public EEstacion EstacionTransplante { get { return estacionTransplante; } set { estacionTransplante = value; } }
-        public bool AptaInterior { get { return aptaInterior; } set { } }
-        public bool AptaExterior { get { return aptaExterior; } set { } }
-        public float AlturaMax { get { return alturaMax; } set { } }
-        public float AlturaActual { get { return alturaActual;  } set { } }
-        public float AlturaTransplante { get { return alturaTransplante; } set { } }
+        public bool AptaInterior { get { return aptaInterior; } set { aptaInterior = value; } }
+        public bool AptaExterior { get { return aptaExterior; } set { aptaExterior = value; } }
+        public float AlturaMax { get { return alturaMax; } set { alturaMax = value; } }
+        public float AlturaActual { get { return alturaActual;  } set { alturaActual = value;  } }
+        public float AlturaTransplante { get { return alturaTransplante; } set { alturaTransplante = value; } }
 
         #endregion
 

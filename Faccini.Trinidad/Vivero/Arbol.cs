@@ -82,16 +82,16 @@ namespace Parcial
         {
 
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Tipo: Arbol\t");
-            sb.Append(base.Mostrar());
-            sb.AppendLine($"Pais: {paisOrigen}\t");
+            sb.Append($"Tipo: ");
+            sb.Append(this.ToString());
+            sb.Append($"Pais: {paisOrigen}\n");
             return (sb.ToString());
         }
 
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append($"Arbol \t");
+            sb.Append($"Arbol\t");
             sb.Append(base.ToString());
             return sb.ToString();
         }

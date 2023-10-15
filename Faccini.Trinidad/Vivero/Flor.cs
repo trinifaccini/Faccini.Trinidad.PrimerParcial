@@ -41,6 +41,8 @@ namespace Parcial
             this(nombre, frecuenciaRiego, estacionTransplante, aptaInterior, aptaExterior, alturaMax, alturaTransplante, precio)
         {
             this.color = color;
+
+
         }
 
         // Recibe todos menos olor y color
@@ -72,19 +74,18 @@ namespace Parcial
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Tipo: ");
+            sb.Append($"Tipo: ");
             sb.Append(this.ToString());
-            sb.AppendLine($"Color: {color}");
+            sb.Append($"Color: {color}\n");
 
-            return(sb.ToString());
+            return (sb.ToString());
         }
 
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append($"Flor \t");
+            sb.Append($"Flor\t");
             sb.Append(base.ToString());
-            
             return sb.ToString();
         }
 
