@@ -29,10 +29,14 @@
         private void InitializeComponent()
         {
             lblColor = new Label();
-            btnOlor = new RadioButton();
             txtColor = new TextBox();
             lblTitulo = new Label();
+            chBoxOlor = new CheckBox();
             SuspendLayout();
+            // 
+            // checkedListBoxAmbiente
+            // 
+            checkedListBoxAmbiente.SelectedIndexChanged += checkedListBoxAmbiente_SelectedIndexChanged;
             // 
             // lblColor
             // 
@@ -43,17 +47,6 @@
             lblColor.TabIndex = 16;
             lblColor.Text = "Color de la flor";
             lblColor.Click += label1_Click;
-            // 
-            // btnOlor
-            // 
-            btnOlor.AutoSize = true;
-            btnOlor.Location = new Point(283, 317);
-            btnOlor.Name = "btnOlor";
-            btnOlor.Size = new Size(77, 19);
-            btnOlor.TabIndex = 17;
-            btnOlor.TabStop = true;
-            btnOlor.Text = "Tiene olor";
-            btnOlor.UseVisualStyleBackColor = true;
             // 
             // txtColor
             // 
@@ -71,21 +64,43 @@
             lblTitulo.TabIndex = 19;
             lblTitulo.Text = "AGREGAR NUEVA FLOR AL VIVERO";
             // 
+            // chBoxOlor
+            // 
+            chBoxOlor.AutoSize = true;
+            chBoxOlor.Location = new Point(282, 327);
+            chBoxOlor.Name = "chBoxOlor";
+            chBoxOlor.Size = new Size(78, 19);
+            chBoxOlor.TabIndex = 20;
+            chBoxOlor.Text = "Tiene olor";
+            chBoxOlor.UseVisualStyleBackColor = true;
+            // 
             // FormFlor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(523, 473);
+            Controls.Add(chBoxOlor);
             Controls.Add(lblTitulo);
             Controls.Add(txtColor);
-            Controls.Add(btnOlor);
             Controls.Add(lblColor);
             Name = "FormFlor";
             Text = "PROPIEDADES FLOR";
+            Load += FormFlor_Load;
+            Controls.SetChildIndex(txtNombre, 0);
+            Controls.SetChildIndex(txtPrecio, 0);
+            Controls.SetChildIndex(txtFrecuencia, 0);
+            Controls.SetChildIndex(cbmBoxEstacion, 0);
+            Controls.SetChildIndex(checkedListBoxAmbiente, 0);
+            Controls.SetChildIndex(txtAlturaActual, 0);
+            Controls.SetChildIndex(txtAlturaMax, 0);
+            Controls.SetChildIndex(lblAlturaTransplante, 0);
+            Controls.SetChildIndex(txtAlturaTransplante, 0);
+            Controls.SetChildIndex(btnAgregar, 0);
+            Controls.SetChildIndex(btnCancelar, 0);
             Controls.SetChildIndex(lblColor, 0);
-            Controls.SetChildIndex(btnOlor, 0);
             Controls.SetChildIndex(txtColor, 0);
             Controls.SetChildIndex(lblTitulo, 0);
+            Controls.SetChildIndex(chBoxOlor, 0);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -96,5 +111,6 @@
         private RadioButton btnOlor;
         private TextBox txtColor;
         private Label lblTitulo;
+        private CheckBox chBoxOlor;
     }
 }

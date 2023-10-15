@@ -29,10 +29,18 @@
         private void InitializeComponent()
         {
             lblTitulo = new Label();
-            btnFrutos = new RadioButton();
             lblPais = new Label();
             comboBox1 = new ComboBox();
+            chFruto = new CheckBox();
             SuspendLayout();
+            // 
+            // btnAgregar
+            // 
+            btnAgregar.Location = new Point(128, 447);
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.Location = new Point(262, 447);
             // 
             // lblTitulo
             // 
@@ -42,16 +50,6 @@
             lblTitulo.Size = new Size(200, 15);
             lblTitulo.TabIndex = 20;
             lblTitulo.Text = "AGREGAR NUEVO ARBOL AL VIVERO";
-            // 
-            // btnFrutos
-            // 
-            btnFrutos.AutoSize = true;
-            btnFrutos.Location = new Point(280, 265);
-            btnFrutos.Name = "btnFrutos";
-            btnFrutos.Size = new Size(87, 19);
-            btnFrutos.TabIndex = 21;
-            btnFrutos.Text = "Tiene frutos";
-            btnFrutos.UseVisualStyleBackColor = true;
             // 
             // lblPais
             // 
@@ -71,21 +69,42 @@
             comboBox1.Size = new Size(160, 23);
             comboBox1.TabIndex = 23;
             // 
+            // chFruto
+            // 
+            chFruto.AutoSize = true;
+            chFruto.Location = new Point(282, 265);
+            chFruto.Name = "chFruto";
+            chFruto.Size = new Size(74, 19);
+            chFruto.TabIndex = 24;
+            chFruto.Text = "Da frutos";
+            chFruto.UseVisualStyleBackColor = true;
+            // 
             // FormArbol
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(487, 450);
+            ClientSize = new Size(487, 516);
+            Controls.Add(chFruto);
             Controls.Add(comboBox1);
             Controls.Add(lblPais);
-            Controls.Add(btnFrutos);
             Controls.Add(lblTitulo);
             Name = "FormArbol";
             Text = "FormArbol";
+            Controls.SetChildIndex(txtNombre, 0);
+            Controls.SetChildIndex(txtPrecio, 0);
+            Controls.SetChildIndex(txtFrecuencia, 0);
+            Controls.SetChildIndex(cbmBoxEstacion, 0);
+            Controls.SetChildIndex(checkedListBoxAmbiente, 0);
+            Controls.SetChildIndex(txtAlturaActual, 0);
+            Controls.SetChildIndex(txtAlturaMax, 0);
+            Controls.SetChildIndex(lblAlturaTransplante, 0);
+            Controls.SetChildIndex(txtAlturaTransplante, 0);
+            Controls.SetChildIndex(btnAgregar, 0);
+            Controls.SetChildIndex(btnCancelar, 0);
             Controls.SetChildIndex(lblTitulo, 0);
-            Controls.SetChildIndex(btnFrutos, 0);
             Controls.SetChildIndex(lblPais, 0);
             Controls.SetChildIndex(comboBox1, 0);
+            Controls.SetChildIndex(chFruto, 0);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -93,8 +112,8 @@
         #endregion
 
         private Label lblTitulo;
-        private RadioButton btnFrutos;
         private Label lblPais;
         private ComboBox comboBox1;
+        private CheckBox chFruto;
     }
 }

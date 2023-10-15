@@ -17,7 +17,14 @@ namespace Parcial
 
         #endregion
 
+        #region Propiedades
+        public bool TieneEspinas { get { return tieneEspinas; } set { tieneEspinas = value; } }
+        public bool TieneFlores { get { return tieneFlores; } set { tieneFlores = value; } }
+        #endregion
+
         #region Constructores
+
+        public Cactus() { }
         // Recibe todos
         public Cactus(string nombre, int frecuenciaRiego, EEstacion estacionTransplante, bool aptaInterior, bool aptaExterior,
             float alturaMax, float alturaTransplante,bool espinas, bool flores, float precio) :
@@ -48,7 +55,10 @@ namespace Parcial
         #region Sobreescritura operadores
         public static bool operator ==(Cactus a, Cactus b)
         {
-            return (a.nombre == b.nombre && a.precio == b.precio && a.alturaActual == b.alturaActual && a.tieneEspinas 
+            return (a.nombre == b.nombre && 
+                a.precio == b.precio && 
+                a.alturaActual == b.alturaActual && 
+                a.tieneEspinas 
                 && a.tieneEspinas == b.tieneEspinas);
         }
 
@@ -78,11 +88,9 @@ namespace Parcial
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine($"Tipo: Cactus - ");
+            sb.AppendLine($"Tipo: Cactus  \t");
             sb.Append(base.Mostrar());
-
-            //this.tieneEspinas ? sb.Append(" - Tiene espinas") : sb.Append(" - No tiene espinas");
-
+            sb.Append(this.tieneEspinas ? $"Tiene espinas\t" : $"No tiene espinas\t");
             return (sb.ToString());
 
         }
@@ -94,9 +102,7 @@ namespace Parcial
                 alturaActual += 5;
             }
         }
-
-       
-
+   
         #endregion
 
 

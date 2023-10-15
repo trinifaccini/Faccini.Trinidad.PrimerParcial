@@ -27,13 +27,13 @@ namespace Formularios
 
             string path = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\MOCK_DATA.json";
 
-            List <Usuario> usuarios = Usuario.DeserealizarUsuarios(path);
+            List <Usuario> usuarios = Serializador.DeserealizarUsuarios(path);
 
-            bool encontrado = usuarios.Any(u => u.correo == correo && u.clave == clave);
+            Usuario u = Usuario.BuscarUsuario(usuarios, correo, clave);
 
-            if (encontrado)
+            if (u.nombre != null)
             {
-                FormInicio inicio = new FormInicio();
+                FormInicio inicio = new FormInicio(u);
                 this.Hide();
                 inicio.Show();
             }

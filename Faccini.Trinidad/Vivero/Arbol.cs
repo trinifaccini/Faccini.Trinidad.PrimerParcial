@@ -16,10 +16,14 @@ namespace Parcial
         #endregion
 
         #region Propiedades
+
+        public bool TieneFrutos { get { return tieneFrutos; } set { tieneFrutos = value; } }
+        public EPais PaisOrigen { get { return paisOrigen; } set { paisOrigen = value;  } }
         #endregion
 
         #region Constructores
-
+        
+        public Arbol() { }
         // Recibe todos
         public Arbol(string nombre, int frecuenciaRiego, EEstacion estacionTransplante, bool aptaInterior, bool aptaExterior,
             float alturaMax, float alturaTransplante, bool tieneFrutos, EPais paisOrigen, float precio) :
@@ -52,7 +56,10 @@ namespace Parcial
         public static bool operator ==(Arbol a, Arbol b)
         {
             Console.WriteLine("== DE ARBOL");
-            return (a.nombre == b.nombre && a.precio == b.precio && a.alturaActual == b.alturaActual && a.tieneFrutos == b.tieneFrutos);
+            return (a.nombre == b.nombre && 
+                a.precio == b.precio && 
+                a.alturaActual == b.alturaActual && 
+                a.tieneFrutos == b.tieneFrutos);
         }
 
         public static bool operator !=(Arbol a, Arbol b)
@@ -75,9 +82,9 @@ namespace Parcial
         {
 
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Tipo: Arbol - ");
+            sb.AppendLine($"Tipo: Arbol\t");
             sb.Append(base.Mostrar());
-            sb.AppendLine($" - Pais: {paisOrigen}");
+            sb.AppendLine($"Pais: {paisOrigen}\t");
 
             return (sb.ToString());
         }

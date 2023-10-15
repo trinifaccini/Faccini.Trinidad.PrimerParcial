@@ -1,0 +1,14 @@
+[
+  {
+    "Nombre": "Arrayan",
+    "Precio": 2000,
+    "UltimoRiego": "15/10/2023 0:06:20",
+    "FrecuenciaRiego": 10,
+    "EstacionTransplante": 0,
+    "AptaInterior": true,
+    "AptaExterior": false,
+    "AlturaMax": 2000,
+    "AlturaActual": 0,
+    "AlturaTransplante": 200
+  }
+]

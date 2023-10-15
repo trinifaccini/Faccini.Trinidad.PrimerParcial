@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             lblTitulo = new Label();
-            btnEspinas = new RadioButton();
-            btnFlor = new RadioButton();
+            chFlor = new CheckBox();
+            chEspinas = new CheckBox();
             SuspendLayout();
             // 
             // lblTitulo
@@ -42,41 +42,50 @@
             lblTitulo.TabIndex = 20;
             lblTitulo.Text = "AGREGAR NUEVO CACTUS AL VIVERO";
             // 
-            // btnEspinas
+            // chFlor
             // 
-            btnEspinas.AutoSize = true;
-            btnEspinas.Location = new Point(282, 265);
-            btnEspinas.Name = "btnEspinas";
-            btnEspinas.Size = new Size(95, 19);
-            btnEspinas.TabIndex = 21;
-            btnEspinas.TabStop = true;
-            btnEspinas.Text = "Tiene espinas";
-            btnEspinas.UseVisualStyleBackColor = true;
+            chFlor.AutoSize = true;
+            chFlor.Location = new Point(282, 327);
+            chFlor.Name = "chFlor";
+            chFlor.Size = new Size(61, 19);
+            chFlor.TabIndex = 23;
+            chFlor.Text = "Da flor";
+            chFlor.UseVisualStyleBackColor = true;
             // 
-            // btnFlor
+            // chEspinas
             // 
-            btnFlor.AutoSize = true;
-            btnFlor.Location = new Point(282, 327);
-            btnFlor.Name = "btnFlor";
-            btnFlor.Size = new Size(74, 19);
-            btnFlor.TabIndex = 22;
-            btnFlor.TabStop = true;
-            btnFlor.Text = "Tiene flor";
-            btnFlor.UseVisualStyleBackColor = true;
+            chEspinas.AutoSize = true;
+            chEspinas.Location = new Point(282, 259);
+            chEspinas.Name = "chEspinas";
+            chEspinas.Size = new Size(96, 19);
+            chEspinas.TabIndex = 24;
+            chEspinas.Text = "Tiene espinas";
+            chEspinas.UseVisualStyleBackColor = true;
             // 
             // FormCactus
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(486, 450);
-            Controls.Add(btnFlor);
-            Controls.Add(btnEspinas);
+            Controls.Add(chEspinas);
+            Controls.Add(chFlor);
             Controls.Add(lblTitulo);
             Name = "FormCactus";
             Text = "FormCactus";
+            Controls.SetChildIndex(txtNombre, 0);
+            Controls.SetChildIndex(txtPrecio, 0);
+            Controls.SetChildIndex(txtFrecuencia, 0);
+            Controls.SetChildIndex(cbmBoxEstacion, 0);
+            Controls.SetChildIndex(checkedListBoxAmbiente, 0);
+            Controls.SetChildIndex(txtAlturaActual, 0);
+            Controls.SetChildIndex(txtAlturaMax, 0);
+            Controls.SetChildIndex(lblAlturaTransplante, 0);
+            Controls.SetChildIndex(txtAlturaTransplante, 0);
+            Controls.SetChildIndex(btnAgregar, 0);
+            Controls.SetChildIndex(btnCancelar, 0);
             Controls.SetChildIndex(lblTitulo, 0);
-            Controls.SetChildIndex(btnEspinas, 0);
-            Controls.SetChildIndex(btnFlor, 0);
+            Controls.SetChildIndex(chFlor, 0);
+            Controls.SetChildIndex(chEspinas, 0);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -84,7 +93,7 @@
         #endregion
 
         private Label lblTitulo;
-        private RadioButton btnEspinas;
-        private RadioButton btnFlor;
+        private CheckBox chFlor;
+        private CheckBox chEspinas;
     }
 }

@@ -31,35 +31,19 @@ namespace Parcial
             this.perfil = perfil;
         }
 
-        public static List<Usuario> DeserealizarUsuarios(string path)
+        public static Usuario BuscarUsuario(List<Usuario> usuarios, string correo, string clave)
         {
-            List<Usuario> usuarios = new List<Usuario>(); 
+            Usuario usuario = new Usuario(); 
 
-            try
+            foreach (Usuario u in usuarios)
             {
-                using (System.IO.StreamReader sr = new System.IO.StreamReader(path))
-                {
-                    string json = sr.ReadToEnd();
-                    usuarios = (List<Usuario>)System.Text.Json.JsonSerializer.Deserialize(json, typeof(List<Usuario>));
-                }
-            }
-            
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
+                if (u.correo == correo && u.clave == clave)
+                    usuario = u;
             }
 
-            return usuarios;
-
+            return usuario;
         }
+
+     
     }
 }
-
-    /*
-     * 
-    [{"apellido":"Gorgen","nombre":"Corey","legajo":1,"correo":"cgorgen@vendedor.com","clave":"123abc45","perfil":"vendedor"},
-{ "apellido":"Harroll","nombre":"Ingrid","legajo":2,"correo":"iharroll@vendedor.com","clave":"qweasdzx","perfil":"vendedor"},
-{ "apellido":"Harris","nombre":"Steve","legajo":3,"correo":"sharris@maiden.com.uk","clave":"eddie666","perfil":"vendedor"},
-{ "apellido":"Robinson","nombre":"Tilda","legajo":4,"correo":"trobinson@super.com","clave":"12345678","perfil":"supervisor"},
-{ "apellido":"Jordan","nombre":"Michael","legajo":5,"correo":"admin@admin.com","clave":"12345678","perfil":"administrador"}]
-    */

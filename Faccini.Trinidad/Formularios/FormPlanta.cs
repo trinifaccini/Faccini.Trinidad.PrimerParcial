@@ -14,11 +14,12 @@ namespace Formularios
     public partial class FormPlanta : Form
     {
 
-        protected Planta planta; 
+        protected Planta planta;
 
         public Planta Planta
         {
             get { return planta; }
+            set { planta = value; }
         }
 
         public FormPlanta()
@@ -50,8 +51,8 @@ namespace Formularios
             float precio = float.Parse(this.txtPrecio.Text);
             int frecuenciaRiego = int.Parse(this.txtFrecuencia.Text);
             EEstacion estacionTransplante = (EEstacion)this.cbmBoxEstacion.SelectionStart;
-            bool aptaInterior = this.checkedListBoxEstacion.CheckedIndices.Contains(0);
-            bool aptaExterior = this.checkedListBoxEstacion.CheckedIndices.Contains(0);
+            bool aptaInterior = this.checkedListBoxAmbiente.CheckedIndices.Contains(0);
+            bool aptaExterior = this.checkedListBoxAmbiente.CheckedIndices.Contains(0);
         }
     }
 }

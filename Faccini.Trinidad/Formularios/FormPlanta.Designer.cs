@@ -39,7 +39,7 @@
             txtPrecio = new TextBox();
             txtFrecuencia = new TextBox();
             cbmBoxEstacion = new ComboBox();
-            checkedListBoxEstacion = new CheckedListBox();
+            checkedListBoxAmbiente = new CheckedListBox();
             txtAlturaActual = new TextBox();
             txtAlturaMax = new TextBox();
             txtAlturaTransplante = new TextBox();
@@ -141,21 +141,23 @@
             cbmBoxEstacion.Size = new Size(160, 23);
             cbmBoxEstacion.TabIndex = 10;
             // 
-            // checkedListBoxEstacion
+            // checkedListBoxAmbiente
             // 
-            checkedListBoxEstacion.FormattingEnabled = true;
-            checkedListBoxEstacion.Items.AddRange(new object[] { "Interior", "Exterior" });
-            checkedListBoxEstacion.Location = new Point(282, 59);
-            checkedListBoxEstacion.Name = "checkedListBoxEstacion";
-            checkedListBoxEstacion.Size = new Size(158, 40);
-            checkedListBoxEstacion.TabIndex = 11;
+            checkedListBoxAmbiente.FormattingEnabled = true;
+            checkedListBoxAmbiente.Items.AddRange(new object[] { "Interior", "Exterior" });
+            checkedListBoxAmbiente.Location = new Point(282, 59);
+            checkedListBoxAmbiente.Name = "checkedListBoxAmbiente";
+            checkedListBoxAmbiente.Size = new Size(158, 40);
+            checkedListBoxAmbiente.TabIndex = 11;
             // 
             // txtAlturaActual
             // 
+            txtAlturaActual.Enabled = false;
             txtAlturaActual.Location = new Point(282, 136);
             txtAlturaActual.Name = "txtAlturaActual";
             txtAlturaActual.Size = new Size(158, 23);
             txtAlturaActual.TabIndex = 12;
+            txtAlturaActual.Text = "0";
             // 
             // txtAlturaMax
             // 
@@ -182,17 +184,17 @@
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(130, 380);
+            btnAgregar.Location = new Point(128, 415);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(94, 42);
             btnAgregar.TabIndex = 16;
-            btnAgregar.Text = "AGREGAR";
+            btnAgregar.Text = "ACEPTAR";
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click;
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(264, 380);
+            btnCancelar.Location = new Point(262, 415);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(94, 42);
             btnCancelar.TabIndex = 17;
@@ -204,14 +206,14 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(489, 452);
+            ClientSize = new Size(489, 498);
             Controls.Add(btnCancelar);
             Controls.Add(btnAgregar);
             Controls.Add(txtAlturaTransplante);
             Controls.Add(lblAlturaTransplante);
             Controls.Add(txtAlturaMax);
             Controls.Add(txtAlturaActual);
-            Controls.Add(checkedListBoxEstacion);
+            Controls.Add(checkedListBoxAmbiente);
             Controls.Add(cbmBoxEstacion);
             Controls.Add(txtFrecuencia);
             Controls.Add(txtPrecio);
@@ -244,7 +246,7 @@
         protected TextBox txtPrecio;
         protected TextBox txtFrecuencia;
         protected ComboBox cbmBoxEstacion;
-        protected CheckedListBox checkedListBoxEstacion;
+        protected CheckedListBox checkedListBoxAmbiente;
         protected TextBox txtAlturaActual;
         protected TextBox txtAlturaMax;
         protected TextBox txtAlturaTransplante;

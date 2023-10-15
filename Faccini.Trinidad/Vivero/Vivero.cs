@@ -13,6 +13,10 @@
 
         private string nombreVivero;
 
+        #region Propiedades
+        public string NombreVivero { get { return nombreVivero; } }
+        #endregion
+
         private Vivero()
         {   
             listaPlantas = new List<Planta>();

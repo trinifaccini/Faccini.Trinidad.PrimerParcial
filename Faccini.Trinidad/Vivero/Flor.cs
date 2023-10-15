@@ -14,9 +14,18 @@ namespace Parcial
         #endregion
 
         #region Propiedades
+
+        public string Color { get { return color; } set { color = value;  } }
+        public bool TieneOlor { get {  return tieneOlor; } set { tieneOlor = value; } }
+
         #endregion
 
         #region Constructores
+
+        public Flor()
+        {
+
+        }
 
         // Recibe todos
         public Flor(string nombre, int frecuenciaRiego, EEstacion estacionTransplante, bool aptaInterior, bool aptaExterior, float alturaMax,
@@ -60,9 +69,9 @@ namespace Parcial
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Tipo: Flor - ");
+            sb.AppendLine($"Tipo: Flor\t");
             sb.Append(base.Mostrar());
-            sb.AppendLine($" - Color: {color}");
+            sb.AppendLine($"Color: {color}");
 
             return(sb.ToString());
         }

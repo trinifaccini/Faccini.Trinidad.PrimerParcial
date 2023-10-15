@@ -10,7 +10,7 @@ namespace Parcial
     public abstract class Planta
     {
         #region Atributos
-        public string nombre;
+        internal string nombre;
         internal float precio;
         internal DateTime ultimoRiego;
         internal int frecuenciaRiego;
@@ -24,13 +24,49 @@ namespace Parcial
         internal float alturaTransplante;
         #endregion
 
+        #region Propiedades
+        // PREGUNTAR SI ESTA BIEN
+        // devuelve true si nos encontramos en la estacion en la que se puede
+        // y tiene la altura necesaria 
+        internal bool Transpantable
+        {
+            get { return (this.ObtenerEstacion() == estacionTransplante && alturaActual > alturaTransplante); }
+        }
+        public string Nombre { get { return nombre; } set { nombre = value;  } }
+        public float Precio { get { return precio; } set { precio = value; } }
+        public string UltimoRiego { get { return ultimoRiego.ToString(); } set { ultimoRiego = ParsearFecha(value.ToString()); } }
+        public int FrecuenciaRiego { get { return frecuenciaRiego; } set { } }
+        public EEstacion EstacionTransplante { get { return estacionTransplante; } set { estacionTransplante = value; } }
+        public bool AptaInterior { get { return aptaInterior; } set { } }
+        public bool AptaExterior { get { return aptaExterior; } set { } }
+        public float AlturaMax { get { return alturaMax; } set { } }
+        public float AlturaActual { get { return alturaActual;  } set { } }
+        public float AlturaTransplante { get { return alturaTransplante; } set { } }
+
+        #endregion
+
         #region Constructores
+        public Planta() { }
+
+        private DateTime ParsearFecha(string fecha)
+        {
+            Console.Write("PARSEAR FECHA: ");
+            Console.WriteLine(fecha);
+            string[] dtSeparada = fecha.Split('/', ' ');
+            Console.WriteLine(dtSeparada[0] + dtSeparada[1] + dtSeparada[2]);
+            DateTime dt = new DateTime(int.Parse(dtSeparada[2]), int.Parse(dtSeparada[1]), int.Parse(dtSeparada[0]));
+            return dt;
+        }
+
         // Recibe todos -> llama al que recibe alturaActual 
-        public Planta(string nombre, DateTime ultimoRiego, int frecuenciaRiego, EEstacion estacionTransplante, bool aptaInterior, bool aptaExterior, 
+        public Planta(string nombre, string ultimoRiego, int frecuenciaRiego, EEstacion estacionTransplante, bool aptaInterior, bool aptaExterior, 
             float alturaMax, float alturaActual, float alturaTransplante,float precio): this(nombre, frecuenciaRiego, estacionTransplante,
                        aptaInterior, aptaExterior,alturaActual, alturaMax, alturaTransplante, precio)
         {
-            this.ultimoRiego = ultimoRiego;
+
+            Console.Write("CONSTRUCTOR PLANTA: ");
+            Console.WriteLine(ultimoRiego);
+            this.ultimoRiego = ParsearFecha(ultimoRiego);
         }
 
         // No recibe ultimoRiego -> llama al que no recibe ni ultimoRiego ni alturaActual
@@ -58,15 +94,7 @@ namespace Parcial
         }
         #endregion
 
-        #region Propiedades
-        // PREGUNTAR SI ESTA BIEN
-        // devuelve true si nos encontramos en la estacion en la que se puede
-        // y tiene la altura necesaria 
-        internal bool Transpantable {
-            get { return (this.ObtenerEstacion() == estacionTransplante && alturaActual > alturaTransplante); }
-        }
-
-        #endregion
+       
 
         #region Metodos
         private EEstacion ObtenerEstacion()
@@ -119,23 +147,24 @@ namespace Parcial
         }
 
         // este metodo lo DEBE implementar cada clase, segun que tipo sea hace crecer ciertos cm a la planta
+        
         internal abstract void CrecerPlanta();
 
         // si pasaron los dias necesarios, se hace crecer a la planta y devuelve true
-        private bool Regar()
+        public string Regar()
         {
             TimeSpan dif = DateTime.Now - this.ultimoRiego;
             int difDias = dif.Days;
 
             if (difDias >= frecuenciaRiego)
             {
-                this.ultimoRiego = DateTime.Now;
+                ultimoRiego = DateTime.Now;
                 CrecerPlanta();
-                return true;
+                return $"Regada - Altura actual de {nombre}: {alturaActual}";
             }
 
             else
-                return false;
+                return $"Aun no se puede regar - Debes esperar {frecuenciaRiego - difDias} días"; ;
         }
 
 
@@ -143,10 +172,9 @@ namespace Parcial
         {
             // MUESTRO SOLO INFO QUE QUIERO VER EN LA LISTA DEL FORM
             StringBuilder sb = new StringBuilder();
-            sb.Append($"Nombre {nombre} - ");
-            sb.AppendLine($"Altura actual: {alturaActual} - ");
-            sb.AppendLine($"Precio {precio}");
-
+            sb.Append($"Nombre {nombre}\t");
+            sb.AppendLine($"Altura actual: {alturaActual}\t");
+            sb.AppendLine($"Precio {precio}\t");
             return sb.ToString();
         }
 
