@@ -27,8 +27,20 @@ namespace Formularios
             InitializeComponent();
         }
 
-        private void FormPlanta_Load(object sender, EventArgs e)
+        internal virtual void FormPlanta_Load(object sender, EventArgs e)
         {
+            if (planta is not null)
+            {
+                txtNombre.Text = planta.Nombre;
+                txtAlturaActual.Text = planta.AlturaActual.ToString();
+                txtAlturaMax.Text = planta.AlturaMax.ToString();
+                txtAlturaTransplante.Text = planta.AlturaTransplante.ToString();
+                cbmBoxEstacion.SelectedIndex = (int)planta.EstacionTransplante;
+                txtPrecio.Text = planta.Precio.ToString();
+                checkedListBoxAmbiente.SetItemChecked(0, planta.AptaInterior);
+                checkedListBoxAmbiente.SetItemChecked(1, planta.AptaExterior);
+                txtFrecuencia.Text = planta.FrecuenciaRiego.ToString();
+            }
 
         }
 

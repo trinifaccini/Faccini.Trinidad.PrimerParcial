@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Parcial;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,31 @@ namespace Formularios
 {
     public partial class FormArbol : FormPlanta
     {
+
+        Arbol arbol;
         public FormArbol()
         {
             InitializeComponent();
+        }
+
+        public FormArbol(Arbol a) : this()
+        {
+            arbol = a;
+            base.Planta = a;
+        }
+
+        private void FormArbol_Load(object sender, EventArgs e)
+        {
+            if (arbol is not null)
+            {
+                chFruto.Checked = arbol.TieneFrutos;
+                cmbBoxPais.SelectedIndex = (int)arbol.PaisOrigen;
+            }
+        }
+
+        private void btnAgregar_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

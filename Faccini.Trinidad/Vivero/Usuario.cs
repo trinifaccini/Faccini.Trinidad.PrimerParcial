@@ -21,23 +21,48 @@ namespace Parcial
 
         }
 
-        public Usuario(string apellido, string nombre, int legajo, string correo, string clave, string perfil)
+        public Usuario(string correo, string clave)
         {
-            this.apellido = apellido;
-            this.nombre = nombre;
+            this.correo = correo;
+            this.clave = clave;
+            this.apellido = "";
+            this.nombre = "";
+            this.perfil = "";
+        }
+
+        public Usuario(string apellido, string nombre, int legajo, string correo, string clave, string perfil):this(correo, clave)
+        {
+        
             this.legajo = legajo;
             this.correo = correo;
             this.clave = clave;
             this.perfil = perfil;
         }
 
+        // USARLO EN LA BARRA DE TAREAS
+        public override string ToString()
+        {
+            return $"{this.nombre} {this.apellido}";
+        }
+
+        public static bool operator == (Usuario u1, Usuario u2)
+        {
+            return (u1.correo == u2.correo && u1.clave == u2.clave);
+        }
+
+        public static bool operator !=(Usuario u1, Usuario u2)
+        {
+            return !(u1 == u2);
+        }
+
         public static Usuario BuscarUsuario(List<Usuario> usuarios, string correo, string clave)
         {
-            Usuario usuario = new Usuario(); 
+
+            Usuario usuario = new Usuario(correo, clave); 
 
             foreach (Usuario u in usuarios)
             {
-                if (u.correo == correo && u.clave == clave)
+                if (u == usuario)
                     usuario = u;
             }
 

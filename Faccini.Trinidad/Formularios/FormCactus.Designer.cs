@@ -33,6 +33,10 @@
             chEspinas = new CheckBox();
             SuspendLayout();
             // 
+            // btnAgregar
+            // 
+            btnAgregar.Click += btnAgregar_Click_1;
+            // 
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
@@ -72,6 +76,7 @@
             Controls.Add(lblTitulo);
             Name = "FormCactus";
             Text = "FormCactus";
+            Load += FormCactus_Load;
             Controls.SetChildIndex(txtNombre, 0);
             Controls.SetChildIndex(txtPrecio, 0);
             Controls.SetChildIndex(txtFrecuencia, 0);

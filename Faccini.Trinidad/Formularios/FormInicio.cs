@@ -28,6 +28,10 @@ namespace Formularios
         private void FormInicio_Load(object sender, EventArgs e)
         {
             label1.Text = $"BIENVENIDO AL SISTEMA DEL VIVERO: {vivero.NombreVivero}";
+            lblOperador.Text = $"Operador: {usuario.ToString()}";
+
+            lblFecha.Text = $"Fecha: {DateTime.Now.ToString().Substring(0, 10)}";
+
             if (usuario.perfil != "vendedor")
             {
                 btnAgregarArbol.Visible = true;
@@ -136,9 +140,9 @@ namespace Formularios
             else if (ordenamiento == "Descendente" && tipoOrdenamiento == "Altura maxima")
                 vivero.listaPlantas.Sort(Vivero.OrdenarPorAlturaMaxDesc);
             else if (ordenamiento == "Ascendente")
-                vivero.listaPlantas = vivero.listaPlantas.OrderBy(p => p.nombre).ToList();
+                vivero.listaPlantas = vivero.listaPlantas.OrderBy(p => p.Nombre).ToList();
             else
-                vivero.listaPlantas = vivero.listaPlantas.OrderByDescending(p => p.nombre).ToList();
+                vivero.listaPlantas = vivero.listaPlantas.OrderByDescending(p => p.Nombre).ToList();
 
             ActualizarVisor();
         }

@@ -24,6 +24,8 @@ namespace Parcial
         #region Constructores
         
         public Arbol() { }
+
+
         // Recibe todos
         public Arbol(string nombre, int frecuenciaRiego, EEstacion estacionTransplante, bool aptaInterior, bool aptaExterior,
             float alturaMax, float alturaTransplante, bool tieneFrutos, EPais paisOrigen, float precio) :

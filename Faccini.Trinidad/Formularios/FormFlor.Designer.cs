@@ -108,7 +108,6 @@
         #endregion
 
         private Label lblColor;
-        private RadioButton btnOlor;
         private TextBox txtColor;
         private Label lblTitulo;
         private CheckBox chBoxOlor;

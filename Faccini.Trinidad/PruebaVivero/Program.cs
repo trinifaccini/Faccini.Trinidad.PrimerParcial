@@ -43,18 +43,18 @@ public class Program
         List<Planta> plantas = new List<Planta> { arbol };
 
 
-        Serializador.SerealizarPlantas(path, plantas); //FUNCIONA OK
+        //Serializador.SerealizarPlantas(path, plantas);
 
-        /*
-        var obj_son = System.Text.Json.JsonSerializer.Serialize(arbol);
+        var obj_son = System.Text.Json.JsonSerializer.Serialize(plantas);
         Console.WriteLine(obj_son);
-        Arbol a = (Arbol)System.Text.Json.JsonSerializer.Deserialize(obj_son, typeof(Arbol));
+        
+        //Arbol a = (Arbol)System.Text.Json.JsonSerializer.Deserialize(obj_son, typeof(Arbol));
 
-        Console.WriteLine(a.PaisOrigen);
-        Console.WriteLine(a.UltimoRiego);
-        Console.WriteLine(a.EstacionTransplante);
-        Console.WriteLine(p);
-        */
+        //Console.WriteLine(a.PaisOrigen);
+        //Console.WriteLine(a.UltimoRiego);
+        //Console.WriteLine(a.EstacionTransplante);
+        //Console.WriteLine(p);
+        
 
 
 

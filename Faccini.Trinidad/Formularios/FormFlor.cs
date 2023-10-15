@@ -23,6 +23,7 @@ namespace Formularios
         public FormFlor(Flor f) : this()
         {
             flor = f;
+            base.Planta = flor;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -55,19 +56,13 @@ namespace Formularios
 
         private void FormFlor_Load(object sender, EventArgs e)
         {
+
             if (flor is not null)
             {
-                txtNombre.Text = flor.Nombre;
+                
                 txtColor.Text = flor.Color;
-                txtAlturaActual.Text = flor.AlturaActual.ToString();
-                txtAlturaMax.Text = flor.AlturaMax.ToString();
-                txtAlturaTransplante.Text = flor.AlturaTransplante.ToString();
-                cbmBoxEstacion.SelectedIndex = (int)flor.EstacionTransplante;
                 chBoxOlor.Checked = flor.TieneOlor;
-                txtPrecio.Text = flor.Precio.ToString();
-                checkedListBoxAmbiente.SetItemChecked(0, flor.AptaInterior);
-                checkedListBoxAmbiente.SetItemChecked(1, flor.AptaExterior);
-                txtFrecuencia.Text = flor.FrecuenciaRiego.ToString();
+               
             }
         }
 

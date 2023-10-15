@@ -59,7 +59,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(145, 46);
+            label1.Location = new Point(233, 46);
             label1.Name = "label1";
             label1.Size = new Size(477, 23);
             label1.TabIndex = 0;
@@ -235,7 +235,6 @@
             btnRegar.TabIndex = 12;
             btnRegar.Text = "REGAR PLANTA SELECCIONADA";
             btnRegar.UseVisualStyleBackColor = true;
-            btnRegar.Visible = false;
             btnRegar.Click += btnRegar_Click;
             // 
             // toolStrip1
@@ -261,8 +260,8 @@
             // lblFecha
             // 
             lblFecha.Name = "lblFecha";
-            lblFecha.Size = new Size(38, 22);
-            lblFecha.Text = "Fecha";
+            lblFecha.Size = new Size(44, 22);
+            lblFecha.Text = "Fecha: ";
             // 
             // FormInicio
             // 

@@ -30,13 +30,14 @@
         {
             lblTitulo = new Label();
             lblPais = new Label();
-            comboBox1 = new ComboBox();
+            cmbBoxPais = new ComboBox();
             chFruto = new CheckBox();
             SuspendLayout();
             // 
             // btnAgregar
             // 
             btnAgregar.Location = new Point(128, 447);
+            btnAgregar.Click += btnAgregar_Click_1;
             // 
             // btnCancelar
             // 
@@ -60,14 +61,14 @@
             lblPais.TabIndex = 22;
             lblPais.Text = "Pais de origen";
             // 
-            // comboBox1
+            // cmbBoxPais
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Argentina", "USA", "Paraguay", "Brasil" });
-            comboBox1.Location = new Point(280, 327);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(160, 23);
-            comboBox1.TabIndex = 23;
+            cmbBoxPais.FormattingEnabled = true;
+            cmbBoxPais.Items.AddRange(new object[] { "Argentina", "USA", "Paraguay", "Brasil" });
+            cmbBoxPais.Location = new Point(280, 327);
+            cmbBoxPais.Name = "cmbBoxPais";
+            cmbBoxPais.Size = new Size(160, 23);
+            cmbBoxPais.TabIndex = 23;
             // 
             // chFruto
             // 
@@ -85,11 +86,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(487, 516);
             Controls.Add(chFruto);
-            Controls.Add(comboBox1);
+            Controls.Add(cmbBoxPais);
             Controls.Add(lblPais);
             Controls.Add(lblTitulo);
             Name = "FormArbol";
             Text = "FormArbol";
+            Load += FormArbol_Load;
             Controls.SetChildIndex(txtNombre, 0);
             Controls.SetChildIndex(txtPrecio, 0);
             Controls.SetChildIndex(txtFrecuencia, 0);
@@ -103,7 +105,7 @@
             Controls.SetChildIndex(btnCancelar, 0);
             Controls.SetChildIndex(lblTitulo, 0);
             Controls.SetChildIndex(lblPais, 0);
-            Controls.SetChildIndex(comboBox1, 0);
+            Controls.SetChildIndex(cmbBoxPais, 0);
             Controls.SetChildIndex(chFruto, 0);
             ResumeLayout(false);
             PerformLayout();
@@ -113,7 +115,7 @@
 
         private Label lblTitulo;
         private Label lblPais;
-        private ComboBox comboBox1;
+        private ComboBox cmbBoxPais;
         private CheckBox chFruto;
     }
 }
