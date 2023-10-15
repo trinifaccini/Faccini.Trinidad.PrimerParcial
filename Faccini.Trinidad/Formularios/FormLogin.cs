@@ -33,7 +33,11 @@ namespace Formularios
 
             if (u.nombre != null)
             {
-                FormInicio inicio = new FormInicio(u);
+                string pathU = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\usuarios.log";
+                string pathP = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\PLANTAS_DATA.xml";
+
+                u.CrearLogUsuario(pathU);
+                FormInicio inicio = new FormInicio(u, pathP);
                 this.Hide();
                 inicio.Show();
             }

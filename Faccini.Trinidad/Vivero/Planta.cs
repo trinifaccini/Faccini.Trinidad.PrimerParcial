@@ -4,9 +4,15 @@ using System.Linq;
 using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Parcial
 {
+
+    [XmlInclude(typeof(Cactus))]
+    [XmlInclude(typeof(Arbol))]
+    [XmlInclude(typeof(Flor))]
+    [XmlRoot("Planta")]
     public abstract class Planta
     {
         #region Atributos
@@ -94,7 +100,21 @@ namespace Parcial
         }
         #endregion
 
-       
+
+        #region Sobreescritura operadores
+        public static bool operator ==(Planta a, Planta b)
+        {
+            Console.WriteLine("== DE PLANTA");
+
+            return a.nombre == b.nombre;
+        }
+
+        public static bool operator !=(Planta a, Planta b)
+        {
+            return !(a == b);
+        }
+
+        #endregion
 
         #region Metodos
         private EEstacion ObtenerEstacion()
@@ -147,10 +167,9 @@ namespace Parcial
         }
 
         // este metodo lo DEBE implementar cada clase, segun que tipo sea hace crecer ciertos cm a la planta
-        
         internal abstract void CrecerPlanta();
 
-        // si pasaron los dias necesarios, se hace crecer a la planta y devuelve true
+        // si pasaron los dias necesarios, se hace crecer a la planta y devuelve un mensaje
         public string Regar()
         {
             TimeSpan dif = DateTime.Now - this.ultimoRiego;
@@ -166,42 +185,42 @@ namespace Parcial
             else
                 return $"Aun no se puede regar - Debes esperar {frecuenciaRiego - difDias} días"; ;
         }
-
-
         public virtual string Mostrar()
         {
             // MUESTRO SOLO INFO QUE QUIERO VER EN LA LISTA DEL FORM
             StringBuilder sb = new StringBuilder();
-            sb.Append($"Nombre {nombre}\t");
-            sb.AppendLine($"Altura actual: {alturaActual}\t");
-            sb.AppendLine($"Precio {precio}\t");
+            sb.Append(this.ToString());
             return sb.ToString();
         }
 
         public override bool Equals(object? obj)
         {
-            Console.WriteLine("EQUALS DE PLANTA");
-            
-            Planta planta = (Planta)obj;
-            return (planta is not null && this == planta);
+            Console.Write("EQUALS DE PLANTA");
+            if (obj is Planta)
+                return this == (Planta)obj;
+
+            return false;
+        }
+
+        public bool Equals(Planta p)
+        {
+            if (p == null) return false;
+            return (this == p);
+        }
+
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append($"Nombre {nombre}\t");
+            sb.Append($"Altura actual: {alturaActual}\t");
+            sb.Append($"Precio {precio}\t");
+            return sb.ToString();
         }
 
         #endregion
 
-        #region Sobreescritura operadores
-        public static bool operator ==(Planta a, Planta b)
-        {
-            Console.WriteLine("== DE PLANTA");
 
-            return a.nombre == b.nombre;
-        }
-
-        public static bool operator !=(Planta a, Planta b)
-        {
-            return !(a == b);
-        }
-
-        #endregion
 
         #region Metodos ordenamiento
 

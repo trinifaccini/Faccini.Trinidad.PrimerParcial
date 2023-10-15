@@ -3,20 +3,18 @@
     public class Vivero
     {
 
+        #region Atributos
+
         public List<Planta> listaPlantas;
-
-        /*
-        private List<Arbol> listaArboles;
-        private List<Cactus> listaCactus;
-        private List<Flor> listaFlores;
-        */
-
         private string nombreVivero;
+
+        #endregion
 
         #region Propiedades
         public string NombreVivero { get { return nombreVivero; } }
         #endregion
 
+        #region Constructores
         private Vivero()
         {   
             listaPlantas = new List<Planta>();
@@ -27,26 +25,28 @@
         {
             this.nombreVivero = nombreVivero;
         }
+        #endregion
 
+        #region Sobreescritura de operadores
         public static bool operator ==(Vivero v, Planta p)
         {
+            Console.WriteLine("== DE VIVERO");
+            return v.listaPlantas.Contains(p);
+            //foreach (Planta planta in v.listaPlantas)
+            //{
+            //    if (planta is Arbol && p is Arbol)
+            //        return (Arbol)planta == (Arbol)p;
 
-            Console.WriteLine("ENTRA A == DE VIVERO");
-            foreach (Planta planta in v.listaPlantas)
-            {
-                if (planta is Arbol && p is Arbol)
-                    return (Arbol)planta == (Arbol)p;
+            //    else if (planta is Cactus && p is Cactus)
+            //        return (Cactus)planta == (Cactus)p;
 
-                else if (planta is Cactus && p is Cactus)
-                    return (Cactus)planta == (Cactus)p;
+            //    else if (planta is Flor && p is Flor)
+            //        return (Flor)planta == (Flor)p;
+            //    else
+            //        return (planta == p);
+            //}
 
-                else if (planta is Flor && p is Flor)
-                    return (Flor)planta == (Flor)p;
-                else
-                    return (planta == p);
-            }
-
-            return false;
+            //return false;
         }
 
         public static bool operator !=(Vivero v, Planta p)
@@ -56,12 +56,14 @@
             return !(v == p);
         }
 
+        #endregion
 
         public static Vivero operator +(Vivero v, Planta p)
         {
             if (v != p)
                 v.listaPlantas.Add(p);
-
+            else
+                Console.WriteLine("Ya existe la planta");
             return v;
         }
 
@@ -69,15 +71,17 @@
         {
             if (v == p)
                 v.listaPlantas.Remove(p);
-
+            else
+                Console.WriteLine("No existe la planta a remover");
             return v;
         }
 
         public void MostrarInfoVivero()
         {
+            string[] infoPlantas = { };
             foreach(Planta p in listaPlantas)
             {
-                p.Mostrar(); // llama vien al mostrar de cada clase 
+                infoPlantas.Append(p.Mostrar());
             }
         }
 

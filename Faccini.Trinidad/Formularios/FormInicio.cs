@@ -20,9 +20,15 @@ namespace Formularios
 
         public FormInicio(Usuario usuario)
         {
+    
             InitializeComponent();
             vivero = new Vivero("ARRAYANES");
             this.usuario = usuario;
+        }
+
+        public FormInicio(Usuario usuario, string path):this(usuario)
+        {
+            vivero.listaPlantas = Serializador.DeserealizarPlantas(path);
         }
 
         private void FormInicio_Load(object sender, EventArgs e)
@@ -44,6 +50,8 @@ namespace Formularios
                 btnEliminar.Visible = true;
                 btnModificar.Visible = true;
             }
+
+            ActualizarVisor();
         }
 
         private void ActualizarVisor()
@@ -58,10 +66,15 @@ namespace Formularios
 
         private void AgregarPlanta(FormPlanta frm)
         {
+
             if (frm.DialogResult == DialogResult.OK)
             {
                 vivero += frm.Planta;
-                ActualizarVisor();
+                if (vivero.listaPlantas.Count == lstPlantas.Items.Count)
+                    MessageBox.Show("No se pudo añadir la planta - Ya existente");
+
+                else
+                    ActualizarVisor();
             }
         }
 
@@ -107,11 +120,11 @@ namespace Formularios
             FormPlanta frm;
 
             if (vivero.listaPlantas[index] is Arbol)
-                frm = new FormArbol();
+                frm = new FormArbol((Arbol)vivero.listaPlantas[index], true);
             else if (vivero.listaPlantas[index] is Flor)
-                frm = new FormFlor((Flor)vivero.listaPlantas[index]);
+                frm = new FormFlor((Flor)vivero.listaPlantas[index], true);
             else
-                frm = new FormCactus();
+                frm = new FormCactus((Cactus)vivero.listaPlantas[index], true);
 
             frm.ShowDialog();
             if (frm.DialogResult == DialogResult.OK)
@@ -123,7 +136,21 @@ namespace Formularios
 
         private void btnDetalles_Click(object sender, EventArgs e)
         {
+            int index = lstPlantas.SelectedIndex;
 
+            if (index == -1) return;
+
+            FormPlanta frm;
+
+            if (vivero.listaPlantas[index] is Arbol)
+                frm = new FormArbol((Arbol)vivero.listaPlantas[index], false);
+            else if (vivero.listaPlantas[index] is Flor)
+                frm = new FormFlor((Flor)vivero.listaPlantas[index], false);
+            else
+                frm = new FormCactus((Cactus)vivero.listaPlantas[index], false);
+
+            frm.ShowDialog();
+      
         }
 
         private void btnOrden_Click(object sender, EventArgs e)
@@ -156,6 +183,21 @@ namespace Formularios
             Planta planta = vivero.listaPlantas[index];
 
             MessageBox.Show(planta.Regar());
+        }
+
+        private void FormInicio_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro que quieres salir?", "Apagando sistema", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+
+            else
+            {
+                string path = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\PLANTAS_DATA.xml";
+                Serializador.SerealizarPlantas(path, vivero.listaPlantas);
+                e.Cancel = false;
+            }
         }
     }
 }

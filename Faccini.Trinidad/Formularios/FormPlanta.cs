@@ -27,6 +27,39 @@ namespace Formularios
             InitializeComponent();
         }
 
+        /*
+        public FormPlanta()
+        {
+            InitializeComponent();
+            DeshabilitarControles();
+        }
+
+        public FormPlanta(bool editable):this()
+        {
+            if (editable)
+                HabilitarControles();
+        }
+        */
+
+        internal void DeshabilitarControles()
+        {
+            foreach (Control c in this.Controls)
+            {
+                if (c is not Label)
+                {
+                    c.Enabled = false;
+                }
+            }
+        }
+
+        internal void HabilitarControles()
+        {
+            foreach (Control c in this.Controls)
+            {
+                c.Enabled = true;
+            }
+        }
+
         internal virtual void FormPlanta_Load(object sender, EventArgs e)
         {
             if (planta is not null)
@@ -41,11 +74,6 @@ namespace Formularios
                 checkedListBoxAmbiente.SetItemChecked(1, planta.AptaExterior);
                 txtFrecuencia.Text = planta.FrecuenciaRiego.ToString();
             }
-
-        }
-
-        private void FormPlanta_FormClosing(object sender, FormClosingEventArgs e)
-        {
 
         }
 

@@ -46,7 +46,6 @@
             lblColor.Size = new Size(85, 15);
             lblColor.TabIndex = 16;
             lblColor.Text = "Color de la flor";
-            lblColor.Click += label1_Click;
             // 
             // txtColor
             // 

@@ -284,6 +284,7 @@
             Controls.Add(label1);
             Name = "FormInicio";
             Text = "Inicio";
+            FormClosing += FormInicio_FormClosing;
             Load += FormInicio_Load;
             grpBoxTipoOrdenamiento.ResumeLayout(false);
             grpBoxTipoOrdenamiento.PerformLayout();

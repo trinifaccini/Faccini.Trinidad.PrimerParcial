@@ -4,19 +4,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
+using System.Xml;
 
 namespace Parcial
 {
     public static class Serializador
     {
-
         public static List<Usuario> DeserealizarUsuarios(string path)
         {
             List<Usuario> usuarios = new List<Usuario>();
 
             try
             {
-                using (System.IO.StreamReader sr = new System.IO.StreamReader(path))
+                using (StreamReader sr = new StreamReader(path))
                 {
                     string json = sr.ReadToEnd();
                     usuarios = (List<Usuario>)System.Text.Json.JsonSerializer.Deserialize(json, typeof(List<Usuario>));
@@ -34,15 +35,12 @@ namespace Parcial
 
         public static void SerealizarPlantas(string path, List<Planta> plantas)
         {
-            System.Text.Json.JsonSerializerOptions opciones = new System.Text.Json.JsonSerializerOptions();
-            opciones.WriteIndented = true;
             try
             {
-                using (System.IO.StreamWriter sw = new System.IO.StreamWriter(path))
+                using (XmlTextWriter writer = new XmlTextWriter(path, System.Text.Encoding.UTF8))
                 {
-                    var obj_son = System.Text.Json.JsonSerializer.Serialize(plantas, opciones);
-                    Console.WriteLine(obj_son);
-                    sw.Write(obj_son.ToString());
+                    XmlSerializer ser = new XmlSerializer(typeof(List<Planta>));
+                    ser.Serialize(writer, plantas);
                 }
             }
 
@@ -50,7 +48,6 @@ namespace Parcial
             {
                 Console.WriteLine(ex.Message);
             }
-
         }
 
         public static List<Planta> DeserealizarPlantas(string path)
@@ -59,12 +56,11 @@ namespace Parcial
 
             try
             {
-                using (System.IO.StreamReader sr = new System.IO.StreamReader(path))
+                using (XmlTextReader reader = new XmlTextReader(path)) 
                 {
-                    string json = sr.ReadToEnd();
-                    Console.WriteLine(json);
-                    plantas = (List<Planta>)System.Text.Json.JsonSerializer.Deserialize(json, typeof(List<Planta>));
-                    Console.WriteLine(plantas[0].precio);
+                    XmlSerializer ser = new XmlSerializer(typeof(List<Planta>));
+                    plantas = (List<Planta>)ser.Deserialize(reader);
+                    Console.WriteLine(plantas[0].AlturaActual);
                 }
             }
 
@@ -74,7 +70,25 @@ namespace Parcial
             }
 
             return plantas;
+              
+        }
 
+        public static string[] LeerArchivoLogs(string path)
+        {
+
+            string[] lineas = {};
+
+            try
+            {
+                lineas = File.ReadAllLines(path);
+            }
+
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            return lineas;
         }
 
     }

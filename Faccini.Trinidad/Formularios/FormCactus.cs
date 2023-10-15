@@ -19,10 +19,14 @@ namespace Formularios
             InitializeComponent();
         }
 
-        public FormCactus(Cactus c) : this()
+        public FormCactus(Cactus c, bool editable) : this()
         {
             cactus = c;
             base.Planta = c;
+            if (editable)
+            {
+                HabilitarControles();
+            }
         }
 
         private void btnAgregar_Click_1(object sender, EventArgs e)
@@ -49,12 +53,10 @@ namespace Formularios
 
         private void FormCactus_Load(object sender, EventArgs e)
         {
-
             if (cactus is not null)
             {
                 chEspinas.Checked = cactus.TieneEspinas;
                 chFlor.Checked = cactus.TieneFlores;
-               
             }
         }
     }

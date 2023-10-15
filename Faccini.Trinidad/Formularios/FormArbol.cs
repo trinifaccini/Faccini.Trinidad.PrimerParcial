@@ -20,10 +20,14 @@ namespace Formularios
             InitializeComponent();
         }
 
-        public FormArbol(Arbol a) : this()
+        public FormArbol(Arbol a, bool editable) : this()
         {
             arbol = a;
             base.Planta = a;
+            if (editable)
+            {
+                HabilitarControles();
+            }
         }
 
         private void FormArbol_Load(object sender, EventArgs e)

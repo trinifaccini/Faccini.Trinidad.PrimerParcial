@@ -20,16 +20,16 @@ namespace Formularios
             InitializeComponent();
         }
 
-        public FormFlor(Flor f) : this()
+        public FormFlor(Flor f, bool editable) : this()
         {
             flor = f;
             base.Planta = flor;
+
+            if(editable == false)
+                DeshabilitarControles();
+
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         internal override void btnAgregar_Click(object sender, EventArgs e)
         {

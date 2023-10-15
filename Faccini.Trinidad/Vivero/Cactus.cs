@@ -55,11 +55,11 @@ namespace Parcial
         #region Sobreescritura operadores
         public static bool operator ==(Cactus a, Cactus b)
         {
+            Console.WriteLine("== DE CACTUS");
             return (a.nombre == b.nombre && 
                 a.precio == b.precio && 
                 a.alturaActual == b.alturaActual && 
-                a.tieneEspinas 
-                && a.tieneEspinas == b.tieneEspinas);
+                a.tieneEspinas == b.tieneEspinas);
         }
 
         public static bool operator !=(Cactus a, Cactus b)
@@ -72,14 +72,19 @@ namespace Parcial
         #region Metodos
         public override bool Equals(object? obj)
         {
-            return base.Equals(obj);
+            Console.WriteLine("EQUALS DE CACTUS");
+
+            if (obj is Cactus)
+                return this == (Cactus)obj;
+
+            return false;
         }
 
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
+            sb.Append($"Cactus \t");
             sb.Append(base.ToString());
-
 
             return sb.ToString();
         }

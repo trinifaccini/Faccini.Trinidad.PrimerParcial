@@ -56,7 +56,10 @@ namespace Parcial
 
         public static bool operator ==(Flor a, Flor b)
         {
-            return (a.nombre == b.nombre && a.precio == b.precio && a.alturaActual == b.alturaActual && a.tieneOlor == b.tieneOlor);
+            return (a.nombre == b.nombre && 
+                a.precio == b.precio && 
+                a.alturaActual == b.alturaActual && 
+                a.tieneOlor == b.tieneOlor);
         }
 
         public static bool operator !=(Flor a, Flor b)
@@ -69,8 +72,8 @@ namespace Parcial
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Tipo: Flor\t");
-            sb.Append(base.Mostrar());
+            sb.AppendLine($"Tipo: ");
+            sb.Append(this.ToString());
             sb.AppendLine($"Color: {color}");
 
             return(sb.ToString());
@@ -79,15 +82,20 @@ namespace Parcial
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
+            sb.Append($"Flor \t");
             sb.Append(base.ToString());
-
-
+            
             return sb.ToString();
         }
 
         public override bool Equals(object? obj)
         {
-            return base.Equals(obj);
+            Console.WriteLine("EQUALS DE FLOR");
+
+            if (obj is Flor)
+                return this == (Flor)obj;
+
+            return false;
         }
 
         internal override void CrecerPlanta()

@@ -6,61 +6,33 @@ public class Program
     {
         
         Planta arbol = new Arbol("Arrayan", 10, (int)EEstacion.Verano, true, false, 2000, 200,true, EPais.USA, 2000); // ESTE SI
-        /*
-        Arbol arbol1 = new Arbol("Arrayan", 10, EEstacion.Primavera, false, true, 2500, 150,true, EPais.USA, 450089); // ESTE NO
+        Planta arbol1 = new Arbol("Arrayan", 10, (int)EEstacion.Verano, true, false, 2000, 200,true, EPais.USA, 2000); // ESTE SI
         Arbol arbol2 = new Arbol("Arrayan", 10, EEstacion.Primavera, false, true, 3000, 150,false, EPais.USA, 450089); // ESTE SI
-        Flor flor = new Flor("Lupines", 5, EEstacion.Otonio, false, true, 200, 100, 2000);
-
+      
+        Flor flor = new Flor("Lupines", 5, EEstacion.Otonio, false, true, 200, 100, "rosa", true, 200);
+        Flor flor1 = new Flor("Lupines", 5, EEstacion.Otonio, false, true, 200, 100, "rosa", true, 200);
+        Flor flor2 = new Flor("Retama", 5, EEstacion.Otonio, false, true, 200, 100, "rosa", true, 200);
 
         Vivero vivero = new Vivero("Los arrayanes");
 
-        Console.WriteLine(vivero + arbol);
-        Console.WriteLine(vivero + arbol1); 
-        Console.WriteLine(vivero + arbol2); 
-        Console.WriteLine(vivero + flor);
+        vivero += arbol;
+        vivero += arbol1;
+        vivero += arbol2;
+        vivero += flor;
+        vivero += flor1;
+        vivero += flor2;
 
-        vivero.MostrarInfoVivero();
+        Console.WriteLine(vivero.listaPlantas[0]);
+        Console.WriteLine(vivero.listaPlantas[1]);
+        Console.WriteLine(vivero.listaPlantas[2]);
+        Console.WriteLine(vivero.listaPlantas[3]);
 
-        vivero.listaPlantas.Sort(Vivero.OrdenarPorAlturaMaxAsc);
+        string path = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\PLANTAS_DATA.xml";
 
-        vivero.MostrarInfoVivero();
-        */
+        Serializador.SerealizarPlantas(path, vivero.listaPlantas);
 
-        //DESERIALIZAR
-
-        //string path = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\MOCK_DATA.json";
-        //using (System.IO.StreamReader sr = new System.IO.StreamReader(path))
-        //{
-        //    string json = sr.ReadToEnd();
-        //    Console.Write(json);
-        //    List<Usuario> usuarios = (List<Usuario>)System.Text.Json.JsonSerializer.Deserialize(json, typeof(List<Usuario>));
-        //    Console.WriteLine(usuarios[0].apellido);
-
-        //}7
-
-        string path = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\PLANTAS_DATA.json";
-
-        List<Planta> plantas = new List<Planta> { arbol };
-
-
-        //Serializador.SerealizarPlantas(path, plantas);
-
-        var obj_son = System.Text.Json.JsonSerializer.Serialize(plantas);
-        Console.WriteLine(obj_son);
+        List<Planta> plantas = Serializador.DeserealizarPlantas(path);
         
-        //Arbol a = (Arbol)System.Text.Json.JsonSerializer.Deserialize(obj_son, typeof(Arbol));
-
-        //Console.WriteLine(a.PaisOrigen);
-        //Console.WriteLine(a.UltimoRiego);
-        //Console.WriteLine(a.EstacionTransplante);
-        //Console.WriteLine(p);
-        
-
-
-
-
-
-
     }
 
 

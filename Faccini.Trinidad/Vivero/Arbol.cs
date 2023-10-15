@@ -75,9 +75,7 @@ namespace Parcial
         internal override void CrecerPlanta()
         {
             if (alturaActual + 20 <= alturaMax)
-            {
                 alturaActual += 20;
-            }
         }
 
         public override string Mostrar()
@@ -87,23 +85,25 @@ namespace Parcial
             sb.AppendLine($"Tipo: Arbol\t");
             sb.Append(base.Mostrar());
             sb.AppendLine($"Pais: {paisOrigen}\t");
-
             return (sb.ToString());
         }
 
         public override string ToString()
         {
-
             StringBuilder sb = new StringBuilder();
+            sb.Append($"Arbol \t");
             sb.Append(base.ToString());
-
-
             return sb.ToString();
         }
 
         public override bool Equals(object? obj)
         {
-            return base.Equals(obj);
+            Console.WriteLine("EQUALS DE ARBOL");
+
+            if (obj is Arbol)
+                return this == (Arbol)obj;
+
+            return false;
         }
 
         #endregion

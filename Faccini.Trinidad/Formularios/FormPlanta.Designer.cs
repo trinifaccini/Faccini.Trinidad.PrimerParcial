@@ -227,7 +227,6 @@
             Controls.Add(lblNombre);
             Name = "FormPlanta";
             Text = "FormPlanta";
-            FormClosing += FormPlanta_FormClosing;
             Load += FormPlanta_Load;
             ResumeLayout(false);
             PerformLayout();

@@ -39,7 +39,6 @@ namespace Parcial
             this.perfil = perfil;
         }
 
-        // USARLO EN LA BARRA DE TAREAS
         public override string ToString()
         {
             return $"{this.nombre} {this.apellido}";
@@ -68,6 +67,23 @@ namespace Parcial
 
             return usuario;
         }
+
+        public void CrearLogUsuario(string path)
+        {
+            string fechaHora = DateTime.Now.ToString();
+
+            StringBuilder sb = new StringBuilder();
+            sb.Append($"Usuario ingresado: {this.ToString()}");
+            sb.Append($" - Fecha y hora de ingreso: {fechaHora}");
+
+            using (StreamWriter sw = new StreamWriter(path, true))
+            {
+                sw.WriteLine(sb.ToString());
+            }
+
+        }
+
+
 
      
     }
