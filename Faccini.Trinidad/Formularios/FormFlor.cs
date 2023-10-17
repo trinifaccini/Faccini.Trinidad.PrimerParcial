@@ -30,7 +30,7 @@ namespace Formularios
             if (verificadoGeneral == false)
                 return false;
 
-            if (txtColor.Text == "" || Validador.VerificarEntero(txtColor.Text) || Validador.VerificarFloat(txtColor.Text))
+            if (txtColor.Text == "" || Validador.ValidarEntero(txtColor.Text) || Validador.ValidarFloat(txtColor.Text))
             {
                 MessageBox.Show($"Ingresar un color para la planta", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;

@@ -1,6 +1,7 @@
 ﻿using Parcial;
 using Utilidades;
 using System.Data;
+using System.IO;
 
 namespace Formularios
 {
@@ -17,18 +18,51 @@ namespace Formularios
             vivero = new Vivero("ARRAYANES");
         }
 
-        public FormInicio(Usuario usuario):this()
+        public FormInicio(Usuario usuario) : this()
         {
             this.usuario = usuario;
+            AbrirArchivoPlantas();
         }
 
-        public FormInicio(Usuario usuario, string path):this(usuario)
+        public void AbrirArchivoPlantas()
         {
-            List<Planta>? aux = Serializador.DeserealizarPlantas(path);
-            if (aux is not null)
-                vivero.listaPlantas = aux;
+            openFileDialog1.Title = "Elige el archivo de plantas a abrir";
+            openFileDialog1.ShowDialog();
+
+            if (File.Exists(openFileDialog1.FileName))
+            {
+                List<Planta>? aux = Serializador.DeserealizarPlantas(openFileDialog1.FileName);
+                if (aux is not null)
+                    vivero.listaPlantas = aux;
+            }
+        }
+
+        public bool GuardarArchivoPlantas()
+        {
+            saveFileDialog1.Title = "Elige donde guardar la lista de plantas";
+
+            try
+            {
+                if(saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    if (File.Exists(saveFileDialog1.FileName))
+                    { 
+                        Serializador.SerealizarPlantas(saveFileDialog1.FileName, vivero.listaPlantas);
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+
+            catch(Exception e)
+            {
+                MessageBox.Show("Error al guardar");
+                return false;
+            }
 
         }
+
 
 
         private void FormInicio_Load(object sender, EventArgs e)
@@ -149,7 +183,7 @@ namespace Formularios
                 frm = new FormCactus((Cactus)vivero.listaPlantas[index], false);
 
             frm.ShowDialog();
-      
+
         }
 
         private void btnOrden_Click(object sender, EventArgs e)
@@ -193,9 +227,10 @@ namespace Formularios
 
             else
             {
-                string path = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\PLANTAS_DATA.xml";
-                Serializador.SerealizarPlantas(path, vivero.listaPlantas);
-                e.Cancel = false;
+                if (GuardarArchivoPlantas() == true)
+                    e.Cancel = false;
+                else
+                    e.Cancel = true;
             }
         }
     }

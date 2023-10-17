@@ -50,6 +50,8 @@
             lblOperador = new ToolStripLabel();
             toolStripSeparator1 = new ToolStripSeparator();
             lblFecha = new ToolStripLabel();
+            openFileDialog1 = new OpenFileDialog();
+            saveFileDialog1 = new SaveFileDialog();
             grpBoxTipoOrdenamiento.SuspendLayout();
             grpBoxOrden.SuspendLayout();
             toolStrip1.SuspendLayout();
@@ -263,6 +265,10 @@
             lblFecha.Size = new Size(44, 22);
             lblFecha.Text = "Fecha: ";
             // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            // 
             // FormInicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -319,5 +325,7 @@
         private ToolStripLabel lblOperador;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripLabel lblFecha;
+        private OpenFileDialog openFileDialog1;
+        private SaveFileDialog saveFileDialog1;
     }
 }

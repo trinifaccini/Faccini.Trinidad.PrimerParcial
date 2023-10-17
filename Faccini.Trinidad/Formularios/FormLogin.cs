@@ -28,7 +28,7 @@ namespace Formularios
                 string pathP = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\PLANTAS_DATA.xml";
 
                 u.CrearLogUsuario(pathU);
-                FormInicio inicio = new FormInicio(u, pathP);
+                FormInicio inicio = new FormInicio(u);
                 Hide();
                 inicio.Show();
             }
