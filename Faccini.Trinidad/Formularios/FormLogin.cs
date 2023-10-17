@@ -1,4 +1,5 @@
 ﻿using Parcial;
+using Utilidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,26 @@ namespace Formularios
         {
             InitializeComponent();
         }
+
+        private void LoguearUsuario(List<Usuario> usuarios, Usuario u)
+        {
+           
+            if (u.Nombre != "")
+            {
+                string pathU = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\usuarios.log";
+                string pathP = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\PLANTAS_DATA.xml";
+
+                u.CrearLogUsuario(pathU);
+                FormInicio inicio = new FormInicio(u, pathP);
+                Hide();
+                inicio.Show();
+            }
+
+            else
+            {
+                MessageBox.Show($"Correo o clave incorrectas\nIntenta nuevamente");
+            }
+        }
  
 
         private void btnIngresar_Click(object sender, EventArgs e)
@@ -27,27 +48,17 @@ namespace Formularios
 
             string path = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\MOCK_DATA.json";
 
-            List <Usuario> usuarios = Serializador.DeserealizarUsuarios(path);
+            List <Usuario>? usuarios = Serializador.DeserealizarUsuarios(path);
 
-            Usuario u = Usuario.BuscarUsuario(usuarios, correo, clave);
-
-            if (u.nombre != null)
+            if(usuarios is not null)
             {
-                string pathU = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\usuarios.log";
-                string pathP = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\PLANTAS_DATA.xml";
-
-                u.CrearLogUsuario(pathU);
-                FormInicio inicio = new FormInicio(u, pathP);
-                this.Hide();
-                inicio.Show();
+                Usuario u = Usuario.BuscarUsuario(usuarios, correo, clave);
+                LoguearUsuario(usuarios, u);
             }
 
             else
-            {
-                MessageBox.Show($"Correo o clave incorrectas\nIntenta nuevamente");
-            }
+                MessageBox.Show($"No se ha podido verificar la existencia del usuario.\nIntenta nuevamente en unos momentos.");
 
-          
         }
     }
 }

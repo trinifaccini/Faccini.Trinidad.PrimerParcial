@@ -24,3 +24,5 @@ C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Fo
 C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Formularios\obj\Debug\net6.0-windows\Formularios.FormPlanta.resources
 C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Formularios\obj\Debug\net6.0-windows\Formularios.FormArbol.resources
 C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Formularios\obj\Debug\net6.0-windows\Formularios.FormCactus.resources
+C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Formularios\bin\Debug\net6.0-windows\Utilidades.dll
+C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Formularios\bin\Debug\net6.0-windows\Utilidades.pdb

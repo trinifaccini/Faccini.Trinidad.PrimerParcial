@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PruebaVivero", "PruebaViver
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Formularios", "Formularios\Formularios.csproj", "{EFC8F3B2-763A-4B91-8EEF-8524479D41D5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsAppLogin", "..\..\..\..\Downloads\WinFormsAppLogin\WinFormsAppLogin\WinFormsAppLogin.csproj", "{B7616FD9-038C-44D3-82AD-8503C2F59AC7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilidades", "Utilidades\Utilidades.csproj", "{D1592FFF-BE71-4026-AD5C-1264DFDA4A3A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{EFC8F3B2-763A-4B91-8EEF-8524479D41D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFC8F3B2-763A-4B91-8EEF-8524479D41D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFC8F3B2-763A-4B91-8EEF-8524479D41D5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B7616FD9-038C-44D3-82AD-8503C2F59AC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B7616FD9-038C-44D3-82AD-8503C2F59AC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B7616FD9-038C-44D3-82AD-8503C2F59AC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B7616FD9-038C-44D3-82AD-8503C2F59AC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1592FFF-BE71-4026-AD5C-1264DFDA4A3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1592FFF-BE71-4026-AD5C-1264DFDA4A3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1592FFF-BE71-4026-AD5C-1264DFDA4A3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1592FFF-BE71-4026-AD5C-1264DFDA4A3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

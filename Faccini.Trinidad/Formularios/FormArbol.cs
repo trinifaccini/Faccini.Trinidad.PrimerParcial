@@ -8,13 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Utilidades;
 
 namespace Formularios
 {
     public partial class FormArbol : FormPlanta
     {
-
-        Arbol arbol;
+        Arbol? arbol;
         public FormArbol()
         {
             InitializeComponent();
@@ -39,9 +39,41 @@ namespace Formularios
             }
         }
 
-        private void btnAgregar_Click_1(object sender, EventArgs e)
+        public override bool VerificarCampos()
         {
+            bool verificadoGeneral = base.VerificarCampos();
 
+            if (verificadoGeneral == false)
+                return false;
+
+            // VERIFICAR PAIS
+
+            return true;
+        }
+
+
+        internal override void btnAceptar_Click(object sender, EventArgs e)
+        {
+            if (VerificarCampos())
+            {
+                string nombre = txtNombre.Text;
+                float alturaMax = float.Parse(txtAlturaMax.Text);
+                float alturaTransplante = float.Parse(txtAlturaTransplante.Text);
+                float precio = float.Parse(txtPrecio.Text);
+                int frecuenciaRiego = int.Parse(txtFrecuencia.Text);
+                EEstacion estacionTransplante = (EEstacion)cbmBoxEstacion.SelectedIndex;
+                bool aptaInterior = checkedListBoxAmbiente.CheckedIndices.Contains(0);
+                bool aptaExterior = checkedListBoxAmbiente.CheckedIndices.Contains(1);
+                bool tieneFrutos = chFruto.Checked;
+                EPais pais = (EPais)cmbBoxPais.SelectedIndex;
+
+                arbol = new Arbol(nombre, frecuenciaRiego, estacionTransplante, aptaInterior, aptaExterior,
+                    alturaMax, alturaTransplante, tieneFrutos, pais, precio);
+
+                Planta = arbol;
+
+                DialogResult = DialogResult.OK;
+            }
         }
     }
 }

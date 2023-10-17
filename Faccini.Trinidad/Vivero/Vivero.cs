@@ -51,8 +51,6 @@
 
         public static bool operator !=(Vivero v, Planta p)
         {
-            // si no lo contiene, devuelve true
-
             return !(v == p);
         }
 
@@ -106,10 +104,8 @@
                 return 0;
         }
 
-
         public static int OrdenarPorAlturaMaxAsc(Planta a, Planta b)
         {
-           // ASCENDENTE
             if (a.alturaMax < b.alturaMax)
                 return -1;
             else if (a.alturaMax > b.alturaMax)
@@ -128,7 +124,23 @@
                 return 0;
         }
 
+        
+       
 
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (ReferenceEquals(obj, null))
+            {
+                return false;
+            }
+
+            throw new NotImplementedException();
+        }
     }
 
 

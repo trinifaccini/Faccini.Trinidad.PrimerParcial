@@ -24,7 +24,7 @@ namespace Parcial
 
         public Flor()
         {
-
+            color = "";
         }
 
         // Recibe todos
@@ -41,8 +41,6 @@ namespace Parcial
             this(nombre, frecuenciaRiego, estacionTransplante, aptaInterior, aptaExterior, alturaMax, alturaTransplante, precio)
         {
             this.color = color;
-
-
         }
 
         // Recibe todos menos olor y color
@@ -50,7 +48,7 @@ namespace Parcial
             float alturaTransplante, float precio) : 
             base(nombre, frecuenciaRiego, estacionTransplante, aptaInterior, aptaExterior, alturaMax, alturaTransplante, precio)
         {
-            this.color = "verde";
+            this.color = "Verde";
             this.tieneOlor = false;
         }
 
@@ -99,13 +97,22 @@ namespace Parcial
             return false;
         }
 
-        internal override void CrecerPlanta()
+        internal override bool CrecerPlanta()
         {
-            if (alturaActual + 10 <= alturaMax)
+            if (alturaActual < alturaMax)
             {
-                alturaActual += 10;
+                if (alturaActual + 10 <= alturaMax)
+                    alturaActual += 10;
+                else
+                    alturaActual = alturaMax;
+                return true;
+ 
             }
+
+            else return false;
         }
+
+      
 
         #endregion
     }

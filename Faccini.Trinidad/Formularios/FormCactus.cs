@@ -13,42 +13,45 @@ namespace Formularios
 {
     public partial class FormCactus : FormPlanta
     {
-        private Cactus cactus;
+        private Cactus? cactus;
         public FormCactus()
         {
             InitializeComponent();
+            cactus = new Cactus();
         }
 
         public FormCactus(Cactus c, bool editable) : this()
         {
             cactus = c;
-            base.Planta = c;
+            Planta = c;
             if (editable)
             {
                 HabilitarControles();
             }
         }
 
-        private void btnAgregar_Click_1(object sender, EventArgs e)
+        internal override void btnAceptar_Click(object sender, EventArgs e)
         {
-            string nombre = base.txtNombre.Text;
-            //float alturaActual = float.Parse(base.txtAlturaActual.Text);
-            float alturaMax = float.Parse(base.txtAlturaMax.Text);
-            float alturaTransplante = float.Parse(base.txtAlturaTransplante.Text);
-            float precio = float.Parse(base.txtPrecio.Text);
-            int frecuenciaRiego = int.Parse(base.txtFrecuencia.Text);
-            EEstacion estacionTransplante = (EEstacion)base.cbmBoxEstacion.SelectedIndex;
-            bool aptaInterior = base.checkedListBoxAmbiente.CheckedIndices.Contains(0);
-            bool aptaExterior = base.checkedListBoxAmbiente.CheckedIndices.Contains(1);
-            bool tieneEspinas = this.chEspinas.Checked;
-            bool tieneFlor = this.chFlor.Checked;
+            if (VerificarCampos())
+            {
+                string nombre = txtNombre.Text;
+                float alturaMax = float.Parse(txtAlturaMax.Text);
+                float alturaTransplante = float.Parse(txtAlturaTransplante.Text);
+                float precio = float.Parse( txtPrecio.Text);
+                int frecuenciaRiego = int.Parse(txtFrecuencia.Text);
+                EEstacion estacionTransplante = (EEstacion)cbmBoxEstacion.SelectedIndex;
+                bool aptaInterior = checkedListBoxAmbiente.CheckedIndices.Contains(0);
+                bool aptaExterior = checkedListBoxAmbiente.CheckedIndices.Contains(1);
+                bool tieneEspinas = chEspinas.Checked;
+                bool tieneFlor = chFlor.Checked;
 
-            cactus = new Cactus(nombre, frecuenciaRiego, estacionTransplante, aptaInterior, aptaExterior,
-                alturaMax, alturaTransplante, tieneEspinas, tieneFlor, precio);
+                cactus = new Cactus(nombre, frecuenciaRiego, estacionTransplante, aptaInterior, aptaExterior,
+                    alturaMax, alturaTransplante, tieneEspinas, tieneFlor, precio);
 
-            base.planta = cactus;
+                Planta = cactus;
 
-            DialogResult = DialogResult.OK;
+                DialogResult = DialogResult.OK;
+            }
         }
 
         private void FormCactus_Load(object sender, EventArgs e)

@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Utilidades\Utilidades.csproj" />
     <ProjectReference Include="..\Vivero\Vivero.csproj" />
   </ItemGroup>
 

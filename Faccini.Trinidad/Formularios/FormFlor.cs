@@ -1,19 +1,11 @@
 ﻿using Parcial;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using Utilidades;
 
 namespace Formularios
 {
     public partial class FormFlor : FormPlanta
     {
-        private Flor flor;
+        private Flor? flor;
 
         public FormFlor()
         {
@@ -23,35 +15,53 @@ namespace Formularios
         public FormFlor(Flor f, bool editable) : this()
         {
             flor = f;
-            base.Planta = flor;
+            Planta = flor;
 
-            if(editable == false)
+            if (editable == false)
                 DeshabilitarControles();
 
         }
 
 
-        internal override void btnAgregar_Click(object sender, EventArgs e)
+        public override bool VerificarCampos()
         {
+            bool verificadoGeneral = base.VerificarCampos();
 
-            string nombre = base.txtNombre.Text;
-            //float alturaActual = float.Parse(base.txtAlturaActual.Text);
-            float alturaMax = float.Parse(base.txtAlturaMax.Text);
-            float alturaTransplante = float.Parse(base.txtAlturaTransplante.Text);
-            float precio = float.Parse(base.txtPrecio.Text);
-            int frecuenciaRiego = int.Parse(base.txtFrecuencia.Text);
-            EEstacion estacionTransplante = (EEstacion)base.cbmBoxEstacion.SelectedIndex;
-            bool aptaInterior = base.checkedListBoxAmbiente.CheckedIndices.Contains(0);
-            bool aptaExterior = base.checkedListBoxAmbiente.CheckedIndices.Contains(1);
-            bool tieneOlor = this.chBoxOlor.Checked;
-            string color = this.txtColor.Text;
+            if (verificadoGeneral == false)
+                return false;
 
-            flor = new Flor(nombre, frecuenciaRiego, estacionTransplante, aptaInterior, aptaExterior,
-                alturaMax, alturaTransplante, color, tieneOlor, precio);
+            if (txtColor.Text == "" || Validador.VerificarEntero(txtColor.Text) || Validador.VerificarFloat(txtColor.Text))
+            {
+                MessageBox.Show("Ingresar un color para la planta");
+                return false;
+            }
 
-            base.planta = flor;
+            return true;
+        }
+       
 
-            DialogResult = DialogResult.OK;
+        internal override void btnAceptar_Click(object sender, EventArgs e)
+        {
+            if (VerificarCampos())
+            {
+                string nombre = txtNombre.Text; // NO VALIDAR
+                float alturaMax = float.Parse(txtAlturaMax.Text);
+                float alturaTransplante = float.Parse(txtAlturaTransplante.Text);
+                float precio = float.Parse(txtPrecio.Text);
+                int frecuenciaRiego = int.Parse(txtFrecuencia.Text);
+                EEstacion estacionTransplante = (EEstacion)cbmBoxEstacion.SelectedIndex;
+                bool aptaInterior = checkedListBoxAmbiente.CheckedIndices.Contains(0);
+                bool aptaExterior = checkedListBoxAmbiente.CheckedIndices.Contains(1);
+                bool tieneOlor = chBoxOlor.Checked;
+                string color = txtColor.Text;
+
+                flor = new Flor(nombre, frecuenciaRiego, estacionTransplante, aptaInterior, aptaExterior,
+                    alturaMax, alturaTransplante, color, tieneOlor, precio);
+
+                Planta = flor;
+
+                DialogResult = DialogResult.OK;
+            }
         }
 
         private void FormFlor_Load(object sender, EventArgs e)

@@ -35,7 +35,7 @@
             // 
             // btnAgregar
             // 
-            btnAgregar.Click += btnAgregar_Click_1;
+            btnAceptar.Click += btnAceptar_Click;
             // 
             // lblTitulo
             // 
@@ -86,7 +86,7 @@
             Controls.SetChildIndex(txtAlturaMax, 0);
             Controls.SetChildIndex(lblAlturaTransplante, 0);
             Controls.SetChildIndex(txtAlturaTransplante, 0);
-            Controls.SetChildIndex(btnAgregar, 0);
+            Controls.SetChildIndex(btnAceptar, 0);
             Controls.SetChildIndex(btnCancelar, 0);
             Controls.SetChildIndex(lblTitulo, 0);
             Controls.SetChildIndex(chFlor, 0);

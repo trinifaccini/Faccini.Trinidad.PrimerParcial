@@ -1,4 +1,5 @@
 ﻿using Parcial;
+using Utilidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,9 +15,9 @@ namespace Formularios
     public partial class FormPlanta : Form
     {
 
-        protected Planta planta;
+        private Planta? planta;
 
-        public Planta Planta
+        public Planta? Planta
         {
             get { return planta; }
             set { planta = value; }
@@ -43,7 +44,7 @@ namespace Formularios
 
         internal void DeshabilitarControles()
         {
-            foreach (Control c in this.Controls)
+            foreach (Control c in Controls)
             {
                 if (c is not Label)
                 {
@@ -54,11 +55,42 @@ namespace Formularios
 
         internal void HabilitarControles()
         {
-            foreach (Control c in this.Controls)
-            {
+            foreach (Control c in Controls)
                 c.Enabled = true;
-            }
         }
+
+
+        public virtual bool VerificarCampos()
+        {
+            if (txtNombre.Text == "" || Validador.VerificarEntero(txtNombre.Text) || Validador.VerificarFloat(txtNombre.Text))
+            {
+                MessageBox.Show("Ingresar un nombre para la planta");
+                return false;
+            }
+            if (!Validador.VerificarFloat(txtAlturaMax.Text))
+            {
+                MessageBox.Show("Ingresar altura máxima válida para la planta");
+                return false;
+            }
+            if (!Validador.VerificarFloat(txtAlturaTransplante.Text))
+            {
+                MessageBox.Show("Ingresar altura transplante válida para la planta");
+                return false;
+            }
+            if (!Validador.VerificarFloat(txtPrecio.Text))
+            {
+                MessageBox.Show("Ingresar precio válido para la planta");
+                return false;
+            }
+            if (!Validador.VerificarEntero(txtFrecuencia.Text))
+            {
+                MessageBox.Show("Ingresar numero de frecuencia de riego válido para la planta");
+                return false;
+            }
+
+            return true;
+        }
+
 
         internal virtual void FormPlanta_Load(object sender, EventArgs e)
         {
@@ -82,17 +114,6 @@ namespace Formularios
             this.DialogResult = DialogResult.Cancel;
         }
 
-        internal virtual void btnAgregar_Click(object sender, EventArgs e)
-        {
-            string nombre = this.txtNombre.Text;
-            float alturaActual = float.Parse(this.txtAlturaActual.Text);
-            float alturaMax = float.Parse(this.txtAlturaMax.Text);
-            float alturaTransplante = float.Parse(this.txtAlturaTransplante.Text);
-            float precio = float.Parse(this.txtPrecio.Text);
-            int frecuenciaRiego = int.Parse(this.txtFrecuencia.Text);
-            EEstacion estacionTransplante = (EEstacion)this.cbmBoxEstacion.SelectionStart;
-            bool aptaInterior = this.checkedListBoxAmbiente.CheckedIndices.Contains(0);
-            bool aptaExterior = this.checkedListBoxAmbiente.CheckedIndices.Contains(0);
-        }
+        internal virtual void btnAceptar_Click(object sender, EventArgs e) { }
     }
 }

@@ -72,20 +72,29 @@ namespace Parcial
         #endregion
         
         #region Metodos
-        internal override void CrecerPlanta()
+        internal override bool CrecerPlanta()
         {
-            if (alturaActual + 20 <= alturaMax)
-                alturaActual += 20;
+            if (alturaActual < alturaMax)
+            {
+                if (alturaActual + 20 <= alturaMax)
+                    alturaActual += 20;
+                else
+                    alturaActual = alturaMax;
+
+                return true;
+
+            }
+
+            else return false;
         }
 
         public override string Mostrar()
         {
-
             StringBuilder sb = new StringBuilder();
             sb.Append($"Tipo: ");
             sb.Append(this.ToString());
             sb.Append($"Pais: {paisOrigen}\n");
-            return (sb.ToString());
+            return sb.ToString();
         }
 
         public override string ToString()
@@ -106,6 +115,7 @@ namespace Parcial
             return false;
         }
 
+       
         #endregion
     }
 }

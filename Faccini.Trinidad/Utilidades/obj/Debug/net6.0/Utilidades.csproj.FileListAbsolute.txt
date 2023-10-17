@@ -1,0 +1,15 @@
+C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Utilidades\bin\Debug\net6.0\Utilidades.deps.json
+C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Utilidades\bin\Debug\net6.0\Utilidades.dll
+C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Utilidades\bin\Debug\net6.0\Utilidades.pdb
+C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Utilidades\bin\Debug\net6.0\Vivero.dll
+C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Utilidades\bin\Debug\net6.0\Vivero.pdb
+C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Utilidades\obj\Debug\net6.0\Utilidades.csproj.AssemblyReference.cache
+C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Utilidades\obj\Debug\net6.0\Utilidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Utilidades\obj\Debug\net6.0\Utilidades.AssemblyInfoInputs.cache
+C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Utilidades\obj\Debug\net6.0\Utilidades.AssemblyInfo.cs
+C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Utilidades\obj\Debug\net6.0\Utilidades.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Utilidades\obj\Debug\net6.0\Utilidades.csproj.CopyComplete
+C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Utilidades\obj\Debug\net6.0\Utilidades.dll
+C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Utilidades\obj\Debug\net6.0\refint\Utilidades.dll
+C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Utilidades\obj\Debug\net6.0\Utilidades.pdb
+C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Utilidades\obj\Debug\net6.0\ref\Utilidades.dll

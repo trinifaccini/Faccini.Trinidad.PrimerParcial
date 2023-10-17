@@ -94,7 +94,7 @@
             Controls.SetChildIndex(txtAlturaMax, 0);
             Controls.SetChildIndex(lblAlturaTransplante, 0);
             Controls.SetChildIndex(txtAlturaTransplante, 0);
-            Controls.SetChildIndex(btnAgregar, 0);
+            Controls.SetChildIndex(btnAceptar, 0);
             Controls.SetChildIndex(btnCancelar, 0);
             Controls.SetChildIndex(lblColor, 0);
             Controls.SetChildIndex(txtColor, 0);

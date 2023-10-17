@@ -88,6 +88,7 @@ namespace Parcial
             return sb.ToString();
         }
 
+
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
@@ -99,14 +100,23 @@ namespace Parcial
 
         }
 
-        internal override void CrecerPlanta()
+        internal override bool CrecerPlanta()
         {
-            if (alturaActual + 5 <= alturaMax)
+            if (alturaActual < alturaMax)
             {
-                alturaActual += 5;
+                if (alturaActual + 5 <= alturaMax)
+                    alturaActual += 5;
+                else
+                    alturaActual = alturaMax;
+
+                return true;
             }
+
+            else return false;
         }
-   
+
+     
+
         #endregion
 
 

@@ -44,7 +44,7 @@
             txtAlturaMax = new TextBox();
             txtAlturaTransplante = new TextBox();
             lblAlturaTransplante = new Label();
-            btnAgregar = new Button();
+            btnAceptar = new Button();
             btnCancelar = new Button();
             SuspendLayout();
             // 
@@ -182,15 +182,15 @@
             lblAlturaTransplante.TabIndex = 14;
             lblAlturaTransplante.Text = "Altura apta transplante";
             // 
-            // btnAgregar
+            // btnAceptar
             // 
-            btnAgregar.Location = new Point(128, 415);
-            btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(94, 42);
-            btnAgregar.TabIndex = 16;
-            btnAgregar.Text = "ACEPTAR";
-            btnAgregar.UseVisualStyleBackColor = true;
-            btnAgregar.Click += btnAgregar_Click;
+            btnAceptar.Location = new Point(128, 415);
+            btnAceptar.Name = "btnAceptar";
+            btnAceptar.Size = new Size(94, 42);
+            btnAceptar.TabIndex = 16;
+            btnAceptar.Text = "ACEPTAR";
+            btnAceptar.UseVisualStyleBackColor = true;
+            btnAceptar.Click += btnAceptar_Click;
             // 
             // btnCancelar
             // 
@@ -208,7 +208,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(489, 498);
             Controls.Add(btnCancelar);
-            Controls.Add(btnAgregar);
+            Controls.Add(btnAceptar);
             Controls.Add(txtAlturaTransplante);
             Controls.Add(lblAlturaTransplante);
             Controls.Add(txtAlturaMax);
@@ -250,7 +250,7 @@
         protected TextBox txtAlturaMax;
         protected TextBox txtAlturaTransplante;
         protected Label lblAlturaTransplante;
-        protected Button btnAgregar;
+        protected Button btnAceptar;
         protected Button btnCancelar;
     }
 }

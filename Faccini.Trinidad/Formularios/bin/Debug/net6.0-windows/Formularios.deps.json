@@ -8,10 +8,19 @@
     ".NETCoreApp,Version=v6.0": {
       "Formularios/1.0.0": {
         "dependencies": {
+          "Utilidades": "1.0.0",
           "Vivero": "1.0.0"
         },
         "runtime": {
           "Formularios.dll": {}
+        }
+      },
+      "Utilidades/1.0.0": {
+        "dependencies": {
+          "Vivero": "1.0.0"
+        },
+        "runtime": {
+          "Utilidades.dll": {}
         }
       },
       "Vivero/1.0.0": {
@@ -23,6 +32,11 @@
   },
   "libraries": {
     "Formularios/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Utilidades/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

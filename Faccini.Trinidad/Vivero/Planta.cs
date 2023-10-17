@@ -36,7 +36,7 @@ namespace Parcial
         // y tiene la altura necesaria 
         internal bool Transpantable
         {
-            get { return (this.ObtenerEstacion() == estacionTransplante && alturaActual > alturaTransplante); }
+            get { return (ObtenerEstacion() == estacionTransplante && alturaActual > alturaTransplante); }
         }
         public string Nombre { get { return nombre; } set { nombre = value;  } }
         public float Precio { get { return precio; } set { precio = value; } }
@@ -52,16 +52,9 @@ namespace Parcial
         #endregion
 
         #region Constructores
-        public Planta() { }
-
-        private DateTime ParsearFecha(string fecha)
+        public Planta() 
         {
-            Console.Write("PARSEAR FECHA: ");
-            Console.WriteLine(fecha);
-            string[] dtSeparada = fecha.Split('/', ' ');
-            Console.WriteLine(dtSeparada[0] + dtSeparada[1] + dtSeparada[2]);
-            DateTime dt = new DateTime(int.Parse(dtSeparada[2]), int.Parse(dtSeparada[1]), int.Parse(dtSeparada[0]));
-            return dt;
+            nombre = "";
         }
 
         // Recibe todos -> llama al que recibe alturaActual 
@@ -69,9 +62,6 @@ namespace Parcial
             float alturaMax, float alturaActual, float alturaTransplante,float precio): this(nombre, frecuenciaRiego, estacionTransplante,
                        aptaInterior, aptaExterior,alturaActual, alturaMax, alturaTransplante, precio)
         {
-
-            Console.Write("CONSTRUCTOR PLANTA: ");
-            Console.WriteLine(ultimoRiego);
             this.ultimoRiego = ParsearFecha(ultimoRiego);
         }
 
@@ -101,6 +91,7 @@ namespace Parcial
         #endregion
 
 
+
         #region Sobreescritura operadores
         public static bool operator ==(Planta a, Planta b)
         {
@@ -117,11 +108,30 @@ namespace Parcial
         #endregion
 
         #region Metodos
-        private EEstacion ObtenerEstacion()
+
+        /// <summary>
+        /// Parsea un string con formato de fecha valido a DateTime
+        /// </summary>
+        /// <param name="fecha">string con fecha a parsear</param>
+        /// <returns>Fecha recibida en tipo DateTime</returns>
+        private static DateTime ParsearFecha(string fecha)
+        {
+            string[] dtSeparada = fecha.Split('/', ' ');
+            Console.WriteLine(dtSeparada[0] + dtSeparada[1] + dtSeparada[2]);
+            DateTime dt = new DateTime(int.Parse(dtSeparada[2]), int.Parse(dtSeparada[1]), int.Parse(dtSeparada[0]));
+            return dt;
+        }
+
+        /// <summary>
+        /// Calcula la estaciond del año correspondiente a la fecha recibida
+        /// </summary>
+        /// <param name="fecha">DateTime con fecha a calcular</param>
+        /// <returns> Enumerado de tipo EEstacion con la estacion correspondiente</returns>
+        private static EEstacion ObtenerEstacion(DateTime fecha)
         {
 
-            EMes mes = (EMes)DateTime.Now.Month;
-            int dia = DateTime.Now.Day;
+            EMes mes = (EMes)fecha.Month;
+            int dia = fecha.Day;
 
             switch (mes)
             {
@@ -166,10 +176,37 @@ namespace Parcial
 
         }
 
-        // este metodo lo DEBE implementar cada clase, segun que tipo sea hace crecer ciertos cm a la planta
-        internal abstract void CrecerPlanta();
+        /// <summary>
+        /// Calcula la estaciond del año correspondiente a la fecha recibida
+        /// </summary>
+        /// <param name="fecha">string con fecha a calcular</param>
+        /// <returns> Enumerado de tipo EEstacion con la estacion correspondiente</returns>
+        private static EEstacion ObtenerEstacion(string fecha)
+        {
+            DateTime fechaDt = ParsearFecha(fecha);
+            return ObtenerEstacion(fechaDt);
+        }
 
-        // si pasaron los dias necesarios, se hace crecer a la planta y devuelve un mensaje
+        /// <summary>
+        /// Devuelve un enumerado EEstacion correspondiente a la estacion actual
+        /// </summary>
+        /// <returns>Fecha recibida en tipo DateTime</returns>
+        private static EEstacion ObtenerEstacion()
+        {
+            return  ObtenerEstacion(DateTime.Now);
+        }
+
+        /// <summary>
+        /// Aumenta, si es posible, el atributo alturaActual de la planta los centimetros correspondientes
+        /// </summary>
+        /// <returns>true si se pudo aumentar, false en caso contrario</returns>
+        internal abstract bool CrecerPlanta();
+
+
+        /// <summary>
+        /// Riega, si es posible, la planta.
+        /// </summary>
+        /// <returns>string que informa si fue posible o no regarla y la altura actual de la planta</returns>
         public string Regar()
         {
             TimeSpan dif = DateTime.Now - this.ultimoRiego;
@@ -178,8 +215,12 @@ namespace Parcial
             if (difDias >= frecuenciaRiego)
             {
                 ultimoRiego = DateTime.Now;
-                CrecerPlanta();
-                return $"Regada - Altura actual de {nombre}: {alturaActual}";
+                bool crecida = CrecerPlanta();
+
+                if (crecida)
+                    return $"Regada - Altura actual de {nombre}: {alturaActual}cm";
+                else
+                    return $"No se puede regar - {nombre} alcanzó su altura máxima de {alturaActual}cm";
             }
 
             else
@@ -204,7 +245,7 @@ namespace Parcial
 
         public bool Equals(Planta p)
         {
-            if (p == null) return false;
+            if (p is null) return false;
             return (this == p);
         }
 
@@ -218,14 +259,9 @@ namespace Parcial
             return sb.ToString();
         }
 
-        #endregion
-
-
-
-        #region Metodos ordenamiento
+        
 
         #endregion
-
 
 
     }

@@ -1,14 +1,6 @@
 ﻿using Parcial;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+using Utilidades;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace Formularios
 {
@@ -28,24 +20,27 @@ namespace Formularios
 
         public FormInicio(Usuario usuario, string path):this(usuario)
         {
-            vivero.listaPlantas = Serializador.DeserealizarPlantas(path);
+            List<Planta>? aux = Serializador.DeserealizarPlantas(path);
+            if (aux is not null)
+                vivero.listaPlantas = aux;
+
         }
 
         private void FormInicio_Load(object sender, EventArgs e)
         {
             label1.Text = $"BIENVENIDO AL SISTEMA DEL VIVERO: {vivero.NombreVivero}";
-            lblOperador.Text = $"Operador: {usuario.ToString()}";
+            lblOperador.Text = $"Operador: {usuario}";
 
             lblFecha.Text = $"Fecha: {DateTime.Now.ToString().Substring(0, 10)}";
 
-            if (usuario.perfil != "vendedor")
+            if (usuario.Perfil != "vendedor")
             {
                 btnAgregarArbol.Visible = true;
                 btnAgregarCactus.Visible = true;
                 btnAgregarFlor.Visible = true;
             }
 
-            if (usuario.perfil == "administrador")
+            if (usuario.Perfil == "administrador")
             {
                 btnEliminar.Visible = true;
                 btnModificar.Visible = true;
@@ -108,7 +103,6 @@ namespace Formularios
 
             vivero -= vivero.listaPlantas[index];
             ActualizarVisor();
-
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
