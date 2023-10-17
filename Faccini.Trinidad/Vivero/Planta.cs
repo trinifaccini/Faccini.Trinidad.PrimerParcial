@@ -9,6 +9,9 @@ using System.Xml.Serialization;
 namespace Parcial
 {
 
+    /// <summary>
+    /// Representa una planta con sus atributos principales
+    /// </summary>
     [XmlInclude(typeof(Cactus))]
     [XmlInclude(typeof(Arbol))]
     [XmlInclude(typeof(Flor))]
@@ -92,13 +95,20 @@ namespace Parcial
 
 
         #region Sobreescritura operadores
+
+        /// <summary>
+        /// Compara dos objetos de tipo Planta segun su atributo nombre
+        /// </summary>
+        /// <returns>true si son iguales, false si son diferentes</returns>
         public static bool operator ==(Planta a, Planta b)
         {
-            Console.WriteLine("== DE PLANTA");
-
             return a.nombre == b.nombre;
         }
 
+        /// <summary>
+        /// Compara dos objetos de tipo Planta segun su atributo nombre
+        /// </summary>
+        /// <returns>true si son diferentes, false si son iguales</returns>
         public static bool operator !=(Planta a, Planta b)
         {
             return !(a == b);
@@ -225,30 +235,28 @@ namespace Parcial
             else
                 return $"Aun no se puede regar - Debes esperar {frecuenciaRiego - difDias} días"; ;
         }
+
+        /// <summary>
+        /// Devuelve un string con los datos a mostrar sobre la planta actual
+        /// </summary>
+        /// <returns>string con los datos</returns>
         public virtual string Mostrar()
         {
-            // MUESTRO SOLO INFO QUE QUIERO VER EN LA LISTA DEL FORM
             StringBuilder sb = new StringBuilder();
             sb.Append(this.ToString());
             return sb.ToString();
         }
 
+        // NO DOCUMENTAR
         public override bool Equals(object? obj)
         {
-            Console.Write("EQUALS DE PLANTA");
             if (obj is Planta)
                 return this == (Planta)obj;
 
             return false;
         }
 
-        public bool Equals(Planta p)
-        {
-            if (p is null) return false;
-            return (this == p);
-        }
-
-
+        // NO DOCUMENTAR
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

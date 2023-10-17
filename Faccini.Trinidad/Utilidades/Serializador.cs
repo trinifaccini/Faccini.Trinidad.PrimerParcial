@@ -41,7 +41,8 @@ namespace Utilidades
         }
 
         /// <summary>
-        /// Seraliza la lista de plantas recibida por parametro en formato XML
+        /// Seraliza, en el archivo que se encuentra en la ruta recibida por parametro,
+        /// la lista de plantas recibida por parametro en formato XML
         /// </summary>
         /// <param name="path">string con la ruta del archivo</param>
         /// <param name="plantas">Lista de plantas con las plantas a serealizar</param>

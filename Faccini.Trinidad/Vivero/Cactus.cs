@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Parcial
 {
+    /// <summary>
+    /// Representa un cactus con sus atributos principales
+    /// </summary>
     public class Cactus : Planta
     {
 
@@ -53,6 +56,11 @@ namespace Parcial
         #endregion
 
         #region Sobreescritura operadores
+
+        /// <summary>
+        /// Compara dos objetos de tipo Cactus segun sus atributos: nombre, precio, alturaActual y tieneEspinas
+        /// </summary>
+        /// <returns>true si son iguales, false si son diferentes</returns>
         public static bool operator ==(Cactus a, Cactus b)
         {
             Console.WriteLine("== DE CACTUS");
@@ -62,6 +70,10 @@ namespace Parcial
                 a.tieneEspinas == b.tieneEspinas);
         }
 
+        /// <summary>
+        /// Compara dos objetos de tipo Cactus segun sus atributos: nombre, precio, alturaActual y tieneEspinas
+        /// </summary>
+        /// <returns>true si son diferentes, false si son iguales</returns>
         public static bool operator !=(Cactus a, Cactus b)
         {
             return !(a == b);
@@ -70,6 +82,8 @@ namespace Parcial
         #endregion
 
         #region Metodos
+
+        // NO DOCUMENTAR
         public override bool Equals(object? obj)
         {
             Console.WriteLine("EQUALS DE CACTUS");
@@ -80,6 +94,7 @@ namespace Parcial
             return false;
         }
 
+        // NO DOCUMENTAR
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
@@ -89,6 +104,7 @@ namespace Parcial
         }
 
 
+        // DOCUMENTADA EN CLASE BASE
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
@@ -100,6 +116,7 @@ namespace Parcial
 
         }
 
+        // DOCUMENTADA EN CLASE BASE
         internal override bool CrecerPlanta()
         {
             if (alturaActual < alturaMax)

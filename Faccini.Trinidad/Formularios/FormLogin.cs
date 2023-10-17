@@ -20,10 +20,9 @@ namespace Formularios
             InitializeComponent();
         }
 
-        private void LoguearUsuario(List<Usuario> usuarios, Usuario u)
+        private void LoguearUsuario(List<Usuario> usuarios, Usuario? u)
         {
-
-            if (u.Nombre != "")
+            if (u is not null)
             {
                 string pathU = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\usuarios.log";
                 string pathP = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\PLANTAS_DATA.xml";
@@ -53,12 +52,12 @@ namespace Formularios
 
             if(usuarios is not null)
             {
-                Usuario u = Usuario.BuscarUsuario(usuarios, correo, clave);
+                Usuario? u = Usuario.BuscarUsuario(usuarios, correo, clave);
                 LoguearUsuario(usuarios, u);
             }
 
             else
-                MessageBox.Show($"No se ha podido verificar la existencia del usuario.\nIntenta nuevamente en unos momentos.");
+                MessageBox.Show($"No se ha podido verificar la existencia de usuarios.\nIntenta nuevamente en unos momentos.");
 
         }
     }

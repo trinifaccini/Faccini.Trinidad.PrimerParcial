@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Parcial
 {
+    /// <summary>
+    /// Representa un usuario con sus atributos principales
+    /// </summary>
     public class Usuario
     {
 
@@ -47,11 +50,20 @@ namespace Parcial
         #endregion
 
         #region Sobreescritura de operadores
+
+        /// <summary>
+        /// Compara dos objetos de tipo Usuario segun sus atributos correo y clave
+        /// </summary>
+        /// <returns>true si son iguales, false si son diferentes</returns>
         public static bool operator == (Usuario u1, Usuario u2)
         {
             return (u1.Correo == u2.Correo && u1.Clave == u2.Clave);
         }
 
+        /// <summary>
+        /// Compara dos objetos de tipo Usuario segun sus atributos correo y clave
+        /// </summary>
+        /// <returns>true si son diferentes, false si son iguales</returns>
         public static bool operator !=(Usuario u1, Usuario u2)
         {
             return !(u1 == u2);
@@ -61,26 +73,36 @@ namespace Parcial
 
         #region Metodos
 
+        // NO DOCUMENTAR
         public override string ToString()
         {
             return $"{this.Nombre} {this.Apellido}";
         }
 
-
-        public static Usuario BuscarUsuario(List<Usuario> usuarios, string correo, string clave)
+        /// <summary>
+        /// Busca si el correo y la clave recibidas por parametro coinciden con las de algun usuario en la lista recibida por parametro
+        /// </summary>
+        /// <param name="usuarios">Lista de usuarios a recorrer</param>
+        /// <param name="correo">string con el correo a buscar</param>
+        /// <param name="clave">string con la clave a buscar</param>
+        /// <returns>null si no se encontró el usuario, el usuario hallado si se encontró</returns>
+        public static Usuario? BuscarUsuario(List<Usuario> usuarios, string correo, string clave)
         {
-
             Usuario usuario = new Usuario(correo, clave); 
 
             foreach (Usuario u in usuarios)
             {
                 if (u == usuario)
-                    usuario = u;
+                    return u;
             }
 
-            return usuario;
+            return null;
         }
 
+        /// <summary>
+        /// Crea un log en el archivo ubicado en la ruta recibida por parametro, escribiendo nombre apellido y horario de ingreso de este usuario
+        /// </summary>
+        /// <param name="path">Ruta del archivo donde se va a escribir</param>
         public void CrearLogUsuario(string path)
         {
             string fechaHora = DateTime.Now.ToString();
@@ -96,6 +118,7 @@ namespace Parcial
 
         }
 
+        // NO DOCUMENTAR
         public override bool Equals(object obj)
         {
          

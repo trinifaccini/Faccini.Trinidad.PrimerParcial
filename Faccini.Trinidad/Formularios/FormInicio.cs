@@ -10,11 +10,15 @@ namespace Formularios
         private Vivero vivero;
         private Usuario usuario;
 
-        public FormInicio(Usuario usuario)
+        public FormInicio()
         {
-    
+
             InitializeComponent();
             vivero = new Vivero("ARRAYANES");
+        }
+
+        public FormInicio(Usuario usuario):this()
+        {
             this.usuario = usuario;
         }
 
@@ -25,6 +29,7 @@ namespace Formularios
                 vivero.listaPlantas = aux;
 
         }
+
 
         private void FormInicio_Load(object sender, EventArgs e)
         {

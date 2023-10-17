@@ -5,7 +5,7 @@ namespace Formularios
 {
     public partial class FormFlor : FormPlanta
     {
-        private Flor? flor;
+        private Flor flor;
 
         public FormFlor()
         {

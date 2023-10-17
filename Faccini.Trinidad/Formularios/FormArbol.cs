@@ -14,7 +14,7 @@ namespace Formularios
 {
     public partial class FormArbol : FormPlanta
     {
-        Arbol? arbol;
+        Arbol arbol;
         public FormArbol()
         {
             InitializeComponent();

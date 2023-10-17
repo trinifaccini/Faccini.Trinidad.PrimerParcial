@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Parcial
 {
+    /// <summary>
+    /// Representa una flor con sus atributos principales
+    /// </summary>
     public class Flor : Planta
     {
         #region Atributos
@@ -54,6 +57,11 @@ namespace Parcial
 
         #endregion
 
+
+        /// <summary>
+        /// Compara dos objetos de tipo Flor segun sus atributos: nombre, precio, alturaActual y tieneOlor
+        /// </summary>
+        /// <returns>true si son iguales, false si son diferentes</returns>
         public static bool operator ==(Flor a, Flor b)
         {
             return (a.nombre == b.nombre && 
@@ -62,6 +70,10 @@ namespace Parcial
                 a.tieneOlor == b.tieneOlor);
         }
 
+        /// <summary>
+        /// Compara dos objetos de tipo Flor segun sus atributos: nombre, precio, alturaActual y tieneOlor
+        /// </summary>
+        /// <returns>false si son iguales, true si son diferentes</returns>
         public static bool operator !=(Flor a, Flor b)
         {
             return !(a == b);
@@ -69,6 +81,7 @@ namespace Parcial
 
         #region Metodos
 
+        // DOCUMENTADA EN CLASE BASE
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
@@ -79,6 +92,7 @@ namespace Parcial
             return (sb.ToString());
         }
 
+        // NO DOCUMENTAR
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
@@ -87,16 +101,16 @@ namespace Parcial
             return sb.ToString();
         }
 
+        // NO DOCUMENTAR
         public override bool Equals(object? obj)
         {
-            Console.WriteLine("EQUALS DE FLOR");
-
             if (obj is Flor)
                 return this == (Flor)obj;
 
             return false;
         }
 
+        // DOCUMENTADA EN CLASE BASE
         internal override bool CrecerPlanta()
         {
             if (alturaActual < alturaMax)

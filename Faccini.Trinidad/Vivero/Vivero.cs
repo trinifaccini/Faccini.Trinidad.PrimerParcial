@@ -1,5 +1,8 @@
 ﻿namespace Parcial
 {
+    /// <summary>
+    /// Representa un vivero con sus atributos principales
+    /// </summary>
     public class Vivero
     {
 
@@ -28,6 +31,11 @@
         #endregion
 
         #region Sobreescritura de operadores
+
+        /// <summary>
+        /// Compara un objeto de tipo Vivero y uno de tipo Planta
+        /// </summary>
+        /// <returns>true si la planta se encuentra en la lista de plantas del vivero recibido por parametro, false en caso contrario</returns>
         public static bool operator ==(Vivero v, Planta p)
         {
             Console.WriteLine("== DE VIVERO");
@@ -49,13 +57,19 @@
             //return false;
         }
 
+        /// <summary>
+        /// Compara un objeto de tipo Vivero y uno de tipo Planta
+        /// </summary>
+        /// <returns>false si la planta se encuentra en la lista de plantas del vivero recibido por parametro, true en caso contrario</returns>
         public static bool operator !=(Vivero v, Planta p)
         {
             return !(v == p);
         }
 
-        #endregion
-
+        /// <summary>
+        /// Agrega la planta recibida por parametro a la lista de plantas del vivero recibido por parametro en caso de no encontrarse anteriormente en ella
+        /// </summary>
+        /// <returns>Vivero modificado</returns>
         public static Vivero operator +(Vivero v, Planta p)
         {
             if (v != p)
@@ -65,6 +79,10 @@
             return v;
         }
 
+        /// <summary>
+        /// Sustrae la planta recibida por parametro a la lista de plantas del vivero recibido por parametro en caso de encontrarse en ella
+        /// </summary>
+        /// <returns>Vivero modificado</returns>
         public static Vivero operator -(Vivero v, Planta p)
         {
             if (v == p)
@@ -74,15 +92,23 @@
             return v;
         }
 
+        #endregion
+
+        /// <summary>
+        /// Muestra por consola la información de la lista de plantas que se encuentrar en el vivero
+        /// </summary>
         public void MostrarInfoVivero()
         {
             string[] infoPlantas = { };
             foreach(Planta p in listaPlantas)
             {
-                infoPlantas.Append(p.Mostrar());
+                Console.WriteLine(p.Mostrar());
             }
         }
 
+        /// <summary>
+        /// Metodo de ordenamiento según precio de la planta, ascendente.
+        /// </summary>
         public static int OrdenarPorPrecioAsc(Planta a, Planta b)
         {
             if (a.precio < b.precio)
@@ -93,6 +119,9 @@
                 return 0;     
         }
 
+        /// <summary>
+        /// Metodo de ordenamiento según precio de la planta, descendente.
+        /// </summary>
         public static int OrdenarPorPrecioDesc(Planta a, Planta b)
         {
             if (a.precio < b.precio)
@@ -103,6 +132,9 @@
                 return 0;
         }
 
+        /// <summary>
+        /// Metodo de ordenamiento según altura máxima de la planta, ascendente.
+        /// </summary>
         public static int OrdenarPorAlturaMaxAsc(Planta a, Planta b)
         {
             if (a.alturaMax < b.alturaMax)
@@ -113,6 +145,9 @@
                 return 0; 
         }
 
+        /// <summary>
+        /// Metodo de ordenamiento según altura máxima de la planta, descendente.
+        /// </summary>
         public static int OrdenarPorAlturaMaxDesc(Planta a, Planta b)
         {
             if (a.alturaMax < b.alturaMax)
@@ -123,7 +158,7 @@
                 return 0;
         }
 
-
+        // NO DOCUMENTAR
         public override bool Equals(object obj)
         {
             if (ReferenceEquals(this, obj))

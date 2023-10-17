@@ -13,11 +13,10 @@ namespace Formularios
 {
     public partial class FormCactus : FormPlanta
     {
-        private Cactus? cactus;
+        private Cactus cactus;
         public FormCactus()
         {
             InitializeComponent();
-            cactus = new Cactus();
         }
 
         public FormCactus(Cactus c, bool editable) : this()

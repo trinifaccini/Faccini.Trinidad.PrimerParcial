@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Parcial
 {
+    /// <summary>
+    /// Representa un arbol con sus atributos principales
+    /// </summary>
     public class Arbol : Planta
     {
 
@@ -55,15 +58,22 @@ namespace Parcial
 
         #region Sobreescritura de operadores
 
+        /// <summary>
+        /// Compara dos objetos de tipo Arbol segun sus atributos: nombre, precio, alturaActual y tieneFrutos
+        /// </summary>
+        /// <returns>true si son iguales, false si son diferentes</returns>
         public static bool operator ==(Arbol a, Arbol b)
         {
-            Console.WriteLine("== DE ARBOL");
             return (a.nombre == b.nombre && 
                 a.precio == b.precio && 
                 a.alturaActual == b.alturaActual && 
                 a.tieneFrutos == b.tieneFrutos);
         }
 
+        /// <summary>
+        /// Compara dos objetos de tipo Arbol segun sus atributos: nombre, precio, alturaActual y tieneFrutos
+        /// </summary>
+        /// <returns>false si son iguales, true si son diferentes</returns>
         public static bool operator !=(Arbol a, Arbol b)
         {
             return !(a == b);
@@ -72,6 +82,7 @@ namespace Parcial
         #endregion
         
         #region Metodos
+        // DOCUMENTADA EN CLASE BASE
         internal override bool CrecerPlanta()
         {
             if (alturaActual < alturaMax)
@@ -88,6 +99,7 @@ namespace Parcial
             else return false;
         }
 
+        // DOCUMENTADA EN CLASE BASE
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
@@ -96,7 +108,8 @@ namespace Parcial
             sb.Append($"Pais: {paisOrigen}\n");
             return sb.ToString();
         }
-
+        
+        // NO DOCUMENTAR
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
@@ -105,6 +118,7 @@ namespace Parcial
             return sb.ToString();
         }
 
+        // NO DOCUMENTAR
         public override bool Equals(object? obj)
         {
             Console.WriteLine("EQUALS DE ARBOL");

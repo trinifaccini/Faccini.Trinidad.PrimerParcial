@@ -6,9 +6,9 @@ namespace Formularios
     public partial class FormPlanta : Form
     {
 
-        private Planta? planta;
+        private Planta planta;
 
-        public Planta? Planta
+        public Planta Planta
         {
             get { return planta; }
             set { planta = value; }
@@ -19,20 +19,9 @@ namespace Formularios
             InitializeComponent();
         }
 
-        /*
-        public FormPlanta()
-        {
-            InitializeComponent();
-            DeshabilitarControles();
-        }
-
-        public FormPlanta(bool editable):this()
-        {
-            if (editable)
-                HabilitarControles();
-        }
-        */
-
+        /// <summary>
+        /// Deshabilita todos los controles del formulario que no sean de tipo Label
+        /// </summary>
         internal void DeshabilitarControles()
         {
             foreach (Control c in Controls)
@@ -44,34 +33,41 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Habilita todos los controles del formulario que no sean de tipo Label
+        /// </summary>
         internal void HabilitarControles()
         {
             foreach (Control c in Controls)
                 c.Enabled = true;
         }
 
-
+        /// <summary>
+        /// Verifica todos los campos del formulario actual.
+        /// Muestra mensaje del primer campo verificado como incorrecto. 
+        /// </summary>
+        /// <returns>true si todos los campos son correctos, false si al menos uno no lo es</returns>
         public virtual bool VerificarCampos()
         {
-            if (txtNombre.Text == "" || Validador.VerificarEntero(txtNombre.Text) || Validador.VerificarFloat(txtNombre.Text))
+            if (txtNombre.Text == "" || Validador.ValidarEntero(txtNombre.Text) || Validador.ValidarFloat(txtNombre.Text))
             {
                 MessageBox.Show($"Ingresar un nombre para la planta", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
-            if (!Validador.VerificarFloat(txtPrecio.Text))
+            if (!Validador.ValidarFloat(txtPrecio.Text))
             {
                 MessageBox.Show($"Ingresar precio válido para la planta", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
-            if (!Validador.VerificarEntero(txtFrecuencia.Text))
+            if (!Validador.ValidarEntero(txtFrecuencia.Text))
             {
                 MessageBox.Show($"Ingresar numero de frecuencia de riego válido para la planta", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
-            if (!Validador.VerificarFloat(txtAlturaTransplante.Text))
+            if (!Validador.ValidarFloat(txtAlturaTransplante.Text))
             {
                 MessageBox.Show($"Ingresar altura transplante válida para la planta","Atencion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -83,7 +79,7 @@ namespace Formularios
                 return false;
             }
 
-            if (!Validador.VerificarFloat(txtAlturaMax.Text))
+            if (!Validador.ValidarFloat(txtAlturaMax.Text))
             {
                 MessageBox.Show($"Ingresar altura máxima válida para la planta", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -92,7 +88,9 @@ namespace Formularios
             return true;
         }
 
-
+        /// <summary>
+        /// Rellena todos los campos de la planta creada anteriormente, si la hubiera. 
+        /// </summary>
         internal virtual void FormPlanta_Load(object sender, EventArgs e)
         {
             if (planta is not null)
@@ -115,6 +113,10 @@ namespace Formularios
             this.DialogResult = DialogResult.Cancel;
         }
 
+        /// <summary>
+        /// Verifica los campos llenados. En caso de ser todos correctos, crea una instancia de la nueva planta.
+        /// </summary>
+       
         internal virtual void btnAceptar_Click(object sender, EventArgs e) { }
     }
 }
