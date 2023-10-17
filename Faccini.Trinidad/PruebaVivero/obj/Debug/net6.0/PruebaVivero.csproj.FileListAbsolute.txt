@@ -16,3 +16,5 @@ C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Pr
 C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\PruebaVivero\obj\Debug\net6.0\PruebaVivero.pdb
 C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\PruebaVivero\obj\Debug\net6.0\PruebaVivero.genruntimeconfig.cache
 C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\PruebaVivero\obj\Debug\net6.0\ref\PruebaVivero.dll
+C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\PruebaVivero\bin\Debug\net6.0\Utilidades.dll
+C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\PruebaVivero\bin\Debug\net6.0\Utilidades.pdb

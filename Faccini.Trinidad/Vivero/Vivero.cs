@@ -85,7 +85,6 @@
 
         public static int OrdenarPorPrecioAsc(Planta a, Planta b)
         {
-            // ASCENDENTE
             if (a.precio < b.precio)
                 return -1;
             else if (a.precio > b.precio)
@@ -124,8 +123,6 @@
                 return 0;
         }
 
-        
-       
 
         public override bool Equals(object obj)
         {

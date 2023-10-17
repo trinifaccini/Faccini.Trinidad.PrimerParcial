@@ -181,7 +181,7 @@ namespace Formularios
 
         private void FormInicio_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("¿Seguro que quieres salir?", "Apagando sistema", MessageBoxButtons.YesNo) == DialogResult.No)
+            if (MessageBox.Show("¿Seguro que quieres salir?", "Apagando sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
                 e.Cancel = true;
             }

@@ -46,7 +46,11 @@ namespace Formularios
             if (verificadoGeneral == false)
                 return false;
 
-            // VERIFICAR PAIS
+            if (cmbBoxPais.SelectedIndex == -1)
+            {
+                MessageBox.Show($"Seleccionar la estacion de transplante", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
 
             return true;
         }

@@ -91,7 +91,6 @@ namespace Parcial
         #endregion
 
 
-
         #region Sobreescritura operadores
         public static bool operator ==(Planta a, Planta b)
         {
@@ -259,10 +258,8 @@ namespace Parcial
             return sb.ToString();
         }
 
-        
 
         #endregion
-
 
     }
 }

@@ -134,6 +134,7 @@
             // 
             // cbmBoxEstacion
             // 
+            cbmBoxEstacion.DropDownStyle = ComboBoxStyle.DropDownList;
             cbmBoxEstacion.FormattingEnabled = true;
             cbmBoxEstacion.Items.AddRange(new object[] { "Verano", "Otonio", "Primavera", "Invierno" });
             cbmBoxEstacion.Location = new Point(18, 327);

@@ -19,5 +19,27 @@
 
             return false;
         }
+
+        public static bool VerificarEnumeradoPais(string enumerado)
+        {
+            foreach(EPais pais in Enum.GetValues(typeof(EPais)))
+            {
+                if (pais.ToString() == enumerado)
+                    return true;
+            }
+            
+            return false;
+        }
+
+        public static bool VerificarEnumeradoEstacion(string enumerado)
+        {
+            foreach (EEstacion estacion in Enum.GetValues(typeof(EEstacion)))
+            {
+                if (estacion.ToString() == enumerado)
+                    return true;
+            }
+
+            return false;
+        }
     }
 }

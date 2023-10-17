@@ -22,7 +22,7 @@ namespace Formularios
 
         private void LoguearUsuario(List<Usuario> usuarios, Usuario u)
         {
-           
+
             if (u.Nombre != "")
             {
                 string pathU = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\usuarios.log";
@@ -36,8 +36,9 @@ namespace Formularios
 
             else
             {
-                MessageBox.Show($"Correo o clave incorrectas\nIntenta nuevamente");
+                MessageBox.Show("Atencion", $"Correo o clave incorrectas\nIntenta nuevamente", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
         }
  
 

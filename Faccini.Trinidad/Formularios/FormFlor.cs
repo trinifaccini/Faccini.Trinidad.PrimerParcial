@@ -32,7 +32,7 @@ namespace Formularios
 
             if (txtColor.Text == "" || Validador.VerificarEntero(txtColor.Text) || Validador.VerificarFloat(txtColor.Text))
             {
-                MessageBox.Show("Ingresar un color para la planta");
+                MessageBox.Show($"Ingresar un color para la planta", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 

@@ -1,14 +1,5 @@
 ﻿using Parcial;
 using Utilidades;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Formularios
 {
@@ -64,30 +55,40 @@ namespace Formularios
         {
             if (txtNombre.Text == "" || Validador.VerificarEntero(txtNombre.Text) || Validador.VerificarFloat(txtNombre.Text))
             {
-                MessageBox.Show("Ingresar un nombre para la planta");
-                return false;
-            }
-            if (!Validador.VerificarFloat(txtAlturaMax.Text))
-            {
-                MessageBox.Show("Ingresar altura máxima válida para la planta");
-                return false;
-            }
-            if (!Validador.VerificarFloat(txtAlturaTransplante.Text))
-            {
-                MessageBox.Show("Ingresar altura transplante válida para la planta");
-                return false;
-            }
-            if (!Validador.VerificarFloat(txtPrecio.Text))
-            {
-                MessageBox.Show("Ingresar precio válido para la planta");
-                return false;
-            }
-            if (!Validador.VerificarEntero(txtFrecuencia.Text))
-            {
-                MessageBox.Show("Ingresar numero de frecuencia de riego válido para la planta");
+                MessageBox.Show($"Ingresar un nombre para la planta", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
+            if (!Validador.VerificarFloat(txtPrecio.Text))
+            {
+                MessageBox.Show($"Ingresar precio válido para la planta", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (!Validador.VerificarEntero(txtFrecuencia.Text))
+            {
+                MessageBox.Show($"Ingresar numero de frecuencia de riego válido para la planta", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (!Validador.VerificarFloat(txtAlturaTransplante.Text))
+            {
+                MessageBox.Show($"Ingresar altura transplante válida para la planta","Atencion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (cbmBoxEstacion.SelectedIndex == -1)
+            {
+                MessageBox.Show($"Seleccionar la estacion de transplante","Atencion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (!Validador.VerificarFloat(txtAlturaMax.Text))
+            {
+                MessageBox.Show($"Ingresar altura máxima válida para la planta", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+           
             return true;
         }
 

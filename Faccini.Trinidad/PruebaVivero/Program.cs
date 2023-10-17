@@ -1,4 +1,5 @@
 ﻿using Parcial;
+using Utilidades;
 
 public class Program
 {
@@ -31,7 +32,9 @@ public class Program
 
         Serializador.SerealizarPlantas(path, vivero.listaPlantas);
 
-        List<Planta> plantas = Serializador.DeserealizarPlantas(path);
+        List<Planta>? plantas = Serializador.DeserealizarPlantas(path);
+
+        Console.Write(Validador.VerificarEnumeradoPais("1"));
         
     }
 

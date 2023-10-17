@@ -34,7 +34,7 @@
             chFruto = new CheckBox();
             SuspendLayout();
             // 
-            // btnAgregar
+            // btnAceptar
             // 
             btnAceptar.Location = new Point(128, 447);
             btnAceptar.Click += btnAceptar_Click;
@@ -63,6 +63,7 @@
             // 
             // cmbBoxPais
             // 
+            cmbBoxPais.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbBoxPais.FormattingEnabled = true;
             cmbBoxPais.Items.AddRange(new object[] { "Argentina", "USA", "Paraguay", "Brasil" });
             cmbBoxPais.Location = new Point(280, 327);

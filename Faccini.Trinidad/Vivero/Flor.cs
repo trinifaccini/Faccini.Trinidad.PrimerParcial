@@ -112,8 +112,6 @@ namespace Parcial
             else return false;
         }
 
-      
-
         #endregion
     }
 }
