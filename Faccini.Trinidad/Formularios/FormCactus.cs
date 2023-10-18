@@ -27,9 +27,9 @@ namespace Formularios
         {
             cactus = c;
             Planta = c;
-            if (editable)
+            if (editable == false)
             {
-                HabilitarControles();
+                DeshabilitarControles();
             }
         }
 

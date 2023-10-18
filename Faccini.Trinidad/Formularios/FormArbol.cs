@@ -26,11 +26,10 @@ namespace Formularios
         public FormArbol(Arbol a, bool editable) : this()
         {
             arbol = a;
-            base.Planta = a;
-            if (editable)
-            {
-                HabilitarControles();
-            }
+            Planta = arbol;
+
+            if (editable == false)
+                DeshabilitarControles();
         }
 
         private void FormArbol_Load(object sender, EventArgs e)

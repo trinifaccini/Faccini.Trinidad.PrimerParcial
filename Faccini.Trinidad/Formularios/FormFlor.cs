@@ -22,7 +22,6 @@ namespace Formularios
 
             if (editable == false)
                 DeshabilitarControles();
-
         }
 
 

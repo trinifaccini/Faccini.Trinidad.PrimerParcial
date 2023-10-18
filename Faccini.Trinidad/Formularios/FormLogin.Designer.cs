@@ -35,6 +35,7 @@
             txtClave = new TextBox();
             lblTitulo = new Label();
             btnIngresar = new Button();
+            btnLogs = new Button();
             SuspendLayout();
             // 
             // lblUsuario
@@ -88,13 +89,26 @@
             btnIngresar.BackColor = SystemColors.ButtonShadow;
             btnIngresar.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnIngresar.ForeColor = SystemColors.ButtonFace;
-            btnIngresar.Location = new Point(143, 267);
+            btnIngresar.Location = new Point(59, 271);
             btnIngresar.Name = "btnIngresar";
-            btnIngresar.Size = new Size(102, 47);
+            btnIngresar.Size = new Size(110, 54);
             btnIngresar.TabIndex = 5;
             btnIngresar.Text = "INGRESAR";
             btnIngresar.UseVisualStyleBackColor = false;
             btnIngresar.Click += btnIngresar_Click;
+            // 
+            // btnLogs
+            // 
+            btnLogs.BackColor = SystemColors.ButtonShadow;
+            btnLogs.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLogs.ForeColor = SystemColors.ButtonFace;
+            btnLogs.Location = new Point(211, 271);
+            btnLogs.Name = "btnLogs";
+            btnLogs.Size = new Size(109, 54);
+            btnLogs.TabIndex = 6;
+            btnLogs.Text = "VER LOGS USUARIOS";
+            btnLogs.UseVisualStyleBackColor = false;
+            btnLogs.Click += btnLogs_Click;
             // 
             // FormLogin
             // 
@@ -102,7 +116,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(381, 347);
+            ClientSize = new Size(381, 380);
+            Controls.Add(btnLogs);
             Controls.Add(btnIngresar);
             Controls.Add(lblTitulo);
             Controls.Add(txtClave);
@@ -124,5 +139,6 @@
         private TextBox txtClave;
         private Label lblTitulo;
         private Button btnIngresar;
+        private Button btnLogs;
     }
 }

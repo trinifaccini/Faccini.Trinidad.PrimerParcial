@@ -44,7 +44,7 @@ namespace Parcial
         public string Nombre { get { return nombre; } set { nombre = value;  } }
         public float Precio { get { return precio; } set { precio = value; } }
         public string UltimoRiego { get { return ultimoRiego.ToString(); } set { ultimoRiego = ParsearFecha(value.ToString()); } }
-        public int FrecuenciaRiego { get { return frecuenciaRiego; } set { } }
+        public int FrecuenciaRiego { get { return frecuenciaRiego; } set { frecuenciaRiego = value;  } }
         public EEstacion EstacionTransplante { get { return estacionTransplante; } set { estacionTransplante = value; } }
         public bool AptaInterior { get { return aptaInterior; } set { aptaInterior = value; } }
         public bool AptaExterior { get { return aptaExterior; } set { aptaExterior = value; } }

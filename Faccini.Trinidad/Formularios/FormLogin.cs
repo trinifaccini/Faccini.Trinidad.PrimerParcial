@@ -37,7 +37,7 @@ namespace Formularios
 
             else
             {
-                MessageBox.Show("Atencion", $"Correo o clave incorrectas\nIntenta nuevamente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Correo o clave incorrectas\nIntenta nuevamente", $"Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -61,6 +61,12 @@ namespace Formularios
             else
                 MessageBox.Show($"No se ha podido verificar la existencia de usuarios.\nIntenta nuevamente en unos momentos.");
 
+        }
+
+        private void btnLogs_Click(object sender, EventArgs e)
+        {
+            FormLogsUsuarios frm = new FormLogsUsuarios();
+            frm.ShowDialog();
         }
     }
 }
