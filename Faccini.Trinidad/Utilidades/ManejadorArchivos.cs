@@ -5,7 +5,7 @@ using System.Text.Json;
 
 namespace Utilidades
 {
-    public static class Serializador
+    public static class ManejadorArchivos
     {
         /// <summary>
         /// Deserealiza la lista de usuarios hallada en el archivo tipo json recibido por parametro

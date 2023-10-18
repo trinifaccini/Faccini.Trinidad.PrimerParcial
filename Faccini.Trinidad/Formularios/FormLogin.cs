@@ -47,7 +47,7 @@ namespace Formularios
 
             string path = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Archivos\MOCK_DATA.json";
 
-            List<Usuario>? usuarios = Serializador.DeserealizarUsuarios(path);
+            List<Usuario>? usuarios = ManejadorArchivos.DeserealizarUsuarios(path);
 
             if (usuarios is not null)
             {

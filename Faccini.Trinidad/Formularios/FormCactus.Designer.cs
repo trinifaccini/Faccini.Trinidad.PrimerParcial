@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCactus));
             lblTitulo = new Label();
             chFlor = new CheckBox();
             chEspinas = new CheckBox();
             SuspendLayout();
             // 
-            // btnAgregar
+            // btnAceptar
             // 
             btnAceptar.Click += btnAceptar_Click;
             // 
@@ -70,7 +71,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(486, 450);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(486, 511);
             Controls.Add(chEspinas);
             Controls.Add(chFlor);
             Controls.Add(lblTitulo);

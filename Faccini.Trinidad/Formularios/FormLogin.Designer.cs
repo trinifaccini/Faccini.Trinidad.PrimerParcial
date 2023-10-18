@@ -101,6 +101,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(381, 347);
             Controls.Add(btnIngresar);
             Controls.Add(lblTitulo);
@@ -108,6 +109,7 @@
             Controls.Add(txtCorreo);
             Controls.Add(lblClave);
             Controls.Add(lblUsuario);
+            DoubleBuffered = true;
             Name = "FormLogin";
             Text = "Inicio sesion";
             ResumeLayout(false);

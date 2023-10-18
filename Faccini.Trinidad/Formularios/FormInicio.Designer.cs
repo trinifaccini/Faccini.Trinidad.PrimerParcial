@@ -274,6 +274,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(943, 552);
             Controls.Add(toolStrip1);
             Controls.Add(btnRegar);
@@ -288,6 +289,7 @@
             Controls.Add(btnAgregarCactus);
             Controls.Add(lstPlantas);
             Controls.Add(label1);
+            DoubleBuffered = true;
             Name = "FormInicio";
             Text = "Inicio";
             FormClosing += FormInicio_FormClosing;

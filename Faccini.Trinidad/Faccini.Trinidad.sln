@@ -5,11 +5,9 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vivero", "Vivero\Vivero.csproj", "{8AC21676-CD17-439C-8270-CF33545CBCF6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PruebaVivero", "PruebaVivero\PruebaVivero.csproj", "{C294301A-13F7-4FF3-93E6-E4295EC893D6}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Formularios", "Formularios\Formularios.csproj", "{EFC8F3B2-763A-4B91-8EEF-8524479D41D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilidades", "Utilidades\Utilidades.csproj", "{D1592FFF-BE71-4026-AD5C-1264DFDA4A3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utilidades", "Utilidades\Utilidades.csproj", "{D1592FFF-BE71-4026-AD5C-1264DFDA4A3A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +19,6 @@ Global
 		{8AC21676-CD17-439C-8270-CF33545CBCF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8AC21676-CD17-439C-8270-CF33545CBCF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8AC21676-CD17-439C-8270-CF33545CBCF6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C294301A-13F7-4FF3-93E6-E4295EC893D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C294301A-13F7-4FF3-93E6-E4295EC893D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C294301A-13F7-4FF3-93E6-E4295EC893D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C294301A-13F7-4FF3-93E6-E4295EC893D6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EFC8F3B2-763A-4B91-8EEF-8524479D41D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EFC8F3B2-763A-4B91-8EEF-8524479D41D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFC8F3B2-763A-4B91-8EEF-8524479D41D5}.Release|Any CPU.ActiveCfg = Release|Any CPU

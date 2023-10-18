@@ -36,7 +36,7 @@ namespace Formularios
                 string nombre = txtNombre.Text;
                 float alturaMax = float.Parse(txtAlturaMax.Text);
                 float alturaTransplante = float.Parse(txtAlturaTransplante.Text);
-                float precio = float.Parse( txtPrecio.Text);
+                float precio = float.Parse(txtPrecio.Text);
                 int frecuenciaRiego = int.Parse(txtFrecuencia.Text);
                 EEstacion estacionTransplante = (EEstacion)cbmBoxEstacion.SelectedIndex;
                 bool aptaInterior = checkedListBoxAmbiente.CheckedIndices.Contains(0);

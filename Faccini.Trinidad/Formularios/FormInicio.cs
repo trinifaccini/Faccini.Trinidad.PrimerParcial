@@ -32,11 +32,11 @@ namespace Formularios
             openFileDialog1.FileName = "PLANTAS_DATA.xml";
             openFileDialog1.Filter = "XML-File | *.xml";
             openFileDialog1.ShowDialog();
-           
+
 
             if (File.Exists(openFileDialog1.FileName))
             {
-                List<Planta>? aux = Serializador.DeserealizarPlantas(openFileDialog1.FileName);
+                List<Planta>? aux = ManejadorArchivos.DeserealizarPlantas(openFileDialog1.FileName);
                 if (aux is not null)
                     vivero.listaPlantas = aux;
             }
@@ -51,11 +51,11 @@ namespace Formularios
 
             try
             {
-                if(saveFileDialog1.ShowDialog() == DialogResult.OK)
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
                     if (File.Exists(saveFileDialog1.FileName))
-                    { 
-                        Serializador.SerealizarPlantas(saveFileDialog1.FileName, vivero.listaPlantas);
+                    {
+                        ManejadorArchivos.SerealizarPlantas(saveFileDialog1.FileName, vivero.listaPlantas);
                         return true;
                     }
                 }
@@ -63,7 +63,7 @@ namespace Formularios
                 return false;
             }
 
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show("Error al guardar");
                 return false;

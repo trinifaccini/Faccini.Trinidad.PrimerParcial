@@ -9,3 +9,14 @@ C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Vi
 C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Vivero\obj\Debug\net6.0\refint\Vivero.dll
 C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Vivero\obj\Debug\net6.0\Vivero.pdb
 C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Vivero\obj\Debug\net6.0\ref\Vivero.dll
+C:\Users\Usuario\Desktop\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Vivero\bin\Debug\net6.0\Vivero.deps.json
+C:\Users\Usuario\Desktop\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Vivero\bin\Debug\net6.0\Vivero.dll
+C:\Users\Usuario\Desktop\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Vivero\bin\Debug\net6.0\Vivero.pdb
+C:\Users\Usuario\Desktop\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Vivero\obj\Debug\net6.0\Vivero.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Vivero\obj\Debug\net6.0\Vivero.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Vivero\obj\Debug\net6.0\Vivero.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Vivero\obj\Debug\net6.0\Vivero.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Vivero\obj\Debug\net6.0\Vivero.dll
+C:\Users\Usuario\Desktop\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Vivero\obj\Debug\net6.0\refint\Vivero.dll
+C:\Users\Usuario\Desktop\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Vivero\obj\Debug\net6.0\Vivero.pdb
+C:\Users\Usuario\Desktop\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Vivero\obj\Debug\net6.0\ref\Vivero.dll

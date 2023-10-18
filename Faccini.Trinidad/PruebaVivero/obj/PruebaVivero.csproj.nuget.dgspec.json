@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\source\\repos\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\PruebaVivero\\PruebaVivero.csproj": {}
+    "C:\\Users\\Usuario\\Desktop\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\PruebaVivero\\PruebaVivero.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\source\\repos\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\PruebaVivero\\PruebaVivero.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\PruebaVivero\\PruebaVivero.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\PruebaVivero\\PruebaVivero.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\PruebaVivero\\PruebaVivero.csproj",
         "projectName": "PruebaVivero",
-        "projectPath": "C:\\Users\\Usuario\\source\\repos\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\PruebaVivero\\PruebaVivero.csproj",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\PruebaVivero\\PruebaVivero.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\source\\repos\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\PruebaVivero\\obj\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\PruebaVivero\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Usuario\\source\\repos\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Utilidades\\Utilidades.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\source\\repos\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Utilidades\\Utilidades.csproj"
+              "C:\\Users\\Usuario\\Desktop\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Utilidades\\Utilidades.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\Desktop\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Utilidades\\Utilidades.csproj"
               },
-              "C:\\Users\\Usuario\\source\\repos\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Vivero\\Vivero.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\source\\repos\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Vivero\\Vivero.csproj"
+              "C:\\Users\\Usuario\\Desktop\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Vivero\\Vivero.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\Desktop\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Vivero\\Vivero.csproj"
               }
             }
           }
@@ -66,14 +66,14 @@
         }
       }
     },
-    "C:\\Users\\Usuario\\source\\repos\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Utilidades\\Utilidades.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Utilidades\\Utilidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Utilidades\\Utilidades.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Utilidades\\Utilidades.csproj",
         "projectName": "Utilidades",
-        "projectPath": "C:\\Users\\Usuario\\source\\repos\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Utilidades\\Utilidades.csproj",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Utilidades\\Utilidades.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\source\\repos\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Utilidades\\obj\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Utilidades\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -90,8 +90,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Usuario\\source\\repos\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Vivero\\Vivero.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\source\\repos\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Vivero\\Vivero.csproj"
+              "C:\\Users\\Usuario\\Desktop\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Vivero\\Vivero.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\Desktop\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Vivero\\Vivero.csproj"
               }
             }
           }
@@ -125,14 +125,14 @@
         }
       }
     },
-    "C:\\Users\\Usuario\\source\\repos\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Vivero\\Vivero.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Vivero\\Vivero.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Vivero\\Vivero.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Vivero\\Vivero.csproj",
         "projectName": "Vivero",
-        "projectPath": "C:\\Users\\Usuario\\source\\repos\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Vivero\\Vivero.csproj",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Vivero\\Vivero.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\source\\repos\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Vivero\\obj\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\Faccini.Trinidad.PrimerParcial\\Faccini.Trinidad\\Vivero\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
