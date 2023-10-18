@@ -38,7 +38,7 @@ namespace Formularios
 
             return true;
         }
-       
+
 
         internal override void btnAceptar_Click(object sender, EventArgs e)
         {
@@ -69,10 +69,10 @@ namespace Formularios
 
             if (flor is not null)
             {
-                
+
                 txtColor.Text = flor.Color;
                 chBoxOlor.Checked = flor.TieneOlor;
-               
+
             }
         }
 

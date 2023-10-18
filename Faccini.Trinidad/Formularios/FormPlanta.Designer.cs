@@ -115,21 +115,24 @@
             // 
             txtNombre.Location = new Point(16, 59);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(160, 23);
+            txtNombre.PlaceholderText = "Ingrese un nombre para la planta";
+            txtNombre.Size = new Size(186, 23);
             txtNombre.TabIndex = 7;
             // 
             // txtPrecio
             // 
             txtPrecio.Location = new Point(16, 136);
             txtPrecio.Name = "txtPrecio";
-            txtPrecio.Size = new Size(160, 23);
+            txtPrecio.PlaceholderText = "Ingrese un numero con o sin .";
+            txtPrecio.Size = new Size(186, 23);
             txtPrecio.TabIndex = 8;
             // 
             // txtFrecuencia
             // 
             txtFrecuencia.Location = new Point(18, 201);
             txtFrecuencia.Name = "txtFrecuencia";
-            txtFrecuencia.Size = new Size(158, 23);
+            txtFrecuencia.PlaceholderText = "Ingrese un numero entero";
+            txtFrecuencia.Size = new Size(184, 23);
             txtFrecuencia.TabIndex = 9;
             // 
             // cbmBoxEstacion
@@ -148,7 +151,7 @@
             checkedListBoxAmbiente.Items.AddRange(new object[] { "Interior", "Exterior" });
             checkedListBoxAmbiente.Location = new Point(282, 59);
             checkedListBoxAmbiente.Name = "checkedListBoxAmbiente";
-            checkedListBoxAmbiente.Size = new Size(158, 40);
+            checkedListBoxAmbiente.Size = new Size(186, 40);
             checkedListBoxAmbiente.TabIndex = 11;
             // 
             // txtAlturaActual
@@ -156,7 +159,7 @@
             txtAlturaActual.Enabled = false;
             txtAlturaActual.Location = new Point(282, 136);
             txtAlturaActual.Name = "txtAlturaActual";
-            txtAlturaActual.Size = new Size(158, 23);
+            txtAlturaActual.Size = new Size(186, 23);
             txtAlturaActual.TabIndex = 12;
             txtAlturaActual.Text = "0";
             // 
@@ -164,14 +167,16 @@
             // 
             txtAlturaMax.Location = new Point(282, 201);
             txtAlturaMax.Name = "txtAlturaMax";
-            txtAlturaMax.Size = new Size(158, 23);
+            txtAlturaMax.PlaceholderText = "Ingrese un numero con o sin .";
+            txtAlturaMax.Size = new Size(186, 23);
             txtAlturaMax.TabIndex = 13;
             // 
             // txtAlturaTransplante
             // 
             txtAlturaTransplante.Location = new Point(18, 265);
             txtAlturaTransplante.Name = "txtAlturaTransplante";
-            txtAlturaTransplante.Size = new Size(158, 23);
+            txtAlturaTransplante.PlaceholderText = "Ingrese un numero con o sin .";
+            txtAlturaTransplante.Size = new Size(184, 23);
             txtAlturaTransplante.TabIndex = 15;
             // 
             // lblAlturaTransplante

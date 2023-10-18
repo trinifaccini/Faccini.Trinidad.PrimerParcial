@@ -69,13 +69,13 @@ namespace Formularios
 
             if (!Validador.ValidarFloat(txtAlturaTransplante.Text))
             {
-                MessageBox.Show($"Ingresar altura transplante válida para la planta","Atencion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"Ingresar altura transplante válida para la planta", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             if (cbmBoxEstacion.SelectedIndex == -1)
             {
-                MessageBox.Show($"Seleccionar la estacion de transplante","Atencion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"Seleccionar la estacion de transplante", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -84,7 +84,7 @@ namespace Formularios
                 MessageBox.Show($"Ingresar altura máxima válida para la planta", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-           
+
             return true;
         }
 
@@ -116,7 +116,7 @@ namespace Formularios
         /// <summary>
         /// Verifica los campos llenados. En caso de ser todos correctos, crea una instancia de la nueva planta.
         /// </summary>
-       
+
         internal virtual void btnAceptar_Click(object sender, EventArgs e) { }
     }
 }

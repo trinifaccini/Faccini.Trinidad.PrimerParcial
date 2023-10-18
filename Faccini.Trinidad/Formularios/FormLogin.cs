@@ -24,8 +24,7 @@ namespace Formularios
         {
             if (u is not null)
             {
-                string pathU = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\usuarios.log";
-                string pathP = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\PLANTAS_DATA.xml";
+                string pathU = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Archivos\usuarios.log";
 
                 u.CrearLogUsuario(pathU);
                 FormInicio inicio = new FormInicio(u);
@@ -37,20 +36,20 @@ namespace Formularios
             {
                 MessageBox.Show("Atencion", $"Correo o clave incorrectas\nIntenta nuevamente", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
- 
+
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             string correo = txtCorreo.Text;
             string clave = txtClave.Text;
 
-            string path = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\MOCK_DATA.json";
+            string path = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Archivos\MOCK_DATA.json";
 
-            List <Usuario>? usuarios = Serializador.DeserealizarUsuarios(path);
+            List<Usuario>? usuarios = Serializador.DeserealizarUsuarios(path);
 
-            if(usuarios is not null)
+            if (usuarios is not null)
             {
                 Usuario? u = Usuario.BuscarUsuario(usuarios, correo, clave);
                 LoguearUsuario(usuarios, u);

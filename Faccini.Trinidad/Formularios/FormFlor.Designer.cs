@@ -51,7 +51,8 @@
             // 
             txtColor.Location = new Point(283, 266);
             txtColor.Name = "txtColor";
-            txtColor.Size = new Size(100, 23);
+            txtColor.PlaceholderText = "Ingrese el color de la flor";
+            txtColor.Size = new Size(157, 23);
             txtColor.TabIndex = 18;
             // 
             // lblTitulo
