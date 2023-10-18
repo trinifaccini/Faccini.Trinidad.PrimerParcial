@@ -236,9 +236,13 @@ namespace Formularios
             else
             {
                 if (GuardarArchivoPlantas() == true)
+                {
                     e.Cancel = false;
+                }
                 else
+                {
                     e.Cancel = true;
+                }
             }
         }
     }

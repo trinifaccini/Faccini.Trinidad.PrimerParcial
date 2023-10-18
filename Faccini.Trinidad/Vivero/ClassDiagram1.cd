@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Parcial.Flor">
+    <Position X="8.75" Y="5.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAQAAAAEgAAAAAAAAAAAAACAAIAAgACAAiA=</HashCode>
+      <FileName>Flor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Parcial.Planta">
+    <Position X="5" Y="1" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AACIBAQAQIQEAgDEgAAAgEAQAABEEARABABEAAAAQyA=</HashCode>
+      <FileName>Planta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Parcial.Arbol">
+    <Position X="8.75" Y="1.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAQAIAAEiCAAAAgAAAAAAAAAAAAAAAAAAiA=</HashCode>
+      <FileName>Arbol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Parcial.Cactus">
+    <Position X="1.25" Y="1.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAIAAAQCAAAEgAAAAAAAAAAAAAAAAAAABAAAAiQ=</HashCode>
+      <FileName>Cactus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Parcial.Vivero">
+    <Position X="13" Y="5.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAEAAwAEAAAAgAAQAAAAAAAQAAAAAgjI=</HashCode>
+      <FileName>Vivero.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Parcial.Usuario">
+    <Position X="13" Y="1.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAEgYAAhAAAAIAAAAAAAAAAAAAAEiA=</HashCode>
+      <FileName>Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Parcial.EEstacion">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAABABAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enumerados.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Parcial.EMes">
+    <Position X="0.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACAAAAAAAAAIIIAAAAAAACAAQCAAQAAAAAGAAAAAA=</HashCode>
+      <FileName>Enumerados.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Parcial.EPais">
+    <Position X="2.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAIAAAAAACAAAAEA=</HashCode>
+      <FileName>Enumerados.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
