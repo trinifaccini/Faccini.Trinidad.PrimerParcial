@@ -23,4 +23,4 @@ Se adjunta una version reducida de los diagramas de clases del proyecto Formular
 
 <img width="728" alt="image" src="https://github.com/trinifaccini/Faccini.Trinidad.PrimerParcial/blob/master/Diagramas/diagrama_reducido.png">
 <img width="728" alt="image" src="https://github.com/trinifaccini/Faccini.Trinidad.PrimerParcial/blob/master/Diagramas/diagramaForms_reducido.png">
-<img width="728" alt="image" src="[https://github.com/trinifaccini/Faccini.Trinidad.PrimerParcial/blob/master/Diagramas/diagrama_reducido.png](https://github.com/trinifaccini/Faccini.Trinidad.PrimerParcial/blob/master/Diagramas/diagramaUtilidades.png)https://github.com/trinifaccini/Faccini.Trinidad.PrimerParcial/blob/master/Diagramas/diagramaUtilidades.png">
+<img width="728" alt="image" src = "https://github.com/trinifaccini/Faccini.Trinidad.PrimerParcial/blob/master/Diagramas/diagramaUtilidades.png">
