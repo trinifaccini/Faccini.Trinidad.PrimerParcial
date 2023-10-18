@@ -2,6 +2,9 @@
 
 namespace Utilidades
 {
+    /// <summary>
+    /// Clase estatica con metodos que se utilizaran para validar tipos de datos
+    /// </summary>
     public static class Validador
     {
         /// <summary>

@@ -11,6 +11,10 @@ using System.Windows.Forms;
 
 namespace Formularios
 {
+
+    /// <summary>
+    /// Formulario con campos comunes a llenar para las plantas de tipo Cactus
+    /// </summary>
     public partial class FormCactus : FormPlanta
     {
         private Cactus cactus;

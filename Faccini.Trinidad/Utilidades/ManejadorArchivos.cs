@@ -5,6 +5,9 @@ using System.Text.Json;
 
 namespace Utilidades
 {
+    /// <summary>
+    /// Clase estatica con metodos que se utilizaran para leer archivos, serealizar y deserealizar datos
+    /// </summary>
     public static class ManejadorArchivos
     {
         /// <summary>

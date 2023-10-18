@@ -3,6 +3,9 @@ using Utilidades;
 
 namespace Formularios
 {
+    /// <summary>
+    /// Formulario base con los campos comunes a llenar para todas las plantas
+    /// </summary>
     public partial class FormPlanta : Form
     {
 
@@ -116,7 +119,6 @@ namespace Formularios
         /// <summary>
         /// Verifica los campos llenados. En caso de ser todos correctos, crea una instancia de la nueva planta.
         /// </summary>
-
         internal virtual void btnAceptar_Click(object sender, EventArgs e) { }
     }
 }

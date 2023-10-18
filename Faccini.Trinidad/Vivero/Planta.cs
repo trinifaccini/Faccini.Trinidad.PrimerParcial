@@ -60,6 +60,11 @@ namespace Parcial
             nombre = "";
         }
 
+        public Planta(string nombre)
+        {
+            this.nombre = nombre;
+        }
+
         // Recibe todos -> llama al que recibe alturaActual 
         public Planta(string nombre, string ultimoRiego, int frecuenciaRiego, EEstacion estacionTransplante, bool aptaInterior, bool aptaExterior, 
             float alturaMax, float alturaActual, float alturaTransplante,float precio): this(nombre, frecuenciaRiego, estacionTransplante,
@@ -93,7 +98,6 @@ namespace Parcial
         }
         #endregion
 
-
         #region Sobreescritura operadores
 
         /// <summary>
@@ -113,6 +117,7 @@ namespace Parcial
         {
             return !(a == b);
         }
+
 
         #endregion
 

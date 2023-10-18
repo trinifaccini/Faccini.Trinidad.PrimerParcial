@@ -28,6 +28,11 @@ namespace Parcial
         
         public Arbol() { }
 
+        public Arbol(string nombre) : base(nombre)
+        {
+
+        }
+
 
         // Recibe todos
         public Arbol(string nombre, int frecuenciaRiego, EEstacion estacionTransplante, bool aptaInterior, bool aptaExterior,
@@ -79,8 +84,19 @@ namespace Parcial
             return !(a == b);
         }
 
+        public static implicit operator string(Arbol arbol)
+        {
+            return arbol.Nombre;
+        }
+
+        public static explicit operator Arbol(string nombreArbol)
+        {
+            Arbol a = new Arbol(nombreArbol);
+            return a;
+        }
+
         #endregion
-        
+
         #region Metodos
         // DOCUMENTADA EN CLASE BASE
         internal override bool CrecerPlanta()

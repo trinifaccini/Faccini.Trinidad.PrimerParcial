@@ -30,6 +30,11 @@ namespace Parcial
             color = "";
         }
 
+        public Flor(string nombre):base(nombre)
+        {
+            color = "verde";
+        }
+
         // Recibe todos
         public Flor(string nombre, int frecuenciaRiego, EEstacion estacionTransplante, bool aptaInterior, bool aptaExterior, float alturaMax,
             float alturaTransplante, string color, bool tieneOlor, float precio) :
@@ -77,6 +82,18 @@ namespace Parcial
         public static bool operator !=(Flor a, Flor b)
         {
             return !(a == b);
+        }
+
+
+        public static implicit operator string(Flor flor)
+        {
+            return flor.Nombre;
+        }
+
+        public static explicit operator Flor(string nombreFlor)
+        {
+            Flor f = new Flor(nombreFlor);
+            return f;
         }
 
         #region Metodos

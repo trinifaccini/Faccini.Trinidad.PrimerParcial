@@ -28,6 +28,9 @@ namespace Parcial
         #region Constructores
 
         public Cactus() { }
+
+        public Cactus(string nombre):base(nombre) { }
+
         // Recibe todos
         public Cactus(string nombre, int frecuenciaRiego, EEstacion estacionTransplante, bool aptaInterior, bool aptaExterior,
             float alturaMax, float alturaTransplante,bool espinas, bool flores, float precio) :
@@ -77,6 +80,17 @@ namespace Parcial
         public static bool operator !=(Cactus a, Cactus b)
         {
             return !(a == b);
+        }
+
+        public static implicit operator string(Cactus cactus)
+        {
+            return cactus.Nombre;
+        }
+
+        public static explicit operator Cactus(string nombreCactus)
+        {
+            Cactus c = new Cactus(nombreCactus);
+            return c;
         }
 
         #endregion

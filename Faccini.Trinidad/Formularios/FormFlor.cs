@@ -3,6 +3,9 @@ using Utilidades;
 
 namespace Formularios
 {
+    /// <summary>
+     /// Formulario con campos comunes a llenar para las plantas de tipo Flor
+     /// </summary>
     public partial class FormFlor : FormPlanta
     {
         private Flor flor;

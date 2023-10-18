@@ -12,6 +12,9 @@ using Utilidades;
 
 namespace Formularios
 {
+    /// <summary>
+    /// Formulario con campos comunes a llenar para las plantas de tipo Arbol
+    /// </summary>
     public partial class FormArbol : FormPlanta
     {
         Arbol arbol;

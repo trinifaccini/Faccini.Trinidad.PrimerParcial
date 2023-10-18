@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Parcial.Flor">
-    <Position X="8.75" Y="5.25" Width="3.25" />
+    <Position X="8.75" Y="5.75" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AAAIAAAAAAQAAAAEgAAAAAAAAAAAAACAAIAAgACAAiA=</HashCode>
+      <HashCode>AAAIIAAAAAQAAAAEgAAAAAAABAAAAACAAIAAgACAAiA=</HashCode>
       <FileName>Flor.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -17,14 +17,14 @@
   <Class Name="Parcial.Arbol">
     <Position X="8.75" Y="1.25" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AAAIAAAAAAQAIAAEiCAAAAgAAAAAAAAAAAAAAAAAAiA=</HashCode>
+      <HashCode>AAAIIAAAAAQAIAAEiCQAAAgAAAAAAAAAAAAAAAAAAiA=</HashCode>
       <FileName>Arbol.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Parcial.Cactus">
     <Position X="1.25" Y="1.25" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AAAIAAIAAAQCAAAEgAAAAAAAAAAAAAAAAAAABAAAAiQ=</HashCode>
+      <HashCode>AAAIIAIAAAQCAAAEgAAAAAAACAAAAAAAAAAABAAAAiQ=</HashCode>
       <FileName>Cactus.cs</FileName>
     </TypeIdentifier>
   </Class>

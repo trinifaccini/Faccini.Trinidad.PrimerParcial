@@ -6,6 +6,10 @@ using System.Windows.Forms;
 
 namespace Formularios
 {
+
+    /// <summary>
+    /// Formulario inicial - Formulario CRUD
+    /// </summary>
     public partial class FormInicio : Form
     {
 
@@ -14,7 +18,6 @@ namespace Formularios
 
         public FormInicio()
         {
-
             InitializeComponent();
             vivero = new Vivero("ARRAYANES");
         }
@@ -25,6 +28,9 @@ namespace Formularios
             AbrirArchivoPlantas();
         }
 
+        /// <summary>
+        /// Muestra el openFileDialog del formulario, le permite al usuario elegir el archivo desde donde cargar las plantas
+        /// </summary>
         public void AbrirArchivoPlantas()
         {
             openFileDialog1.Title = "Elige el archivo de plantas a abrir";
@@ -42,6 +48,9 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Muestra el saveFileDialod del formulario, le permite al usuario elegir el archivo donde quiere cargar las plantas
+        /// </summary>
         public bool GuardarArchivoPlantas()
         {
             saveFileDialog1.Title = "Elige donde guardar la lista de plantas";

@@ -13,6 +13,9 @@ using System.Windows.Forms;
 
 namespace Formularios
 {
+    /// <summary>
+    /// Formulario de inicio de sesion
+    /// </summary>
     public partial class FormLogin : Form
     {
         public FormLogin()
