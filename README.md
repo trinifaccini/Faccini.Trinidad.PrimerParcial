@@ -21,6 +21,6 @@ ATENCION: Solo los usuarios de tipo administrador o supervisor podran modificar 
 A continuación se adjuntas los diagramas de clases que incluyen todas las clases utilizadas en esta solución. Tambien incluyen los enumerados creados. 
 Se adjunta una version reducida de los diagramas de clases del proyecto Formularios y del proyecto Vivero, para su mejor lectura.
 
-<img width="728" alt="image" src="https://github.com/trinifaccini/Faccini.Trinidad.PrimerParcial/blob/master/Diagramas/diagrama_reducido.png">
-<img width="728" alt="image" src="https://github.com/trinifaccini/Faccini.Trinidad.PrimerParcial/blob/master/Diagramas/diagramaForms_reducido.png">
-<img width="728" alt="image" src = "https://github.com/trinifaccini/Faccini.Trinidad.PrimerParcial/blob/master/Diagramas/diagramaUtilidades.png">
+<img width="728" alt="image" src="https://github.com/trinifaccini/Faccini.Trinidad.PrimerParcial/blob/master/Diagramas/DiagramaClasesProyectoVivero.png">
+<img width="728" alt="image" src="https://github.com/trinifaccini/Faccini.Trinidad.PrimerParcial/blob/master/Diagramas/DiagramaClasesFormularios.png">
+<img width="728" alt="image" src = "https://github.com/trinifaccini/Faccini.Trinidad.PrimerParcial/blob/master/Diagramas/DiagramaClasesUtilidades.png">

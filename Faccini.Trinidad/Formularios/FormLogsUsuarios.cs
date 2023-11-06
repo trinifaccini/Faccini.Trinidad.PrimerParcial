@@ -21,6 +21,8 @@ namespace Formularios
 
         private void FormLogsUsuarios_Load(object sender, EventArgs e)
         {
+           
+            MessageBox.Show(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName);
             string path = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Archivos\usuarios.log";
             string[] lineas = ManejadorArchivos.LeerArchivoLogs(path);
 
