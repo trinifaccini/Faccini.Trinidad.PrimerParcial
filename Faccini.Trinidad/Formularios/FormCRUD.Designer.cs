@@ -1,6 +1,6 @@
 ﻿namespace Formularios
 {
-    partial class FormInicio
+    partial class FormCRUD
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInicio));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCRUD));
             label1 = new Label();
             lstPlantas = new ListBox();
             btnAgregarCactus = new Button();

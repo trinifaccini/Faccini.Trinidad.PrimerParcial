@@ -21,17 +21,17 @@
       <FileName>FormFlor.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Formularios.FormInicio">
+  <Class Name="Formularios.FormCRUD">
     <Position X="9.25" Y="4.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>BAQAgEFCACIQAFhAAUKAQAgCCEQgAQwAAlAAIQCEGAI=</HashCode>
-      <FileName>FormInicio.cs</FileName>
+      <HashCode>BAQAgEFCQCIQAFhAAUKAQAgCCEQgAQwAAlAAIQCEGAI=</HashCode>
+      <FileName>FormCRUD.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Formularios.FormLogin">
     <Position X="6.75" Y="4.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>IAAAAIAAQCAAAQQABACEAAACAQAAAQAAACAAAAAAAAA=</HashCode>
+      <HashCode>IAAAAIAAQCAAEQQABACEAAACAQAAAQAAACAAAEAIAAA=</HashCode>
       <FileName>FormLogin.cs</FileName>
     </TypeIdentifier>
   </Class>

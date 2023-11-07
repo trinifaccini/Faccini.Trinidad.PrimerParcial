@@ -10,7 +10,7 @@
     <Compile Update="FormFlor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormInicio.cs">
+    <Compile Update="FormCRUD.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormLogin.cs">

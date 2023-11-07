@@ -39,7 +39,6 @@ C:\Users\Usuario\Desktop\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Formula
 C:\Users\Usuario\Desktop\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Formularios\obj\Debug\net6.0-windows\Formularios.FormArbol.resources
 C:\Users\Usuario\Desktop\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Formularios\obj\Debug\net6.0-windows\Formularios.FormCactus.resources
 C:\Users\Usuario\Desktop\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Formularios\obj\Debug\net6.0-windows\Formularios.FormFlor.resources
-C:\Users\Usuario\Desktop\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Formularios\obj\Debug\net6.0-windows\Formularios.FormInicio.resources
 C:\Users\Usuario\Desktop\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Formularios\obj\Debug\net6.0-windows\Formularios.FormLogin.resources
 C:\Users\Usuario\Desktop\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Formularios\obj\Debug\net6.0-windows\Formularios.FormPlanta.resources
 C:\Users\Usuario\Desktop\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Formularios\obj\Debug\net6.0-windows\Formularios.Properties.Resources.resources
@@ -55,3 +54,4 @@ C:\Users\Usuario\Desktop\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Formula
 C:\Users\Usuario\Desktop\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Formularios\obj\Debug\net6.0-windows\Formularios.genruntimeconfig.cache
 C:\Users\Usuario\Desktop\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Formularios\obj\Debug\net6.0-windows\ref\Formularios.dll
 C:\Users\Usuario\Desktop\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Formularios\obj\Debug\net6.0-windows\Formularios.FormLogsUsuarios.resources
+C:\Users\Usuario\Desktop\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Formularios\obj\Debug\net6.0-windows\Formularios.FormCRUD.resources

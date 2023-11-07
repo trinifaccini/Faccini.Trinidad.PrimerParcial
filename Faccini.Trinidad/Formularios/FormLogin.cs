@@ -20,6 +20,12 @@ namespace Formularios
     {
         private string pathLogsUsuarios;
         private string pathDataUsuarios;
+        private Usuario usuario;
+
+        public Usuario Usuario
+        {
+            get { return usuario; }
+        }
 
         public FormLogin()
         {
@@ -35,12 +41,14 @@ namespace Formularios
         {
             if (u is not null)
             {
-
                 u.CrearLogUsuario(pathLogsUsuarios);
-                FormInicio inicio = new FormInicio(u);
-                //this.Close();
-                Hide();
-                inicio.Show();
+                usuario = u;
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+                //FormCRUD inicio = new FormCRUD(u);
+                //Hide();
+                //inicio.Show();
+
             }
 
             else

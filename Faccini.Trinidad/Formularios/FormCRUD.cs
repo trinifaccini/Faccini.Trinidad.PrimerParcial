@@ -10,14 +10,14 @@ namespace Formularios
     /// <summary>
     /// Formulario inicial - Formulario CRUD
     /// </summary>
-    public partial class FormInicio : Form
+    public partial class FormCRUD : Form
     {
 
         private Vivero vivero;
         private Usuario usuario;
         private string pathDataPlantas;
 
-        public FormInicio()
+        public FormCRUD()
         {
             InitializeComponent();
             vivero = new Vivero("ARRAYANES");
@@ -26,7 +26,7 @@ namespace Formularios
             pathDataPlantas = ManejadorArchivos.ObtenerDirectorioAnterior(Environment.CurrentDirectory, archivoData);
         }
 
-        public FormInicio(Usuario usuario) : this()
+        public FormCRUD(Usuario usuario) : this()
         {
             this.usuario = usuario;
             AbrirArchivoPlantas();
@@ -238,6 +238,7 @@ namespace Formularios
             MessageBox.Show(planta.Regar());
         }
 
+        
         private void FormInicio_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("¿Seguro que quieres salir?", "Apagando sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
@@ -257,5 +258,6 @@ namespace Formularios
                 }
             }
         }
+        
     }
 }
