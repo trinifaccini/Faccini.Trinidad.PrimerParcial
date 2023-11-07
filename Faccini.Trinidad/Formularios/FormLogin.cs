@@ -18,19 +18,27 @@ namespace Formularios
     /// </summary>
     public partial class FormLogin : Form
     {
+        private string pathLogsUsuarios;
+        private string pathDataUsuarios;
+
         public FormLogin()
         {
             InitializeComponent();
+            string archivoLogs = @"\Archivos\usuarios.log";
+            string archivoData = @"\Archivos\MOCK_DATA.json";
+
+            pathLogsUsuarios = ManejadorArchivos.ObtenerDirectorioAnterior(Environment.CurrentDirectory, archivoLogs);
+            pathDataUsuarios = ManejadorArchivos.ObtenerDirectorioAnterior(Environment.CurrentDirectory, archivoData);
         }
 
         private void LoguearUsuario(List<Usuario> usuarios, Usuario? u)
         {
             if (u is not null)
             {
-                string pathU = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Archivos\usuarios.log";
 
-                u.CrearLogUsuario(pathU);
+                u.CrearLogUsuario(pathLogsUsuarios);
                 FormInicio inicio = new FormInicio(u);
+                //this.Close();
                 Hide();
                 inicio.Show();
             }
@@ -48,9 +56,7 @@ namespace Formularios
             string correo = txtCorreo.Text;
             string clave = txtClave.Text;
 
-            string path = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Archivos\MOCK_DATA.json";
-
-            List<Usuario>? usuarios = ManejadorArchivos.DeserealizarUsuarios(path);
+            List<Usuario>? usuarios = ManejadorArchivos.DeserealizarUsuarios(pathDataUsuarios);
 
             if (usuarios is not null)
             {

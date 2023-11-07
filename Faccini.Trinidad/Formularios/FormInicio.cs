@@ -15,11 +15,15 @@ namespace Formularios
 
         private Vivero vivero;
         private Usuario usuario;
+        private string pathDataPlantas;
 
         public FormInicio()
         {
             InitializeComponent();
             vivero = new Vivero("ARRAYANES");
+            string archivoData = @"\Archivos";
+
+            pathDataPlantas = ManejadorArchivos.ObtenerDirectorioAnterior(Environment.CurrentDirectory, archivoData);
         }
 
         public FormInicio(Usuario usuario) : this()
@@ -34,11 +38,10 @@ namespace Formularios
         public void AbrirArchivoPlantas()
         {
             openFileDialog1.Title = "Elige el archivo de plantas a abrir";
-            openFileDialog1.InitialDirectory = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Archivos\";
+            saveFileDialog1.InitialDirectory = pathDataPlantas;
             openFileDialog1.FileName = "PLANTAS_DATA.xml";
             openFileDialog1.Filter = "XML-File | *.xml";
             openFileDialog1.ShowDialog();
-
 
             if (File.Exists(openFileDialog1.FileName))
             {
@@ -54,7 +57,7 @@ namespace Formularios
         public bool GuardarArchivoPlantas()
         {
             saveFileDialog1.Title = "Elige donde guardar la lista de plantas";
-            saveFileDialog1.InitialDirectory = @"C:\Users\Usuario\source\repos\Faccini.Trinidad.PrimerParcial\Faccini.Trinidad\Archivos\";
+            saveFileDialog1.InitialDirectory = pathDataPlantas;
             saveFileDialog1.Filter = "XML-File | *.xml";
             saveFileDialog1.FileName = "PLANTAS_DATA.xml";
 

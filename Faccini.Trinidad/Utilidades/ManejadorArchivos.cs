@@ -10,6 +10,16 @@ namespace Utilidades
     /// </summary>
     public static class ManejadorArchivos
     {
+
+        public static string ObtenerDirectorioAnterior(string dirActual, string archivo)
+        {
+            string a = Directory.GetParent(dirActual).Parent.FullName;
+            string b = Directory.GetParent(a).Parent.FullName;
+
+            string path = b + archivo;
+
+            return path;
+        }
         /// <summary>
         /// Deserealiza la lista de usuarios hallada en el archivo tipo json recibido por parametro
         /// </summary>
