@@ -50,11 +50,11 @@ namespace Formularios
         /// Muestra mensaje del primer campo verificado como incorrecto. 
         /// </summary>
         /// <returns>true si todos los campos son correctos, false si al menos uno no lo es</returns>
-        public virtual bool VerificarCampos()
+        internal virtual bool VerificarCampos()
         {
-            if (txtNombre.Text == "" || Validador.ValidarEntero(txtNombre.Text) || Validador.ValidarFloat(txtNombre.Text))
+            if (txtNombre.Text.Trim() == string.Empty || !Validador.ValidarAlfa(txtNombre.Text))
             {
-                MessageBox.Show($"Ingresar un nombre para la planta", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"Ingresar un nombre válido para la planta", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -116,9 +116,6 @@ namespace Formularios
             this.DialogResult = DialogResult.Cancel;
         }
 
-        /// <summary>
-        /// Verifica los campos llenados. En caso de ser todos correctos, crea una instancia de la nueva planta.
-        /// </summary>
-        internal virtual void btnAceptar_Click(object sender, EventArgs e) { }
+        
     }
 }

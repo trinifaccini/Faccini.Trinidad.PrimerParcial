@@ -87,6 +87,7 @@ namespace Formularios
 
         private void FormInicio_Load(object sender, EventArgs e)
         {
+            this.TopMost = true;
             label1.Text = $"BIENVENIDO AL SISTEMA DEL VIVERO: {vivero.NombreVivero}";
             lblOperador.Text = $"Operador: {usuario}";
 

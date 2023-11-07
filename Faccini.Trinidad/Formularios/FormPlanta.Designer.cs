@@ -196,7 +196,6 @@
             btnAceptar.TabIndex = 16;
             btnAceptar.Text = "ACEPTAR";
             btnAceptar.UseVisualStyleBackColor = true;
-            btnAceptar.Click += btnAceptar_Click;
             // 
             // btnCancelar
             // 

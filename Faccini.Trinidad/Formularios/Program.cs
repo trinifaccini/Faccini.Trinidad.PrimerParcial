@@ -20,7 +20,11 @@ namespace Formularios
             DialogResult result = login.ShowDialog();
             if (result == DialogResult.OK)
             {
-                Application.Run(new FormCRUD(login.Usuario));
+                FormCRUD formCRUD = new FormCRUD(login.Usuario);
+                formCRUD.Show();
+                formCRUD.TopMost = true;
+                Application.Run(formCRUD);
+
             }
             else
             {

@@ -25,7 +25,7 @@ namespace Formularios
         }
 
 
-        public override bool VerificarCampos()
+        internal override bool VerificarCampos()
         {
             bool verificadoGeneral = base.VerificarCampos();
 
@@ -42,7 +42,7 @@ namespace Formularios
         }
 
 
-        internal override void btnAceptar_Click(object sender, EventArgs e)
+        private void btnAceptar_Click(object sender, EventArgs e)
         {
             if (VerificarCampos())
             {

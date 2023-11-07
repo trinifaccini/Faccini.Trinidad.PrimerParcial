@@ -48,7 +48,6 @@ namespace Formularios
                 //FormCRUD inicio = new FormCRUD(u);
                 //Hide();
                 //inicio.Show();
-
             }
 
             else
