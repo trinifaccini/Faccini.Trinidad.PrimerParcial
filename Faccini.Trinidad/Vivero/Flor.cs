@@ -104,7 +104,8 @@ namespace Parcial
             StringBuilder sb = new StringBuilder();
             sb.Append($"Tipo: ");
             sb.Append(this.ToString());
-            sb.Append($"Color: {color}\n");
+            sb.Append($"Color: {color} - ");
+            sb.Append(tieneOlor ? $"Tiene olor\n" : $"No tiene olor\n");
 
             return (sb.ToString());
         }
@@ -113,7 +114,7 @@ namespace Parcial
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append($"Flor\t");
+            sb.Append($"Flor - ");
             sb.Append(base.ToString());
             return sb.ToString();
         }

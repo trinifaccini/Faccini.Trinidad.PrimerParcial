@@ -121,7 +121,9 @@ namespace Parcial
             StringBuilder sb = new StringBuilder();
             sb.Append($"Tipo: ");
             sb.Append(this.ToString());
-            sb.Append($"Pais: {paisOrigen}\n");
+            sb.Append($" - Pais: {paisOrigen} - ");
+            string frutos = tieneFrutos ? "si" : "no";
+            sb.Append($"Da frutos: {frutos} \n");
             return sb.ToString();
         }
         
@@ -129,7 +131,7 @@ namespace Parcial
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append($"Arbol\t");
+            sb.Append($"Arbol - ");
             sb.Append(base.ToString());
             return sb.ToString();
         }

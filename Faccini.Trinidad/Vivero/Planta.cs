@@ -265,9 +265,9 @@ namespace Parcial
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append($"Nombre {nombre}\t");
-            sb.Append($"Altura actual: {alturaActual}\t");
-            sb.Append($"Precio {precio}\t");
+            sb.Append($"Nombre {nombre} - ");
+            sb.Append($"Altura actual: {alturaActual} - ");
+            sb.Append($"Precio {precio} - ");
             return sb.ToString();
         }
 

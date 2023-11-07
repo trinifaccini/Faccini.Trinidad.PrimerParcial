@@ -1,4 +1,5 @@
 ﻿using Parcial;
+using System.Globalization;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,7 +37,9 @@ namespace Formularios
         {
             if (VerificarCampos())
             {
-                string nombre = txtNombre.Text.Trim();
+                TextInfo ti = CultureInfo.CurrentCulture.TextInfo;
+
+                string nombre = ti.ToTitleCase(txtNombre.Text.Trim());
                 float alturaMax = float.Parse(txtAlturaMax.Text.Trim());
                 float alturaTransplante = float.Parse(txtAlturaTransplante.Text.Trim());
                 float precio = float.Parse(txtPrecio.Text.Trim());

@@ -112,7 +112,7 @@ namespace Parcial
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append($"Cactus\t");
+            sb.Append($"Cactus - ");
             sb.Append(base.ToString());
             return sb.ToString();
         }
