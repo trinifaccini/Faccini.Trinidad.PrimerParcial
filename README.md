@@ -33,6 +33,6 @@ Solo los usuarios de tipo administrador podrán ver la información de inicio de
 ## Diagrama de clases
 A continuación se adjuntan los diagramas de clases que incluyen todas las clases utilizadas en esta solución. Tambien incluyen los enumerados creados. 
 
-<img width="728" alt="image" src="https://github.com/trinifaccini/Faccini.Trinidad.PrimerParcial/blob/master/Diagramas/DiagramaClasesProyectoVivero.png">
-<img width="728" alt="image" src="https://github.com/trinifaccini/Faccini.Trinidad.PrimerParcial/blob/master/Diagramas/DiagramaClasesFormularios.png">
-<img width="728" alt="image" src = "https://github.com/trinifaccini/Faccini.Trinidad.PrimerParcial/blob/master/Diagramas/DiagramaClasesUtilidades.png">
+<img width="728" alt="image" src="https://github.com/trinifaccini/Faccini.Trinidad.PrimerParcial/blob/RecuperatorioPP/Diagramas/DiagramaClasesProyectoVivero.png">
+<img width="728" alt="image" src="https://github.com/trinifaccini/Faccini.Trinidad.PrimerParcial/blob/RecuperatorioPP/Diagramas/DiagramaClasesFormularios.png">
+<img width="728" alt="image" src = "https://github.com/trinifaccini/Faccini.Trinidad.PrimerParcial/blob/RecuperatorioPP/Diagramas/DiagramaClasesUtilidades.png">
