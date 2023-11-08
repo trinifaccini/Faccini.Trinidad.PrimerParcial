@@ -134,11 +134,11 @@
         /// <summary>
         /// Metodo de ordenamiento según altura máxima de la planta, ascendente.
         /// </summary>
-        public static int OrdenarPorAlturaMaxAsc(Planta a, Planta b)
+        public static int OrdenarPorAlturaActualAsc(Planta a, Planta b)
         {
-            if (a.alturaMax < b.alturaMax)
+            if (a.alturaActual < b.alturaActual)
                 return -1;
-            else if (a.alturaMax > b.alturaMax)
+            else if (a.alturaActual > b.alturaActual)
                 return 1;
             else
                 return 0; 
@@ -147,11 +147,11 @@
         /// <summary>
         /// Metodo de ordenamiento según altura máxima de la planta, descendente.
         /// </summary>
-        public static int OrdenarPorAlturaMaxDesc(Planta a, Planta b)
+        public static int OrdenarPorAlturaActualDesc(Planta a, Planta b)
         {
-            if (a.alturaMax < b.alturaMax)
+            if (a.alturaActual < b.alturaActual)
                 return 1;
-            else if (a.alturaMax > b.alturaMax)
+            else if (a.alturaActual > b.alturaActual)
                 return -1;
             else
                 return 0;

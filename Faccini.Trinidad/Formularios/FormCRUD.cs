@@ -219,9 +219,9 @@ namespace Formularios
             else if (ordenamiento == "Descendente" && tipoOrdenamiento == "Precio")
                 vivero.listaPlantas.Sort(Vivero.OrdenarPorPrecioDesc);
             else if (ordenamiento == "Ascendente" && tipoOrdenamiento == "Altura maxima")
-                vivero.listaPlantas.Sort(Vivero.OrdenarPorAlturaMaxAsc);
+                vivero.listaPlantas.Sort(Vivero.OrdenarPorAlturaActualAsc);
             else if (ordenamiento == "Descendente" && tipoOrdenamiento == "Altura maxima")
-                vivero.listaPlantas.Sort(Vivero.OrdenarPorAlturaMaxDesc);
+                vivero.listaPlantas.Sort(Vivero.OrdenarPorAlturaActualDesc);
             else if (ordenamiento == "Ascendente")
                 vivero.listaPlantas = vivero.listaPlantas.OrderBy(p => p.Nombre).ToList();
             else

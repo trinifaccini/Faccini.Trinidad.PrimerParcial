@@ -36,7 +36,7 @@
             btnModificar = new Button();
             btnDetalles = new Button();
             grpBoxTipoOrdenamiento = new GroupBox();
-            btnAlturaMax = new RadioButton();
+            btnAlturaActual = new RadioButton();
             btnPrecio = new RadioButton();
             btnDefault = new RadioButton();
             grpBoxOrden = new GroupBox();
@@ -124,7 +124,7 @@
             // 
             // grpBoxTipoOrdenamiento
             // 
-            grpBoxTipoOrdenamiento.Controls.Add(btnAlturaMax);
+            grpBoxTipoOrdenamiento.Controls.Add(btnAlturaActual);
             grpBoxTipoOrdenamiento.Controls.Add(btnPrecio);
             grpBoxTipoOrdenamiento.Controls.Add(btnDefault);
             grpBoxTipoOrdenamiento.Location = new Point(25, 444);
@@ -134,15 +134,15 @@
             grpBoxTipoOrdenamiento.TabStop = false;
             grpBoxTipoOrdenamiento.Text = "Ordenar por:";
             // 
-            // btnAlturaMax
+            // btnAlturaActual
             // 
-            btnAlturaMax.AutoSize = true;
-            btnAlturaMax.Location = new Point(12, 72);
-            btnAlturaMax.Name = "btnAlturaMax";
-            btnAlturaMax.Size = new Size(103, 19);
-            btnAlturaMax.TabIndex = 2;
-            btnAlturaMax.Text = "Altura maxima";
-            btnAlturaMax.UseVisualStyleBackColor = true;
+            btnAlturaActual.AutoSize = true;
+            btnAlturaActual.Location = new Point(12, 72);
+            btnAlturaActual.Name = "btnAlturaActual";
+            btnAlturaActual.Size = new Size(92, 19);
+            btnAlturaActual.TabIndex = 2;
+            btnAlturaActual.Text = "Altura actual";
+            btnAlturaActual.UseVisualStyleBackColor = true;
             // 
             // btnPrecio
             // 
@@ -330,7 +330,7 @@
         private GroupBox grpBoxTipoOrdenamiento;
         private RadioButton btnDefault;
         private GroupBox grpBoxOrden;
-        private RadioButton btnAlturaMax;
+        private RadioButton btnAlturaActual;
         private RadioButton btnPrecio;
         private RadioButton radioButton2;
         private RadioButton radioButton1;
