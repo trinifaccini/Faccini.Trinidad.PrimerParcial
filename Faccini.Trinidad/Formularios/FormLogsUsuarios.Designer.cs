@@ -35,6 +35,7 @@
             // listBox1
             // 
             listBox1.FormattingEnabled = true;
+            listBox1.HorizontalScrollbar = true;
             listBox1.ItemHeight = 15;
             listBox1.Location = new Point(12, 47);
             listBox1.Name = "listBox1";
@@ -60,6 +61,7 @@
             Controls.Add(listBox1);
             Name = "FormLogsUsuarios";
             Text = "Formulario de registro de usuarios";
+            TopMost = true;
             Load += FormLogsUsuarios_Load;
             ResumeLayout(false);
             PerformLayout();

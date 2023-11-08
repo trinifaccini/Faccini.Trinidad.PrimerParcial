@@ -106,7 +106,7 @@ namespace Parcial
         /// <returns>true si son iguales, false si son diferentes</returns>
         public static bool operator ==(Planta a, Planta b)
         {
-            return a.nombre == b.nombre;
+            return a.nombre.ToLower() == b.nombre.ToLower();
         }
 
         /// <summary>
@@ -265,8 +265,9 @@ namespace Parcial
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append($"Nombre {nombre} - ");
+            sb.Append($"Nombre: {nombre} - ");
             sb.Append($"Altura actual: {alturaActual} - ");
+            sb.Append(frecuenciaRiego > 0 ? $"Regar cada: {frecuenciaRiego} días - " :"Regar todos los dias - ");
             sb.Append($"Precio {precio} - ");
             return sb.ToString();
         }

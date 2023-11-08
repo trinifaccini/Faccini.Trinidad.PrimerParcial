@@ -64,15 +64,14 @@ namespace Parcial
 
 
         /// <summary>
-        /// Compara dos objetos de tipo Flor segun sus atributos: nombre, precio, alturaActual y tieneOlor
+        /// Compara dos objetos de tipo Flor segun sus atributos: nombre y tieneOlor
         /// </summary>
         /// <returns>true si son iguales, false si son diferentes</returns>
         public static bool operator ==(Flor a, Flor b)
         {
-            return (a.nombre == b.nombre && 
-                a.precio == b.precio && 
-                a.alturaActual == b.alturaActual && 
-                a.tieneOlor == b.tieneOlor);
+             return a.nombre.ToLower() == b.nombre.ToLower() && a.tieneOlor == b.tieneOlor; 
+
+            
         }
 
         /// <summary>
@@ -102,7 +101,6 @@ namespace Parcial
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append($"Tipo: ");
             sb.Append(this.ToString());
             sb.Append($"Color: {color} - ");
             sb.Append(tieneOlor ? $"Tiene olor\n" : $"No tiene olor\n");
@@ -114,7 +112,7 @@ namespace Parcial
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append($"Flor - ");
+            sb.Append($"Flor      - ");
             sb.Append(base.ToString());
             return sb.ToString();
         }

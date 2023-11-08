@@ -75,11 +75,5 @@ namespace Formularios
                 MessageBox.Show($"No se ha podido verificar la existencia de usuarios.\nIntenta nuevamente en unos momentos.");
 
         }
-
-        private void btnLogs_Click(object sender, EventArgs e)
-        {
-            FormLogsUsuarios frm = new FormLogsUsuarios();
-            frm.ShowDialog();
-        }
     }
 }

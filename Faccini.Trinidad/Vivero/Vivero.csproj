@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Cactus.cs\**" />
+    <EmbeddedResource Remove="Cactus.cs\**" />
+    <None Remove="Cactus.cs\**" />
+  </ItemGroup>
+
 </Project>

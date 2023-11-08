@@ -60,11 +60,11 @@ namespace Formularios
         {
             if (VerificarCampos())
             {
-                string nombre = txtNombre.Text;
-                float alturaMax = float.Parse(txtAlturaMax.Text);
-                float alturaTransplante = float.Parse(txtAlturaTransplante.Text);
-                float precio = float.Parse(txtPrecio.Text);
-                int frecuenciaRiego = int.Parse(txtFrecuencia.Text);
+                string nombre = txtNombre.Text.Trim();
+                float alturaMax = float.Parse(txtAlturaMax.Text.Trim());
+                float alturaTransplante = float.Parse(txtAlturaTransplante.Text.Trim());
+                float precio = float.Parse(txtPrecio.Text.Trim());
+                int frecuenciaRiego = int.Parse(txtFrecuencia.Text.Trim());
                 EEstacion estacionTransplante = (EEstacion)cbmBoxEstacion.SelectedIndex;
                 bool aptaInterior = checkedListBoxAmbiente.CheckedIndices.Contains(0);
                 bool aptaExterior = checkedListBoxAmbiente.CheckedIndices.Contains(1);

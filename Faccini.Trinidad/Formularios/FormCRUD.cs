@@ -29,7 +29,7 @@ namespace Formularios
         public FormCRUD(Usuario usuario) : this()
         {
             this.usuario = usuario;
-            AbrirArchivoPlantas();
+            //AbrirArchivoPlantas();
         }
 
         /// <summary>
@@ -87,7 +87,9 @@ namespace Formularios
 
         private void FormInicio_Load(object sender, EventArgs e)
         {
-            this.TopMost = true;
+            TopMost = true;
+            AbrirArchivoPlantas();
+
             label1.Text = $"BIENVENIDO AL SISTEMA DEL VIVERO: {vivero.NombreVivero}";
             lblOperador.Text = $"Operador: {usuario}";
 
@@ -239,7 +241,7 @@ namespace Formularios
             MessageBox.Show(planta.Regar());
         }
 
-        
+
         private void FormInicio_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("¿Seguro que quieres salir?", "Apagando sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
@@ -259,6 +261,11 @@ namespace Formularios
                 }
             }
         }
-        
+
+        private void btnInfoLogs_Click(object sender, EventArgs e)
+        {
+            FormLogsUsuarios frm = new FormLogsUsuarios();
+            frm.ShowDialog();
+        }
     }
 }

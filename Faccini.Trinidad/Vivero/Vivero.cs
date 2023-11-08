@@ -38,7 +38,6 @@
         /// <returns>true si la planta se encuentra en la lista de plantas del vivero recibido por parametro, false en caso contrario</returns>
         public static bool operator ==(Vivero v, Planta p)
         {
-            Console.WriteLine("== DE VIVERO");
             return v.listaPlantas.Contains(p);
             //foreach (Planta planta in v.listaPlantas)
             //{

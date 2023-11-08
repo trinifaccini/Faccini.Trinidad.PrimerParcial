@@ -64,15 +64,13 @@ namespace Parcial
         #region Sobreescritura de operadores
 
         /// <summary>
-        /// Compara dos objetos de tipo Arbol segun sus atributos: nombre, precio, alturaActual y tieneFrutos
+        /// Compara dos objetos de tipo Arbol segun sus atributos: nombre y tieneFrutos
         /// </summary>
         /// <returns>true si son iguales, false si son diferentes</returns>
         public static bool operator ==(Arbol a, Arbol b)
         {
-            return (a.nombre == b.nombre && 
-                a.precio == b.precio && 
-                a.alturaActual == b.alturaActual && 
-                a.tieneFrutos == b.tieneFrutos);
+            return a.nombre.ToLower() == b.nombre.ToLower() &&  a.tieneFrutos == b.tieneFrutos;
+
         }
 
         /// <summary>
@@ -119,7 +117,6 @@ namespace Parcial
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append($"Tipo: ");
             sb.Append(this.ToString());
             sb.Append($" - Pais: {paisOrigen} - ");
             string frutos = tieneFrutos ? "si" : "no";
@@ -131,7 +128,7 @@ namespace Parcial
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append($"Arbol - ");
+            sb.Append($"Arbol   - ");
             sb.Append(base.ToString());
             return sb.ToString();
         }

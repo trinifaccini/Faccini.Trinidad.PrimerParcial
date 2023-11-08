@@ -52,6 +52,7 @@
             lblFecha = new ToolStripLabel();
             openFileDialog1 = new OpenFileDialog();
             saveFileDialog1 = new SaveFileDialog();
+            btnInfoLogs = new Button();
             grpBoxTipoOrdenamiento.SuspendLayout();
             grpBoxOrden.SuspendLayout();
             toolStrip1.SuspendLayout();
@@ -70,17 +71,19 @@
             // lstPlantas
             // 
             lstPlantas.FormattingEnabled = true;
+            lstPlantas.HorizontalScrollbar = true;
             lstPlantas.ItemHeight = 15;
-            lstPlantas.Location = new Point(64, 95);
+            lstPlantas.Location = new Point(25, 95);
+            lstPlantas.Margin = new Padding(20);
             lstPlantas.Name = "lstPlantas";
-            lstPlantas.Size = new Size(558, 334);
+            lstPlantas.Size = new Size(578, 334);
             lstPlantas.TabIndex = 1;
             // 
             // btnAgregarCactus
             // 
-            btnAgregarCactus.Location = new Point(633, 223);
+            btnAgregarCactus.Location = new Point(609, 193);
             btnAgregarCactus.Name = "btnAgregarCactus";
-            btnAgregarCactus.Size = new Size(78, 50);
+            btnAgregarCactus.Size = new Size(78, 40);
             btnAgregarCactus.TabIndex = 2;
             btnAgregarCactus.Text = "AGREGAR CACTUS";
             btnAgregarCactus.UseVisualStyleBackColor = true;
@@ -89,9 +92,9 @@
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(633, 375);
+            btnEliminar.Location = new Point(609, 301);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(246, 50);
+            btnEliminar.Size = new Size(246, 35);
             btnEliminar.TabIndex = 3;
             btnEliminar.Text = "ELIMINAR PLANTA SELECCIONADA";
             btnEliminar.UseVisualStyleBackColor = true;
@@ -100,9 +103,9 @@
             // 
             // btnModificar
             // 
-            btnModificar.Location = new Point(633, 319);
+            btnModificar.Location = new Point(609, 260);
             btnModificar.Name = "btnModificar";
-            btnModificar.Size = new Size(246, 50);
+            btnModificar.Size = new Size(246, 35);
             btnModificar.TabIndex = 4;
             btnModificar.Text = "MODIFICAR PLANTA SELECCIONADA";
             btnModificar.UseVisualStyleBackColor = true;
@@ -111,9 +114,9 @@
             // 
             // btnDetalles
             // 
-            btnDetalles.Location = new Point(633, 95);
+            btnDetalles.Location = new Point(609, 95);
             btnDetalles.Name = "btnDetalles";
-            btnDetalles.Size = new Size(246, 50);
+            btnDetalles.Size = new Size(246, 35);
             btnDetalles.TabIndex = 5;
             btnDetalles.Text = "DETALLES DE PLANTA SELECCIONADA";
             btnDetalles.UseVisualStyleBackColor = true;
@@ -124,7 +127,7 @@
             grpBoxTipoOrdenamiento.Controls.Add(btnAlturaMax);
             grpBoxTipoOrdenamiento.Controls.Add(btnPrecio);
             grpBoxTipoOrdenamiento.Controls.Add(btnDefault);
-            grpBoxTipoOrdenamiento.Location = new Point(64, 435);
+            grpBoxTipoOrdenamiento.Location = new Point(25, 444);
             grpBoxTipoOrdenamiento.Name = "grpBoxTipoOrdenamiento";
             grpBoxTipoOrdenamiento.Size = new Size(160, 96);
             grpBoxTipoOrdenamiento.TabIndex = 6;
@@ -167,7 +170,7 @@
             // 
             grpBoxOrden.Controls.Add(radioButton2);
             grpBoxOrden.Controls.Add(radioButton1);
-            grpBoxOrden.Location = new Point(253, 435);
+            grpBoxOrden.Location = new Point(214, 444);
             grpBoxOrden.Name = "grpBoxOrden";
             grpBoxOrden.Size = new Size(173, 96);
             grpBoxOrden.TabIndex = 7;
@@ -198,9 +201,9 @@
             // 
             // btnAgregarFlor
             // 
-            btnAgregarFlor.Location = new Point(717, 223);
+            btnAgregarFlor.Location = new Point(693, 193);
             btnAgregarFlor.Name = "btnAgregarFlor";
-            btnAgregarFlor.Size = new Size(78, 50);
+            btnAgregarFlor.Size = new Size(78, 40);
             btnAgregarFlor.TabIndex = 9;
             btnAgregarFlor.Text = "AGREGAR FLOR";
             btnAgregarFlor.UseVisualStyleBackColor = true;
@@ -209,9 +212,9 @@
             // 
             // btnAgregarArbol
             // 
-            btnAgregarArbol.Location = new Point(801, 223);
+            btnAgregarArbol.Location = new Point(777, 193);
             btnAgregarArbol.Name = "btnAgregarArbol";
-            btnAgregarArbol.Size = new Size(78, 50);
+            btnAgregarArbol.Size = new Size(78, 40);
             btnAgregarArbol.TabIndex = 10;
             btnAgregarArbol.Text = "AGREGAR ARBOL";
             btnAgregarArbol.UseVisualStyleBackColor = true;
@@ -221,7 +224,7 @@
             // btnOrden
             // 
             btnOrden.DialogResult = DialogResult.OK;
-            btnOrden.Location = new Point(451, 435);
+            btnOrden.Location = new Point(404, 444);
             btnOrden.Name = "btnOrden";
             btnOrden.Size = new Size(104, 30);
             btnOrden.TabIndex = 11;
@@ -231,9 +234,9 @@
             // 
             // btnRegar
             // 
-            btnRegar.Location = new Point(633, 151);
+            btnRegar.Location = new Point(609, 136);
             btnRegar.Name = "btnRegar";
-            btnRegar.Size = new Size(246, 50);
+            btnRegar.Size = new Size(246, 35);
             btnRegar.TabIndex = 12;
             btnRegar.Text = "REGAR PLANTA SELECCIONADA";
             btnRegar.UseVisualStyleBackColor = true;
@@ -244,7 +247,7 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { lblOperador, toolStripSeparator1, lblFecha });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(943, 25);
+            toolStrip1.Size = new Size(881, 25);
             toolStrip1.TabIndex = 13;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -269,13 +272,24 @@
             // 
             openFileDialog1.FileName = "openFileDialog1";
             // 
-            // FormInicio
+            // btnInfoLogs
+            // 
+            btnInfoLogs.Location = new Point(609, 394);
+            btnInfoLogs.Name = "btnInfoLogs";
+            btnInfoLogs.Size = new Size(246, 35);
+            btnInfoLogs.TabIndex = 14;
+            btnInfoLogs.Text = "VER INFO DE INICIO DE SESION";
+            btnInfoLogs.UseVisualStyleBackColor = true;
+            btnInfoLogs.Click += btnInfoLogs_Click;
+            // 
+            // FormCRUD
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(943, 552);
+            ClientSize = new Size(881, 552);
+            Controls.Add(btnInfoLogs);
             Controls.Add(toolStrip1);
             Controls.Add(btnRegar);
             Controls.Add(btnOrden);
@@ -290,7 +304,8 @@
             Controls.Add(lstPlantas);
             Controls.Add(label1);
             DoubleBuffered = true;
-            Name = "FormInicio";
+            Name = "FormCRUD";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Inicio";
             FormClosing += FormInicio_FormClosing;
             Load += FormInicio_Load;
@@ -329,5 +344,6 @@
         private ToolStripLabel lblFecha;
         private OpenFileDialog openFileDialog1;
         private SaveFileDialog saveFileDialog1;
+        private Button btnInfoLogs;
     }
 }

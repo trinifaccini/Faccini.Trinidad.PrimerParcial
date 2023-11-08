@@ -64,7 +64,7 @@ namespace Formularios
                 return false;
             }
 
-            if (!Validador.ValidarEntero(txtFrecuencia.Text))
+            if (!Validador.ValidarEntero(txtFrecuencia.Text, false))
             {
                 MessageBox.Show($"Ingresar numero de frecuencia de riego válido para la planta", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -96,6 +96,8 @@ namespace Formularios
         /// </summary>
         internal virtual void FormPlanta_Load(object sender, EventArgs e)
         {
+            TopMost = true;
+
             if (planta is not null)
             {
                 txtNombre.Text = planta.Nombre;
@@ -116,6 +118,6 @@ namespace Formularios
             this.DialogResult = DialogResult.Cancel;
         }
 
-        
+
     }
 }

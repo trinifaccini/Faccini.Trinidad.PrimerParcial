@@ -61,16 +61,13 @@ namespace Parcial
         #region Sobreescritura operadores
 
         /// <summary>
-        /// Compara dos objetos de tipo Cactus segun sus atributos: nombre, precio, alturaActual y tieneEspinas
+        /// Compara dos objetos de tipo Cactus segun sus atributos: nombre y tieneEspinas
         /// </summary>
         /// <returns>true si son iguales, false si son diferentes</returns>
         public static bool operator ==(Cactus a, Cactus b)
         {
-            Console.WriteLine("== DE CACTUS");
-            return (a.nombre == b.nombre && 
-                a.precio == b.precio && 
-                a.alturaActual == b.alturaActual && 
-                a.tieneEspinas == b.tieneEspinas);
+            return a.nombre.ToLower() == b.nombre.ToLower() && a.tieneEspinas == b.tieneEspinas;
+        
         }
 
         /// <summary>
@@ -100,8 +97,6 @@ namespace Parcial
         // NO DOCUMENTAR
         public override bool Equals(object? obj)
         {
-            Console.WriteLine("EQUALS DE CACTUS");
-
             if (obj is Cactus)
                 return this == (Cactus)obj;
 
@@ -122,7 +117,6 @@ namespace Parcial
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append($"Tipo: ");
             sb.Append(this.ToString());
             sb.Append(tieneEspinas ? $"Tiene espinas\n" : $"No tiene espinas\n");
 

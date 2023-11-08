@@ -231,6 +231,7 @@
             Controls.Add(Precio);
             Controls.Add(lblNombre);
             Name = "FormPlanta";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormPlanta";
             Load += FormPlanta_Load;
             ResumeLayout(false);

@@ -22,13 +22,14 @@ namespace Utilidades
         /// </summary>
         /// <param name="flotante">string a validar</param>
         /// <returns>true si se puede parsear, false en caso contrario</returns>
-        public static bool ValidarEntero(string entero)
+        public static bool ValidarEntero(string entero, bool positivo = true)
         {
             int numero;
             if (entero != "" && int.TryParse(entero, out numero))
             {
-                if(numero > 0)
+                if(numero > 0 && positivo)
                     return true;
+                return true;
 
             }
             return false;
@@ -39,13 +40,14 @@ namespace Utilidades
         /// </summary>
         /// <param name="flotante">string a validar</param>
         /// <returns>true si se puede parsear, false en caso contrario</returns>
-        public static bool ValidarFloat(string flotante)
+        public static bool ValidarFloat(string flotante, bool positivo = true)
         {
             float numero;
             if (flotante != "" && float.TryParse(flotante, out numero))
             {
-                if (numero > 0)
+                if (numero > 0 && positivo)
                     return true;
+                return true;
             }
 
             return false;
