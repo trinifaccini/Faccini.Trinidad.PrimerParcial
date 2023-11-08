@@ -7,7 +7,8 @@ Mi nombre es Trinidad Faccini, tengo 22 años. Soy de Villa La Angostura, Neuqu�
 
 ## Resumen  
 
-Esta aplicación simula el sistema de manejo de una red de viveros.  
+Esta aplicación simula el sistema de manejo de una red de viveros.
+
 Al iniciarse, se le pedirá a la persona que ingrese su correo y clave y en caso de ser correctos se continuará a elegir el archivo con la información de las plantas del vivero con el que se quiere trabajar.  
 
 Una vez elegido, se podrá visualizar una lista CON LOS DATOS MAS RELEVANTES (no todos) de las plantas que se encuentran en ese vivero, pudiendo esta ser ordenada según nombre de la planta, precio o altura máxima que la planta puede alcanzar.  
@@ -25,7 +26,9 @@ Si no habia un ejemplar igual anteriormente en el vivero, este se agregará a la
 
 Al momento de cerrar la aplicación se le pedirá al usuario que elija el archivo donde quiere guardar la lista de plantas.  
 
-ATENCION: Solo los usuarios de tipo administrador o supervisor podran modificar o eliminar plantas.  
+ATENCION: 
+Solo los usuarios de tipo administrador o supervisor podrán modificar o eliminar plantas.
+Solo los usuarios de tipo administrador podrán ver la información de inicio de sesión (logs de usuarios).
 
 ## Diagrama de clases
 A continuación se adjuntan los diagramas de clases que incluyen todas las clases utilizadas en esta solución. Tambien incluyen los enumerados creados. 

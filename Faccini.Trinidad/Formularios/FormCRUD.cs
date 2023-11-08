@@ -92,6 +92,7 @@ namespace Formularios
 
             label1.Text = $"BIENVENIDO AL SISTEMA DEL VIVERO: {vivero.NombreVivero}";
             lblOperador.Text = $"Operador: {usuario}";
+            lblTipoUsuario.Text = $"Perfil: {usuario.Perfil}";
 
             lblFecha.Text = $"Fecha: {DateTime.Now.ToString().Substring(0, 10)}";
 
@@ -103,6 +104,10 @@ namespace Formularios
             }
 
             if (usuario.Perfil == "administrador")
+
+                btnInfoLogs.Visible = true;
+
+            if (usuario.Perfil == "administrador" || usuario.Perfil == "supervisor")
             {
                 btnEliminar.Visible = true;
                 btnModificar.Visible = true;

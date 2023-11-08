@@ -49,6 +49,8 @@
             toolStrip1 = new ToolStrip();
             lblOperador = new ToolStripLabel();
             toolStripSeparator1 = new ToolStripSeparator();
+            lblTipoUsuario = new ToolStripLabel();
+            toolStripSeparator2 = new ToolStripSeparator();
             lblFecha = new ToolStripLabel();
             openFileDialog1 = new OpenFileDialog();
             saveFileDialog1 = new SaveFileDialog();
@@ -244,7 +246,7 @@
             // 
             // toolStrip1
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { lblOperador, toolStripSeparator1, lblFecha });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { lblOperador, toolStripSeparator1, lblTipoUsuario, toolStripSeparator2, lblFecha });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(881, 25);
@@ -261,6 +263,17 @@
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
             toolStripSeparator1.Size = new Size(6, 25);
+            // 
+            // lblTipoUsuario
+            // 
+            lblTipoUsuario.Name = "lblTipoUsuario";
+            lblTipoUsuario.Size = new Size(37, 22);
+            lblTipoUsuario.Text = "Perfil:";
+            // 
+            // toolStripSeparator2
+            // 
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(6, 25);
             // 
             // lblFecha
             // 
@@ -280,6 +293,7 @@
             btnInfoLogs.TabIndex = 14;
             btnInfoLogs.Text = "VER INFO DE INICIO DE SESION";
             btnInfoLogs.UseVisualStyleBackColor = true;
+            btnInfoLogs.Visible = false;
             btnInfoLogs.Click += btnInfoLogs_Click;
             // 
             // FormCRUD
@@ -345,5 +359,7 @@
         private OpenFileDialog openFileDialog1;
         private SaveFileDialog saveFileDialog1;
         private Button btnInfoLogs;
+        private ToolStripLabel lblTipoUsuario;
+        private ToolStripSeparator toolStripSeparator2;
     }
 }
