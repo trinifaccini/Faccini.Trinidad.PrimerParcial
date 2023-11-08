@@ -31,7 +31,11 @@ Solo los usuarios de tipo administrador o supervisor podrán modificar o elimina
 Solo los usuarios de tipo administrador podrán ver la información de inicio de sesión (logs de usuarios).
 
 ## Diagrama de clases
-A continuación se adjuntan los diagramas de clases que incluyen todas las clases utilizadas en esta solución. Tambien incluyen los enumerados creados. 
+A continuación se adjuntan los diagramas de clases. 
+Incluyen:
+el diagrama de clases de la biblioteca de clases Vivero, donde se encuentran las clases y enumerados creados para realizar la solución.
+el diagrama de clases de los formularios.
+el diagrama de clases dela biblioteca de clases Utilidades, donde se crearon clases para sumar funcionamientos a la solución. 
 
 <img width="728" alt="image" src="https://github.com/trinifaccini/Faccini.Trinidad.PrimerParcial/blob/RecuperatorioPP/Diagramas/DiagramaClasesProyectoVivero.png">
 <img width="728" alt="image" src="https://github.com/trinifaccini/Faccini.Trinidad.PrimerParcial/blob/RecuperatorioPP/Diagramas/DiagramaClasesFormularios.png">
