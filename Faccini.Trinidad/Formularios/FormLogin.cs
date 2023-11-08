@@ -31,16 +31,18 @@ namespace Formularios
         {
             InitializeComponent();
             string archivoLogs = @"\Archivos\usuarios.log";
-            string archivoData = @"\Archivos\MOCK_DATA.json";
+            //string archivoData = @"\Archivos\MOCK_DATA.json";
 
             pathLogsUsuarios = ManejadorArchivos.ObtenerDirectorioAnterior(Environment.CurrentDirectory, archivoLogs);
-            pathDataUsuarios = ManejadorArchivos.ObtenerDirectorioAnterior(Environment.CurrentDirectory, archivoData);
+            pathDataUsuarios = @"..\..\..\MOCK_DATA.json";
+            //pathDataUsuarios = ManejadorArchivos.ObtenerDirectorioAnterior(Environment.CurrentDirectory, archivoData);
         }
 
         private void LoguearUsuario(List<Usuario> usuarios, Usuario? u)
         {
             if (u is not null)
             {
+
                 u.CrearLogUsuario(pathLogsUsuarios);
                 usuario = u;
                 this.DialogResult = DialogResult.OK;
