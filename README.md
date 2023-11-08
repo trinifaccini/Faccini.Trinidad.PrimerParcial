@@ -11,6 +11,8 @@ Esta aplicación simula el sistema de manejo de una red de viveros.
 
 Al iniciarse, se le pedirá a la persona que ingrese su correo y clave y en caso de ser correctos se continuará a elegir el archivo con la información de las plantas del vivero con el que se quiere trabajar.  
 
+ATENCION: El archivo con plantas precargadas se encuentra en la ubicacion DENTRO DEL REPOSITORIO, DENTRO DE Faccini.Trinidad, dentro de la carpeta Archivos con el nombre "PLANTAS_DATA.xml"
+
 Una vez elegido, se podrá visualizar una lista CON LOS DATOS MAS RELEVANTES (no todos) de las plantas que se encuentran en ese vivero, pudiendo esta ser ordenada según nombre de la planta, precio o altura máxima que la planta puede alcanzar.  
 
 Si se desea ver mas detalles de alguna planta, solo debe seleccionarla en la lista y luego cliquear el botón "DETALLES DE LA PLANTA SELECCIONADA".
